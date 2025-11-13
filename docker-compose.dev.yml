@@ -1,0 +1,12 @@
+services:
+  dev:
+    image: klakegg/hugo:ext-alpine
+    working_dir: /src
+    command: server -D --bind 0.0.0.0 --port 1313 --baseURL http://localhost:1313
+    volumes:
+      - ./:/src
+    ports:
+      - "1313:1313"
+    environment:
+      HUGO_ENV: development
+    # Live reload happens automatically because Hugo watches the mounted volume.

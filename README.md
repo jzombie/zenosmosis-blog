@@ -2,7 +2,14 @@
 
 This repository contains a minimal Hugo blog and a Dockerfile that builds the site with Hugo and serves the generated static files with nginx.
 
-Quick start (build + run):
+## Features at a glance
+
+- **Blog layout:** Hero header with CTA, recent posts grid, cards with tags, and a helpful sidebar so the homepage feels like a real publication.
+- **Search overlay:** Click the search icon or press `/` to open it, then type text to filter against the Hugo-generated JSON index.
+- **Per-post table of contents:** Every article automatically renders a TOC (built via Hugo’s `TableOfContents`) to jump between sections quickly.
+- **Live-reload dev environment:** A Compose-powered `hugo server` watches the repo and refreshes the browser the moment content, layouts, or static assets change.
+
+## Quick start (build + run)
 
 ```bash
 # build the image
@@ -14,8 +21,37 @@ docker run --rm -p 1313:80 zenosmosis-blog
 
 Then open http://localhost:1313 in your browser.
 
-Development notes:
-- The Dockerfile performs a full static build with Hugo (useful for production). For live development, you may prefer running the Hugo server locally (requires Hugo installed) or mount the site into a development container.
-- There's a `docker-compose.yml` included for convenience.
+## Using docker compose
+
+```bash
+# build the image and bake the latest Hugo content
+docker compose build
+
+# run nginx serving the generated site on http://localhost:1313
+docker compose up -d
+```
+
+This flow mirrors production: the Dockerfile runs `hugo --minify` in a builder stage, copies the generated `public/` directory into an nginx image, and serves it on port 80 (mapped to 1313 locally).
+
+## Live-reload development (hot reloading)
+
+For faster iteration use the included `docker-compose.dev.yml`, which mounts the repo into a Hugo server container:
+
+```bash
+docker compose -f docker-compose.dev.yml up -d --remove-orphans
+```
+
+- `-d` keeps the server running in the background while you edit.
+- `--remove-orphans` cleans up the production-style `web` service if you previously ran `docker compose up` so the two stacks don’t conflict on port 1313.
+
+The dev service runs `hugo server -D --bind 0.0.0.0 --port 1313 --baseURL http://localhost:1313` inside the `klakegg/hugo:ext-alpine` image while mounting the current folder at `/src`. Any edits to content, layouts, or static assets trigger Hugo’s live-reload pipeline automatically; your browser refreshes as soon as files change.
+
+Check logs at any time with:
+
+```bash
+docker compose -f docker-compose.dev.yml logs --tail=50 -f
+```
+
+Stop the dev container with `docker compose -f docker-compose.dev.yml down` when you’re done.
 
 If you want a different theme or added content, edit the files in the repository and re-build the image with `docker build`.
