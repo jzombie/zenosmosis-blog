@@ -1,4 +1,4 @@
-# Hugo blog (Dockerized)
+# zenOSmosis blog
 
 This repository contains a minimal Hugo blog and a Dockerfile that builds the site with Hugo and serves the generated static files with nginx.
 
