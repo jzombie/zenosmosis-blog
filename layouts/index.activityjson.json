@@ -1,8 +1,8 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
   "title": {{ printf "%s – Activity" .Site.Title | jsonify }},
-  "home_page_url": {{ .Site.BaseURL | jsonify }},
-  "feed_url": {{ printf "%sactivity.json" .Site.BaseURL | jsonify }},
+  "home_page_url": {{ printf "%s/" (strings.TrimSuffix "/" .Site.BaseURL) | jsonify }},
+  "feed_url": {{ printf "%sactivity.json" (printf "%s/" (strings.TrimSuffix "/" .Site.BaseURL)) | jsonify }},
   "description": {{ with .Site.Params.activityDescription }}{{ . | jsonify }}{{ else }}{{ printf "Latest shipping logs, essays, and experiments from %s." .Site.Params.author | jsonify }}{{ end }},
   "language": {{ .Site.Language.Lang | jsonify }},
   "authors": [
