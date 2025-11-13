@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1><a href="/">{{ .Site.Title }}</a></h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="home">
+        <h2>{{ .Title }}</h2>
+        <div class="content">{{ .Content }}</div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© {{ now.Format "2006" }} {{ .Site.Params.author }}</div>
+    </footer>
+  </body>
+</html>

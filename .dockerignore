@@ -1,0 +1,9 @@
+# Ignore build output and common files
+public
+Dockerfile
+.dockerignore
+*.log
+*.tmp
+.DS_Store
+vendor
+node_modules

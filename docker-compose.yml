@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "1313:80"
+    restart: unless-stopped
+    # uncomment to mount local files for development (then rebuild not needed):
+    # volumes:
+    #   - ./:/src

@@ -1,0 +1,7 @@
+baseURL = "https://blog.zenosmosis.com"
+languageCode = "en-us"
+title = "zenOSmosis blog"
+# No external theme used; site uses simple internal layouts in /layouts
+
+[params]
+author = "jzombie"
