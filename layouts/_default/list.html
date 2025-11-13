@@ -14,6 +14,7 @@
         <div class="post-card__tags">
           {{ range .Params.tags }}<span>#{{ . }}</span>{{ end }}
         </div>
+        <a class="post-card__cta" href="{{ .RelPermalink }}">Read more</a>
       </article>
     {{ end }}
   </section>

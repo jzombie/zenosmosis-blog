@@ -30,6 +30,7 @@
                 {{ range first 3 . }}<span>#{{ . }}</span>{{ end }}
               {{ end }}
             </div>
+            <a class="post-card__cta" href="{{ .RelPermalink }}">Read more</a>
           </article>
         {{ end }}
       {{ else }}

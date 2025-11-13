@@ -258,6 +258,28 @@ a:hover {
 	color: var(--accent);
 }
 
+.post-card__cta {
+	margin-top: 1rem;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	font-weight: 600;
+	color: #cfd2ff;
+	text-transform: uppercase;
+	font-size: 0.85rem;
+	letter-spacing: 0.08em;
+}
+
+.post-card__cta::after {
+	content: "→";
+	font-size: 1rem;
+	transition: transform 0.2s ease;
+}
+
+.post-card__cta:hover::after {
+	transform: translateX(3px);
+}
+
 .sidebar {
 	display: flex;
 	flex-direction: column;
