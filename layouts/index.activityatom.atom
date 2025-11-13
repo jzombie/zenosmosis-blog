@@ -5,13 +5,17 @@
 {{- if gt (len $items) 0 -}}
   {{- $updated = (index $items 0).Lastmod.UTC -}}
 {{- end -}}
+{{- $base := $site.BaseURL -}}
+{{- if not (strings.HasSuffix $base "/") -}}
+  {{- $base = printf "%s/" $base -}}
+{{- end -}}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ $site.Title }} – Activity</title>
-  <id>{{ $site.BaseURL }}</id>
+  <id>{{ $base }}</id>
   <updated>{{ $updated.Format "2006-01-02T15:04:05Z" }}</updated>
-  <link rel="self" href="{{ $site.BaseURL }}activity.atom" />
-  <link rel="alternate" href="{{ $site.BaseURL }}" />
+  <link rel="self" href="{{ printf "%sactivity.atom" $base }}" />
+  <link rel="alternate" href="{{ $base }}" />
   <author>
     <name>{{ $site.Params.author }}</name>
   </author>
