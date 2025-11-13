@@ -1,12 +1,14 @@
 :root {
-	--bg: #f8f8fb;
-	--card: #ffffff;
-	--ink: #10121a;
-	--muted: #5f6475;
-	--accent: #5e52ff;
-	--accent-soft: rgba(94, 82, 255, 0.08);
-	--border: #e3e6ef;
+	--bg: #040711;
+	--bg-alt: #090f21;
+	--card: rgba(13, 20, 41, 0.92);
+	--ink: #f4f6ff;
+	--muted: #9aa7d6;
+	--accent: #8d7dff;
+	--accent-soft: rgba(141, 125, 255, 0.18);
+	--border: rgba(255, 255, 255, 0.08);
 	--shell: 1040px;
+	--glow: rgba(141, 125, 255, 0.35);
 }
 
 * {
@@ -16,18 +18,30 @@
 body {
 	font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 	margin: 0;
-	background: var(--bg);
+	min-height: 100vh;
+	background: radial-gradient(circle at 15% 20%, rgba(141, 125, 255, 0.18), transparent 40%),
+		radial-gradient(circle at 80% 0%, rgba(38, 188, 255, 0.2), transparent 45%),
+		var(--bg);
 	color: var(--ink);
 	line-height: 1.6;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: linear-gradient(160deg, rgba(9, 15, 33, 0.75), rgba(4, 7, 17, 0.85));
+	z-index: -1;
 }
 
 a {
 	color: var(--accent);
 	text-decoration: none;
+	transition: color 0.2s ease;
 }
 
 a:hover {
-	text-decoration: underline;
+	color: #c9c2ff;
 }
 
 .shell {
@@ -51,8 +65,9 @@ a:hover {
 }
 
 .masthead {
-	background: var(--card);
+	background: linear-gradient(120deg, rgba(14, 20, 45, 0.95), rgba(6, 8, 21, 0.95));
 	border-bottom: 1px solid var(--border);
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
 }
 
 .masthead__inner {
@@ -66,7 +81,7 @@ a:hover {
 .brand {
 	font-weight: 700;
 	font-size: 1.25rem;
-	color: var(--ink);
+	color: white;
 }
 
 .tagline {
@@ -81,10 +96,11 @@ a:hover {
 }
 
 .nav__link {
-	padding: 0.4rem 0.9rem;
+	padding: 0.35rem 0.85rem;
 	border-radius: 999px;
 	font-size: 0.95rem;
 	color: var(--muted);
+	transition: background 0.2s ease, color 0.2s ease;
 }
 
 .nav__link--button {
@@ -99,21 +115,32 @@ a:hover {
 }
 
 .nav__link.is-active {
-	background: var(--accent-soft);
-	color: var(--accent);
+	background: rgba(255, 255, 255, 0.08);
+	color: white;
 }
 
 .site-main {
-	padding: 2.5rem 0 3rem;
+	padding: 3rem 0 3.5rem;
 }
 
 .hero {
-	background: var(--card);
-	border: 1px solid var(--border);
-	border-radius: 1.25rem;
-	padding: 2.5rem;
-	margin-bottom: 2.5rem;
-	box-shadow: 0 20px 60px rgba(16, 18, 26, 0.04);
+	background: linear-gradient(135deg, rgba(18, 28, 68, 0.95), rgba(10, 15, 36, 0.95));
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	border-radius: 1.5rem;
+	padding: 2.75rem;
+	margin-bottom: 2.75rem;
+	box-shadow: 0 30px 80px rgba(5, 8, 18, 0.6);
+	position: relative;
+	overflow: hidden;
+}
+
+.hero::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle at 75% 20%, rgba(141, 125, 255, 0.35), transparent 40%);
+	opacity: 0.8;
+	pointer-events: none;
 }
 
 .hero .eyebrow {
@@ -132,7 +159,7 @@ a:hover {
 .hero__lead p {
 	margin: 0 0 1rem;
 	font-size: 1.1rem;
-	color: #2f3240;
+	color: #ced4f9;
 }
 
 .hero__cta {
@@ -155,11 +182,18 @@ a:hover {
 	background: var(--accent);
 	color: white;
 	font-weight: 600;
+	box-shadow: 0 15px 35px var(--glow);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 20px 45px rgba(141, 125, 255, 0.45);
 }
 
 .button--ghost {
 	background: transparent;
-	border: 1px solid var(--border);
+	border: 1px solid rgba(255, 255, 255, 0.3);
 	color: var(--ink);
 }
 
@@ -192,10 +226,11 @@ a:hover {
 
 .post-card {
 	background: var(--card);
-	border: 1px solid var(--border);
+	border: 1px solid rgba(255, 255, 255, 0.04);
 	border-radius: 1rem;
-	padding: 1.5rem;
-	box-shadow: 0 10px 30px rgba(16, 18, 26, 0.04);
+	padding: 1.65rem;
+	box-shadow: 0 25px 60px rgba(3, 4, 12, 0.65);
+	backdrop-filter: blur(14px);
 }
 
 .post-card__meta {
@@ -230,10 +265,11 @@ a:hover {
 }
 
 .panel {
-	background: var(--card);
-	border: 1px solid var(--border);
+	background: linear-gradient(145deg, rgba(12, 18, 39, 0.95), rgba(8, 11, 27, 0.95));
+	border: 1px solid rgba(255, 255, 255, 0.05);
 	border-radius: 1rem;
 	padding: 1.5rem;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
 }
 
 .panel h3 {
@@ -260,10 +296,10 @@ a:hover {
 
 .post {
 	background: var(--card);
-	border: 1px solid var(--border);
+	border: 1px solid rgba(255, 255, 255, 0.05);
 	border-radius: 1.25rem;
 	padding: 2.25rem;
-	box-shadow: 0 20px 40px rgba(16, 18, 26, 0.04);
+	box-shadow: 0 35px 80px rgba(0, 0, 0, 0.65);
 }
 
 .post__meta {
@@ -303,7 +339,7 @@ a:hover {
 .site-footer {
 	border-top: 1px solid var(--border);
 	padding: 2rem 0;
-	background: #fafbff;
+	background: rgba(4, 7, 17, 0.85);
 	color: var(--muted);
 	font-size: 0.95rem;
 }
@@ -339,7 +375,8 @@ a:hover {
 	background: var(--card);
 	border-radius: 1.25rem;
 	padding: 1.75rem;
-	box-shadow: 0 40px 80px rgba(10, 12, 20, 0.35);
+	box-shadow: 0 60px 100px rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(18px);
 }
 
 .search-panel__header {
@@ -364,9 +401,11 @@ a:hover {
 	width: 100%;
 	padding: 0.85rem 1rem;
 	border-radius: 0.85rem;
-	border: 1px solid var(--border);
+	border: 1px solid rgba(255, 255, 255, 0.12);
 	font-size: 1rem;
 	margin-bottom: 0.85rem;
+	background: rgba(8, 12, 28, 0.8);
+	color: var(--ink);
 }
 
 .search-panel__results {
@@ -379,7 +418,7 @@ a:hover {
 
 .search-result {
 	padding: 0.75rem 0.5rem;
-	border-bottom: 1px solid var(--border);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .search-result:last-child {
@@ -412,8 +451,8 @@ a:hover {
 
 .toc {
 	margin: 1.5rem 0;
-	background: var(--card);
-	border: 1px dashed var(--border);
+	background: rgba(10, 15, 38, 0.85);
+	border: 1px dashed rgba(255, 255, 255, 0.12);
 	border-radius: 0.85rem;
 	padding: 1rem 1.25rem;
 }
