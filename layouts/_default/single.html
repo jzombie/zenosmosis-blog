@@ -4,10 +4,22 @@
       <p class="eyebrow">{{ humanize .Section }}</p>
       <h1>{{ .Title }}</h1>
       <p class="post__meta">Published {{ .Date.Format "02 Jan 2006" }} · {{ .ReadingTime }} min read</p>
-      <div class="post__tags">
-        {{ range .Params.tags }}<span>#{{ . }}</span>{{ end }}
-      </div>
+      {{ with .Params.tags }}
+        <div class="post__tags">
+          {{ range . }}<span>#{{ . }}</span>{{ end }}
+        </div>
+      {{ end }}
     </header>
+
+    {{ $toc := .TableOfContents }}
+    {{ if gt (len (plainify $toc)) 0 }}
+      <section class="toc">
+        <details open>
+          <summary>On this page</summary>
+          {{ $toc }}
+        </details>
+      </section>
+    {{ end }}
 
     <div class="post__body">
       {{ .Content }}

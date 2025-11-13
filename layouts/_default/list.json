@@ -1,0 +1,13 @@
+[
+{{- range $i, $p := .Pages.ByDate.Reverse -}}
+  {{- if gt $i 0 }},{{ end }}
+  {
+    "title": {{ $p.Title | jsonify }},
+    "description": {{ (or $p.Params.description ($p.Summary | plainify)) | jsonify }},
+    "url": {{ $p.RelPermalink | jsonify }},
+    "date": {{ $p.Date.Format "2006-01-02" | jsonify }},
+    "readingTime": {{ printf "%d" $p.ReadingTime }},
+    "tags": {{ $p.Params.tags | default (slice) | jsonify }}
+  }
+{{- end -}}
+]

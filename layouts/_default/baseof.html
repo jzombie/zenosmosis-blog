@@ -21,6 +21,9 @@
       <nav class="nav">
         <a href="/" class="nav__link {{ if .IsHome }}is-active{{ end }}">Home</a>
         <a href="/posts/" class="nav__link {{ if eq .Section "posts" }}is-active{{ end }}">Posts</a>
+        <button class="nav__link nav__link--button" type="button" data-search-open>
+          Search
+        </button>
         <a href="https://github.com/zenosmosis" class="nav__link" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
@@ -45,6 +48,19 @@
     </div>
   </footer>
 
+  <div class="search-panel" data-search-panel aria-hidden="true">
+    <div class="search-panel__dialog" role="dialog" aria-modal="true" aria-label="Search posts">
+      <div class="search-panel__header">
+        <h2>Search notes</h2>
+        <button class="search-panel__close" type="button" data-search-close aria-label="Close search">✕</button>
+      </div>
+      <input class="search-panel__input" type="search" placeholder="Type a keyword…" data-search-input autocomplete="off">
+      <div class="search-panel__empty" data-search-empty>Start typing to find posts.</div>
+      <div class="search-panel__results" data-search-results></div>
+    </div>
+  </div>
+
+  <script src="/js/search.js" defer></script>
   {{ block "scripts" . }}{{ end }}
 </body>
 </html>

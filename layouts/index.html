@@ -1,4 +1,5 @@
 {{ define "main" }}
+  {{ $posts := (where .Site.RegularPages "Section" "posts") }}
   <section class="hero">
     <p class="eyebrow">zenOSmosis · builder's log</p>
     <h1>{{ .Title }}</h1>
@@ -7,6 +8,7 @@
     </div>
     <div class="hero__cta">
       <a class="button" href="/posts/">Browse all posts</a>
+      <button class="button button--ghost" type="button" data-search-open>Search notes</button>
       <a class="button button--ghost" href="mailto:hello@zenosmosis.com">Say hello</a>
     </div>
   </section>
@@ -17,7 +19,6 @@
         <h2>Latest notes</h2>
         <a href="/posts/" class="see-all">View archive →</a>
       </div>
-      {{ $posts := (where .Site.RegularPages "Type" "posts") }}
       {{ if gt (len $posts) 0 }}
         {{ range first 4 ($posts.ByDate.Reverse) }}
           <article class="post-card">

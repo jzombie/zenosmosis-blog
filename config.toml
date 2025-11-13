@@ -3,5 +3,15 @@ languageCode = "en-us"
 title = "zenOSmosis blog"
 # No external theme used; site uses simple internal layouts in /layouts
 
+[outputs]
+home = ["HTML", "JSON"]
+section = ["HTML", "JSON"]
+
+[markup]
+	[markup.tableOfContents]
+	startLevel = 2
+	endLevel = 4
+	ordered = false
+
 [params]
 author = "jzombie"
