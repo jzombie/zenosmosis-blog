@@ -21,6 +21,16 @@ docker run --rm -p 1313:80 zenosmosis-blog
 
 Then open http://localhost:1313 in your browser.
 
+## Generate static files only
+
+When you just need fresh artifacts for GitHub Pages (without rebuilding the nginx image), run the official Hugo builder image against this repo:
+
+```bash
+docker run --rm -v "$PWD":/src klakegg/hugo:ext-alpine
+```
+
+That command mounts the repository at `/src` inside the container and executes `hugo`, which populates the `public/` directory with the full static site. Commit or deploy the contents of `public/` directly to your Pages branch.
+
 ## Using docker compose
 
 ```bash
