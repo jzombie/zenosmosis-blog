@@ -1,0 +1,25 @@
+{{ define "main" }}
+  <article class="post">
+    <header class="post__header">
+      <p class="eyebrow">{{ humanize .Section }}</p>
+      <h1>{{ .Title }}</h1>
+      <p class="post__meta">Published {{ .Date.Format "02 Jan 2006" }} · {{ .ReadingTime }} min read</p>
+      <div class="post__tags">
+        {{ range .Params.tags }}<span>#{{ . }}</span>{{ end }}
+      </div>
+    </header>
+
+    <div class="post__body">
+      {{ .Content }}
+    </div>
+  </article>
+
+  <nav class="post-nav">
+    {{ with .PrevInSection }}
+      <a class="post-nav__link" href="{{ .RelPermalink }}">← {{ .Title }}</a>
+    {{ end }}
+    {{ with .NextInSection }}
+      <a class="post-nav__link" href="{{ .RelPermalink }}">{{ .Title }} →</a>
+    {{ end }}
+  </nav>
+{{ end }}

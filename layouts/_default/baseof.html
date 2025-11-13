@@ -1,27 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ .Site.Language.Lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{{ .Title }} - {{ .Site.Title }}</title>
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+  {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <h1><a href="/">{{ .Site.Title }}</a></h1>
-      <p class="subtitle">{{ .Site.Params.author }}</p>
+<body class="site {{ if .IsHome }}site--home{{ end }}">
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="masthead">
+    <div class="shell masthead__inner">
+      <div>
+        <a class="brand" href="/">{{ .Site.Title }}</a>
+        <p class="tagline">{{ with .Site.Params.author }}By {{ . }}{{ end }}</p>
+      </div>
+      <nav class="nav">
+        <a href="/" class="nav__link {{ if .IsHome }}is-active{{ end }}">Home</a>
+        <a href="/posts/" class="nav__link {{ if eq .Section "posts" }}is-active{{ end }}">Posts</a>
+        <a href="https://github.com/zenosmosis" class="nav__link" target="_blank" rel="noopener">GitHub</a>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
-    {{ block "main" . }}{{ end }}
+  <main id="content" class="site-main">
+    <div class="shell">
+      {{ block "main" . }}{{ end }}
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© {{ now.Format "2006" }} {{ .Site.Params.author }}</p>
+    <div class="shell footer__grid">
+      <div>
+        <p class="brand">{{ .Site.Title }}</p>
+        <p>Field notes on automation, tooling, and patient engineering.</p>
+      </div>
+      <div class="footer__meta">
+        <p>© {{ now.Format "2006" }} {{ .Site.Params.author }}</p>
+        <p>Built with Hugo · Served from Docker</p>
+      </div>
     </div>
   </footer>
+
+  {{ block "scripts" . }}{{ end }}
 </body>
 </html>

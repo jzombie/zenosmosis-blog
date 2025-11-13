@@ -1,27 +1,64 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>{{ .Title }} - {{ .Site.Title }}</title>
-    <link rel="stylesheet" href="/css/styles.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container">
-        <h1><a href="/">{{ .Site.Title }}</a></h1>
+{{ define "main" }}
+  <section class="hero">
+    <p class="eyebrow">zenOSmosis · builder's log</p>
+    <h1>{{ .Title }}</h1>
+    <div class="hero__lead">
+      {{ .Content }}
+    </div>
+    <div class="hero__cta">
+      <a class="button" href="/posts/">Browse all posts</a>
+      <a class="button button--ghost" href="mailto:hello@zenosmosis.com">Say hello</a>
+    </div>
+  </section>
+
+  <section class="layout-grid">
+    <div class="post-feed">
+      <div class="section-heading">
+        <h2>Latest notes</h2>
+        <a href="/posts/" class="see-all">View archive →</a>
       </div>
-    </header>
+      {{ $posts := (where .Site.RegularPages "Type" "posts") }}
+      {{ if gt (len $posts) 0 }}
+        {{ range first 4 ($posts.ByDate.Reverse) }}
+          <article class="post-card">
+            <p class="post-card__meta">{{ .Date.Format "02 Jan 2006" }} · {{ .ReadingTime }} min read</p>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}</p>
+            <div class="post-card__tags">
+              {{ with .Params.tags }}
+                {{ range first 3 . }}<span>#{{ . }}</span>{{ end }}
+              {{ end }}
+            </div>
+          </article>
+        {{ end }}
+      {{ else }}
+        <p>No posts yet. Add some under <code>content/posts/</code>.</p>
+      {{ end }}
+    </div>
 
-    <main class="container">
-      <article class="home">
-        <h2>{{ .Title }}</h2>
-        <div class="content">{{ .Content }}</div>
-      </article>
-    </main>
+    <aside class="sidebar">
+      <section class="panel">
+        <h3>About</h3>
+        <p>I'm {{ .Site.Params.author }}, experimenting with automation, developer experience, and thoughtful indie infra.</p>
+      </section>
 
-    <footer class="site-footer">
-      <div class="container">© {{ now.Format "2006" }} {{ .Site.Params.author }}</div>
-    </footer>
-  </body>
-</html>
+      <section class="panel">
+        <h3>Currently exploring</h3>
+        <ul>
+          <li>Shipping static sites from containers</li>
+          <li>Human-friendly observability dashboards</li>
+          <li>Personal search tooling</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h3>Elsewhere</h3>
+        <ul>
+          <li><a href="https://zenosmosis.com" target="_blank" rel="noopener">Web</a></li>
+          <li><a href="https://github.com/zenosmosis" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:info@zenosmosis.com">Email</a></li>
+        </ul>
+      </section>
+    </aside>
+  </section>
+{{ end }}
