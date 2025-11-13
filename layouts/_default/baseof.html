@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
   {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} activity RSS" href="/activity.xml">
+  <link rel="alternate" type="application/atom+xml" title="{{ .Site.Title }} activity Atom" href="/activity.atom">
+  <link rel="alternate" type="application/feed+json" title="{{ .Site.Title }} activity JSON" href="/activity.json">
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -8,6 +8,7 @@ This repository contains a minimal Hugo blog and a Dockerfile that builds the si
 - **Search overlay:** Click the search icon or press `/` to open it, then type text to filter against the Hugo-generated JSON index.
 - **Per-post table of contents:** Every article automatically renders a TOC (built via Hugo’s `TableOfContents`) to jump between sections quickly.
 - **Live-reload dev environment:** A Compose-powered `hugo server` watches the repo and refreshes the browser the moment content, layouts, or static assets change.
+- **Activity feeds:** Hugo now emits RSS, Atom, and JSON Feed streams rooted at `/activity.*` so any reader can subscribe.
 
 ## Quick start (build + run)
 
@@ -30,6 +31,16 @@ docker run --rm -v "$PWD":/src klakegg/hugo:ext-alpine
 ```
 
 That command mounts the repository at `/src` inside the container and executes `hugo`, which populates the `public/` directory with the full static site. Commit or deploy the contents of `public/` directly to your Pages branch.
+
+## Activity feeds
+
+Every build emits three matching streams of the latest posts (up to 20 entries) that you can wire into any RSS/Atom/JSON-feed reader:
+
+- RSS 2.0 → `https://blog.zenosmosis.com/activity.xml`
+- Atom 1.0 → `https://blog.zenosmosis.com/activity.atom`
+- JSON Feed 1.1 → `https://blog.zenosmosis.com/activity.json`
+
+When running locally, swap the origin for `http://localhost:1313`. Each file is generated during `hugo` builds, so deploying the `public/` directory automatically publishes the updated feeds.
 
 ## Using docker compose
 

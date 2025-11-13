@@ -1,0 +1,28 @@
+{{- $site := .Site -}}
+{{- $posts := where $site.RegularPages "Section" "posts" -}}
+{{- $items := first 20 ($posts.ByDate.Reverse) -}}
+{{- $updated := now.UTC -}}
+{{- if gt (len $items) 0 -}}
+  {{- $updated = (index $items 0).Lastmod.UTC -}}
+{{- end -}}
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ $site.Title }} – Activity</title>
+  <id>{{ $site.BaseURL }}</id>
+  <updated>{{ $updated.Format "2006-01-02T15:04:05Z" }}</updated>
+  <link rel="self" href="{{ $site.BaseURL }}activity.atom" />
+  <link rel="alternate" href="{{ $site.BaseURL }}" />
+  <author>
+    <name>{{ $site.Params.author }}</name>
+  </author>
+  {{ range $items }}
+  <entry>
+    <title>{{ .Title }}</title>
+    <id>{{ .Permalink }}</id>
+    <link href="{{ .Permalink }}" />
+    <updated>{{ .Lastmod.UTC.Format "2006-01-02T15:04:05Z" }}</updated>
+    <published>{{ .Date.UTC.Format "2006-01-02T15:04:05Z" }}</published>
+    <summary type="html"><![CDATA[{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}]]></summary>
+  </entry>
+  {{ end }}
+</feed>

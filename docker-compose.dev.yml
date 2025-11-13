@@ -7,6 +7,4 @@ services:
       - ./:/src
     ports:
       - "1313:1313"
-    environment:
-      HUGO_ENV: development
     # Live reload happens automatically because Hugo watches the mounted volume.

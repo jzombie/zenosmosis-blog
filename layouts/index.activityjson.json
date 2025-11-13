@@ -1,0 +1,28 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": {{ printf "%s – Activity" .Site.Title | jsonify }},
+  "home_page_url": {{ .Site.BaseURL | jsonify }},
+  "feed_url": {{ printf "%sactivity.json" .Site.BaseURL | jsonify }},
+  "description": {{ with .Site.Params.activityDescription }}{{ . | jsonify }}{{ else }}{{ printf "Latest shipping logs, essays, and experiments from %s." .Site.Params.author | jsonify }}{{ end }},
+  "language": {{ .Site.Language.Lang | jsonify }},
+  "authors": [
+    {
+      "name": {{ .Site.Params.author | jsonify }}
+    }
+  ],
+  "items": [
+    {{- $items := first 20 ((where .Site.RegularPages "Section" "posts").ByDate.Reverse) -}}
+    {{- range $index, $post := $items -}}
+      {{- if gt $index 0 }},{{ end }}
+      {
+        "id": {{ $post.Permalink | jsonify }},
+        "url": {{ $post.Permalink | jsonify }},
+        "title": {{ $post.Title | jsonify }},
+        "content_html": {{ with $post.Description }}{{ . | jsonify }}{{ else }}{{ $post.Summary | jsonify }}{{ end }},
+        "date_published": {{ $post.Date.UTC.Format "2006-01-02T15:04:05Z" | jsonify }},
+        "date_modified": {{ $post.Lastmod.UTC.Format "2006-01-02T15:04:05Z" | jsonify }},
+        "tags": {{ with $post.Params.tags }}{{ . | jsonify }}{{ else }}[]{{ end }}
+      }
+    {{- end -}}
+  ]
+}
