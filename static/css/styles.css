@@ -168,6 +168,19 @@ a:hover {
 	flex-wrap: wrap;
 }
 
+.hero--not-found {
+	text-align: center;
+}
+
+.hero--not-found .hero__lead {
+	margin: 0 auto 1.25rem;
+	max-width: 560px;
+}
+
+.hero--not-found .hero__cta {
+	justify-content: center;
+}
+
 .hero__cta button {
 	cursor: pointer;
 }
@@ -201,6 +214,27 @@ a:hover {
 	display: grid;
 	grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr);
 	gap: 2rem;
+}
+
+.panel--not-found {
+	margin-top: 1rem;
+}
+
+.panel__links {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	gap: 0.75rem;
+}
+
+.panel__links li {
+	padding: 0.75rem 1rem;
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid var(--border);
+	border-radius: 0.85rem;
+	text-align: center;
 }
 
 .post-feed {

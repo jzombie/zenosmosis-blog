@@ -1,0 +1,25 @@
+{{ define "main" }}
+  <section class="hero hero--not-found">
+    <p class="eyebrow">404 · Lost signal</p>
+    <h1>That page drifted off course</h1>
+    <div class="hero__lead">
+      <p>The URL you followed no longer exists or never did. Jump back to the latest notes or pop open the search overlay.</p>
+    </div>
+    <div class="hero__cta">
+      <a class="button" href="/">Return home</a>
+      <button class="button button--ghost" type="button" data-search-open>Search posts</button>
+      <a class="button button--ghost" href="/posts/">Browse the archive</a>
+    </div>
+  </section>
+
+  <section class="panel panel--not-found">
+    <h2>Still stuck?</h2>
+    <p>Here are a few quick links that always resolve:</p>
+    <ul class="panel__links">
+      <li><a href="/activity.xml">Activity RSS</a></li>
+      <li><a href="/activity.atom">Activity Atom</a></li>
+      <li><a href="/activity.json">Activity JSON</a></li>
+      <li><a href="https://github.com/zenosmosis">GitHub profile</a></li>
+    </ul>
+  </section>
+{{ end }}
