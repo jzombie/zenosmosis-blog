@@ -47,3 +47,6 @@ section = ["HTML", "JSON"]
 
 [params]
 author = "jzombie"
+description = "Quietly ambitious software, in public."
+socialImage = "/social/zenOSmosis-blog-card-1200x630.jpg"
+socialImageAlt = "zenOSmosis blog"

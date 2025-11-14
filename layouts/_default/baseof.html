@@ -5,9 +5,42 @@
   <meta charset="utf-8">
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+  {{ $siteTitle := .Site.Title }}
+  {{ $pageTitle := $siteTitle }}
+  {{ $ogTitle := $siteTitle }}
+  {{ if not .IsHome }}
+    {{ $pageTitle = printf "%s · %s" .Title $siteTitle }}
+    {{ $ogTitle = .Title }}
+  {{ end }}
+  {{ $description := .Site.Params.description }}
   {{ with .Description }}
-  <meta name="description" content="{{ . }}">{{ end }}
+    {{ $description = plainify . }}
+  {{ else }}
+    {{ with .Summary }}
+      {{ $description = plainify . }}
+    {{ end }}
+  {{ end }}
+  {{ $pageURL := .Permalink }}
+  {{ $baseURL := strings.TrimSuffix "/" .Site.BaseURL }}
+  {{ $socialImage := `` }}
+  {{ with .Site.Params.socialImage }}
+    {{ if hasPrefix . "http" }}
+      {{ $socialImage = . }}
+    {{ else }}
+      {{ $socialImage = printf "%s%s" $baseURL . }}
+    {{ end }}
+  {{ end }}
+  {{ with .Params.socialImage }}
+    {{ if hasPrefix . "http" }}
+      {{ $socialImage = . }}
+    {{ else }}
+      {{ $socialImage = printf "%s%s" $baseURL . }}
+    {{ end }}
+  {{ end }}
+  {{ $socialImageAlt := default $siteTitle .Site.Params.socialImageAlt }}
+  {{ with .Params.socialImageAlt }}{{ $socialImageAlt = . }}{{ end }}
+  <title>{{ $pageTitle }}</title>
+  <meta name="description" content="{{ $description }}">
   <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} activity RSS" href="/activity.xml">
   <link rel="alternate" type="application/atom+xml" title="{{ .Site.Title }} activity Atom" href="/activity.atom">
   <link rel="alternate" type="application/feed+json" title="{{ .Site.Title }} activity JSON" href="/activity.json">
@@ -15,6 +48,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ $pageURL }}" />
+  <meta property="og:title" content="{{ $ogTitle }}" />
+  <meta property="og:description" content="{{ $description }}" />
+  <meta property="og:site_name" content="{{ $siteTitle }}" />
+  <meta property="og:image" content="{{ $socialImage }}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="{{ $socialImageAlt }}" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="{{ $pageURL }}" />
+  <meta property="twitter:title" content="{{ $ogTitle }}" />
+  <meta property="twitter:description" content="{{ $description }}" />
+  <meta property="twitter:image" content="{{ $socialImage }}" />
+  <meta property="twitter:image:alt" content="{{ $socialImageAlt }}" />
 </head>
 
 <body class="site {{ if .IsHome }}site--home{{ end }}">
