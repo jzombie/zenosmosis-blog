@@ -8,6 +8,14 @@
   const resultsContainer = panel.querySelector('[data-search-results]');
   const emptyState = panel.querySelector('[data-search-empty]');
 
+  const slugify = (text = '') =>
+    text
+      .toString()
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+
   let index = [];
   let hasLoaded = false;
 
@@ -51,11 +59,17 @@
     items.forEach((item) => {
       const article = document.createElement('article');
       article.className = 'search-result';
+      const tagsMarkup = item.tags && item.tags.length
+        ? `<div class="search-result__tags">${item.tags
+            .map((tag) => `<a href="/tags/${slugify(tag)}/" rel="tag">#${tag}</a>`)
+            .join('')}</div>`
+        : '';
       article.innerHTML = `
         <a href="${item.url}">
           <p class="search-result__title">${item.title}</p>
           <p class="search-result__meta">${item.date}${item.readingTime ? ` · ${item.readingTime} min read` : ''}</p>
           <p>${item.description}</p>
+          ${tagsMarkup}
         </a>
       `;
       resultsContainer.appendChild(article);

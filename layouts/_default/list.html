@@ -1,7 +1,11 @@
 {{ define "main" }}
   <section class="page-header">
     <p class="eyebrow">Archive</p>
-    <h1>{{ .Title }}</h1>
+    {{ $pageTitle := .Title }}
+    {{ if and (eq .Kind "term") (eq .Data.Singular "tag") }}
+      {{ $pageTitle = printf "#%s" .Title }}
+    {{ end }}
+    <h1>{{ $pageTitle }}</h1>
     {{ with .Content }}<div class="page-header__lead">{{ . }}</div>{{ end }}
   </section>
 
@@ -12,7 +16,10 @@
         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}</p>
         <div class="post-card__tags">
-          {{ range .Params.tags }}<span>#{{ . }}</span>{{ end }}
+          {{ range .Params.tags }}
+            {{ $tagURL := printf "/tags/%s/" (urlize .) }}
+            <a href="{{ $tagURL }}" rel="tag">#{{ . }}</a>
+          {{ end }}
         </div>
         <a class="post-card__cta" href="{{ .RelPermalink }}">Read more</a>
       </article>

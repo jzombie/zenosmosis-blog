@@ -6,7 +6,10 @@
       <p class="post__meta">Published {{ .Date.Format "02 Jan 2006" }} · {{ .ReadingTime }} min read</p>
       {{ with .Params.tags }}
         <div class="post__tags">
-          {{ range . }}<span>#{{ . }}</span>{{ end }}
+          {{ range . }}
+            {{ $tagURL := printf "/tags/%s/" (urlize .) }}
+            <a href="{{ $tagURL }}" rel="tag">#{{ . }}</a>
+          {{ end }}
         </div>
       {{ end }}
     </header>
