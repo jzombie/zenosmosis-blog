@@ -49,7 +49,7 @@ TPC-H, an OLAP (Online Analytical Processing) benchmark, is aimed squarely at da
     - Dormant high-balance customers (Q22)
 
 - **Single-stream and multi-stream performance**
-  The composite metric QphH@Size (TPC-H Queries per Hour at a specific Scale Factor) is a geometric mean of two separate tests:
+  The composite metric `QphH@Size` (TPC-H **Queries per Hour** at a specific **Scale Factor**) is a geometric mean of two separate tests:
     - **Power** *(@Size)*: A single-stream test where all 22 queries (Q1-Q22) are run sequentially. This measures the raw query optimization and execution speed.
 
     - **Throughput** *(@Size)*: A multi-stream test where multiple concurrent query streams (each running Q1-Q22) are executed at the same time as the two data modification (Refresh) streams. This measures the system’s scalability and concurrency handling under load.
