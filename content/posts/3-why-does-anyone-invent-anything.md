@@ -2,7 +2,7 @@
 title: "Why does anyone invent anything?"
 date: 2025-11-14T08:00:00Z
 description: "Why are there multiple brands of [anything] with extremely similar features..."
-tags: ["building", "reinventing-the-wheel", "systems-design", "software"]
+tags: ["building", "reinventing-the-wheel", "systems-design"]
 ---
 
 Why are there multiple brands of cars with extremely similar features? Most of them have four wheels, a steering wheel, pedals in roughly the same layout, a windshield, and a trunk. From far enough away, a Honda and a BMW are the same object: a metal box that moves you from A to B.
