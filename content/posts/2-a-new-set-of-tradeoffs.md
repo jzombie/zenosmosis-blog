@@ -25,5 +25,4 @@ A few interviews in, I bombed one. That was the end of that.
 
 But one of the things they asked about in that failed round was something I did not know yet and had been thinking about building for myself anyway. So after the interview died, I started building it.
 
-That is how this project started: not with a clean vision, but with a door closing, a question I could not shake, and the decision to just
-build the thing on my own, to learn how it could truly work in conjunction with my own set of trade-offs that I would subsequently impose on such a system.
+That is how this project started: not with a clean vision, but with a door closing, a question I could not shake, and the decision to just build the thing on my own, to learn how it could truly work in conjunction with my own set of trade-offs that I would subsequently impose on such a system.
