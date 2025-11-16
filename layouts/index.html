@@ -27,7 +27,10 @@
             <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}</p>
             <div class="post-card__tags">
               {{ with .Params.tags }}
-                {{ range first 3 . }}<span>#{{ . }}</span>{{ end }}
+                {{ range first 3 . }}
+                  {{ $tagURL := printf "/tags/%s/" (urlize .) }}
+                  <a href="{{ $tagURL }}" rel="tag">#{{ . }}</a>
+                {{ end }}
               {{ end }}
             </div>
             <a class="post-card__cta" href="{{ .RelPermalink }}">Read more</a>
