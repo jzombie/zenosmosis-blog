@@ -470,6 +470,15 @@ a:hover {
 	z-index: 1000;
 }
 
+.no-js [data-search-open],
+.no-js [data-search-panel] {
+	display: none !important;
+}
+
+.has-js .search-panel {
+	display: flex;
+}
+
 .search-panel.is-open {
 	opacity: 1;
 	pointer-events: auto;

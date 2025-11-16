@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
+<html lang="{{ .Site.Language.Lang }}" class="no-js">
 
 <head>
   <meta charset="utf-8">
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('has-js');
+  </script>
   {{ $siteTitle := .Site.Title }}
   {{ $pageTitle := $siteTitle }}
   {{ $ogTitle := $siteTitle }}
