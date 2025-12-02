@@ -25,7 +25,6 @@ Here is the scenario: You are currently on feature-branch,  and you need code fr
 
 **The Simplified `git read-tree` Workflow:**
 
-
 ```bash
 # Update your branch with the remote branch
 git read-tree <other-branch>
