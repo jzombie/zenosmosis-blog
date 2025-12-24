@@ -80,3 +80,7 @@ Most of these are intuitive, but a few trip people up.
 ### 4. Use it or lose it
 
 You don't need intense flashcards. Just look for opportunities to use it. The next time you call to make a reservation or confirm an appointment, force yourself to use the phonetic alphabet. It feels cool, it saves time, and the person on the other end of the line will thank you.
+
+## Additional reading
+
+https://en.wikipedia.org/wiki/NATO_phonetic_alphabet
