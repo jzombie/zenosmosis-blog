@@ -49,7 +49,7 @@ When running locally, swap the origin for `http://localhost:1313`. Each file is 
 docker compose build
 
 # run nginx serving the generated site on http://localhost:1313
-docker compose up -d
+docker compose up
 ```
 
 This flow mirrors production: the Dockerfile runs `hugo --minify` in a builder stage, copies the generated `public/` directory into an nginx image, and serves it on port 80 (mapped to 1313 locally).
@@ -59,10 +59,8 @@ This flow mirrors production: the Dockerfile runs `hugo --minify` in a builder s
 For faster iteration use the included `docker-compose.dev.yml`, which mounts the repo into a Hugo server container:
 
 ```bash
-docker compose -f docker-compose.dev.yml up -d --remove-orphans
+docker compose -f docker-compose.dev.yml up --remove-orphans
 ```
-
-- `-d` keeps the server running in the background while you edit.
 - `--remove-orphans` cleans up the production-style `web` service if you previously ran `docker compose up` so the two stacks don’t conflict on port 1313.
 
 The dev service runs `hugo server -D --bind 0.0.0.0 --port 1313 --baseURL http://localhost:1313` inside the `klakegg/hugo:ext-alpine` image while mounting the current folder at `/src`. Any edits to content, layouts, or static assets trigger Hugo’s live-reload pipeline automatically; your browser refreshes as soon as files change.
