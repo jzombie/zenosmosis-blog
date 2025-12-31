@@ -13,8 +13,13 @@
   {{ $pageTitle := $siteTitle }}
   {{ $ogTitle := $siteTitle }}
   {{ if not .IsHome }}
-    {{ $pageTitle = printf "%s · %s" .Title $siteTitle }}
     {{ $ogTitle = .Title }}
+    {{ if and (eq .Kind "term") (eq .Data.Singular "tag") }}
+      {{ $pageTitle = printf "#%s · %s" .Title $siteTitle }}
+      {{ $ogTitle = printf "#%s" .Title }}
+    {{ else }}
+      {{ $pageTitle = printf "%s · %s" .Title $siteTitle }}
+    {{ end }}
   {{ end }}
   {{ $description := .Site.Params.description }}
   {{ with .Description }}
