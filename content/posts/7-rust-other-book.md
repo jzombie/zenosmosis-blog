@@ -1,8 +1,8 @@
 ---
 title: "Rust's \"Other\" Official Book (The Reference Guide)"
 date: 2025-12-31T00:00:00Z
-description: "While The Rust Book is excellent, it doesn’t dive deep into the core language specification."
-tags: ["rust", "building", "systems-design"]
+description: "While The Rust Book is excellent, it doesn’t dive deep into the core language specification. But fear not, fellow Rustaceans, as another guide lives on the same domain as the Book itself."
+tags: ["rust-programming-language", "building", "systems-design"]
 ---
 
 I’ve used `macro_rules!` plenty of times, but recently I wanted to explore the full range of available **fragment specifiers**. I wasn't trying to learn *how* to write a macro; I just wanted to know every single option available to me beyond the usual `$x:expr` or `$y:ident`.
@@ -25,7 +25,7 @@ https://doc.rust-lang.org/reference/
 * **Goal:** Defines what Rust *is*. It describes the grammar, strict syntax rules, and edge cases. It is dry, precise, and exhaustive.  
 * **Use it for:** Looking up exact rules (like macro matchers), operator precedence, and memory models.
 
----
+----
 
-By the way, if you are looking for the exact definitions of macro metavariables (like I was), they are defined in the Reference here: [https://doc.rust-lang.org/reference/macros-by-example.html\#metavariables](https://doc.rust-lang.org/reference/macros-by-example.html#metavariables)
+*By the way, if you are looking for the exact definitions of macro metavariables (like I was), they are defined in the Reference here: [https://doc.rust-lang.org/reference/macros-by-example.html\#metavariables](https://doc.rust-lang.org/reference/macros-by-example.html#metavariables)*
 
