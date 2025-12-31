@@ -293,6 +293,35 @@ a:hover {
 	text-decoration: none;
 }
 
+/* Sidebar tags panel */
+.tag-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.45rem;
+}
+
+.tag-list .tag {
+	display: inline-flex;
+ 	align-items: center;
+ 	gap: 0.35rem;
+ 	padding: 0.25rem 0.6rem;
+ 	border-radius: 0.65rem;
+ 	background: rgba(255, 255, 255, 0.03);
+ 	color: var(--accent);
+ 	font-size: 0.85rem;
+ 	text-decoration: none;
+ 	white-space: nowrap; /* keep tag and count together */
+}
+
+.tag-list .tag:hover {
+ 	background: rgba(141, 125, 255, 0.08);
+}
+
+.tag-list .tag-count {
+ 	color: var(--muted);
+ 	font-size: 0.78rem;
+}
+
 .post-card__cta {
 	margin-top: 1rem;
 	display: inline-flex;
