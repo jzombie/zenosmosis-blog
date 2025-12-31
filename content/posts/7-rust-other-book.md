@@ -2,7 +2,7 @@
 title: "Rust's \"Other\" Official Book (The Reference Guide)"
 date: 2025-12-31T00:00:00Z
 description: "While The Rust Book is excellent, it doesn’t dive deep into the core language specification. But fear not, fellow Rustaceans, as another guide lives on the same domain as the Book itself."
-tags: ["rust-programming-language", "building", "systems-design"]
+tags: ["rust", "building", "systems-design"]
 ---
 
 I’ve used `macro_rules!` plenty of times, but recently I wanted to explore the full range of available **fragment specifiers**. I wasn't trying to learn *how* to write a macro; I just wanted to know every single option available to me beyond the usual `$x:expr` or `$y:ident`.
