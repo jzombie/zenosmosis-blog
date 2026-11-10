@@ -28,7 +28,7 @@ To prevent context window truncation and token bloat during ingestion, repositor
 
 A critical challenge this framework seeks to solve is the "dual constituency problem", the friction between providing rich visual storytelling for human psychology and maintaining a strict token economy for AI agents.
 
-Visualizing complex systems using inline text-to-diagram tools (such as Mermaid.js) is classified as a severe anti-pattern in this proposal. Inline rendering consumes thousands of context tokens on proprietary syntax, bankrupting the agent's peripheral budget and actively degrading its ability to reason about the codebase. The Magnet Vector framework resolves this via strict decoupling:
+Visualizing complex systems using inline text-to-diagram tools (such as [Mermaid.js](https://mermaid.js.org/)) is classified as a severe anti-pattern in this proposal. Inline rendering consumes thousands of context tokens on proprietary syntax, bankrupting the agent's peripheral budget and actively degrading its ability to reason about the codebase. The Magnet Vector framework resolves this via strict decoupling:
 
 * **For AI Agents:** Topological statistics and dependency maps should be rendered as dense Markdown tables. Language models parse these spatial relationships natively, achieving the highest possible density-to-token ratio.
 
