@@ -1,0 +1,20 @@
+{{- $site := .Site -}}
+{{- $posts := where $site.RegularPages "Section" "posts" -}}
+{{- $items := first 10 ($posts.ByDate.Reverse) -}}
+# {{ $site.Title }}
+
+> {{ with $site.Params.description }}{{ . }}{{ else }}Notes from {{ $site.Params.author }}.{{ end }}
+
+Author: [{{ $site.Params.author }}]({{ $site.Params.githubPersonalURL }})
+Site: {{ strings.TrimSuffix "/" $site.BaseURL }}/
+
+## Posts
+
+{{ range $items -}}
+- [{{ .Title }}]({{ .Permalink }}): {{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 200 }}{{ end }}
+{{ end }}
+## Elsewhere
+
+- [Web]({{ $site.Params.websiteURL }}): professional site
+- [GitHub org]({{ $site.Params.githubOrgURL }}): professional work
+- [GitHub personal]({{ $site.Params.githubPersonalURL }}): personal projects

@@ -4,7 +4,7 @@ title = "zenOSmosis blog"
 # No external theme used; site uses simple internal layouts in /layouts
 
 [outputs]
-home = ["HTML", "JSON", "ActivityRSS", "ActivityAtom", "ActivityJSON"]
+home = ["HTML", "JSON", "ActivityRSS", "ActivityAtom", "ActivityJSON", "LLMS", "LLMSFULL"]
 section = ["HTML", "JSON"]
 
 [mediaTypes]
@@ -36,6 +36,22 @@ section = ["HTML", "JSON"]
 		mediaType = "application/feed+json"
 		baseName = "activity"
 		suffix = "json"
+		rel = "alternate"
+			isPlainText = true
+
+	[outputFormats.LLMS]
+		name = "LLMS"
+		mediaType = "text/plain"
+		baseName = "llms"
+		suffix = "txt"
+		rel = "alternate"
+			isPlainText = true
+
+	[outputFormats.LLMSFULL]
+		name = "LLMSFULL"
+		mediaType = "text/plain"
+		baseName = "llms-full"
+		suffix = "txt"
 		rel = "alternate"
 			isPlainText = true
 
