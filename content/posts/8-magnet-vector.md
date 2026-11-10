@@ -1,51 +1,57 @@
 ---
-title: "The Magnet Vector Framework: A Proposal for Algorithmic Growth and Autonomous Discovery"
+title: "The Magnet Vector: Architecting a Shared Latent Space for Autonomous Discovery"
 date: 2026-11-10T00:00:00Z
-description: "Autonomous, programmatic inbound distribution pipeline, dense coordinates in latent space for humans and AI agents."
-tags: ["systems-design", "GEO", "llms.txt", "algorithmic-arbitrage"]
+description: "Shared latent space for humans and machines, designed for autonomous discovery and maximum impact."
+tags: ["systems-design", "algorithmic-arbitrage", "latent-space", "automation"]
 draft: true
 ---
 
-As the digital distribution landscape shifts away from legacy search engines toward AI scrapers and semantic search, traditional outbound marketing and visual SEO are rapidly losing efficacy. In response, this document outlines the proposed **Magnet Vector** framework: a theoretical blueprint for an autonomous, programmatic inbound distribution pipeline.
+The traditional push model of digital distribution, blindly submitting resumes into portals, publishing keyword stuffed SEO articles, and begging algorithms for attention, is functionally dead. Artificial intelligence and semantic search have rendered these outbound tactics obsolete.
 
-The core hypothesis is that instead of forcing a static document into a crowded digital void, a [repository](https://github.com/jzombie) can be engineered as a dense coordinate in a latent space. By mathematically aligning high-value metadata, code, and documentation to the exact parameters automated algorithms seek, the system proposes to create a localized "magnetic pull". The goal is to leverage algorithmic arbitrage, allowing discovery algorithms to perform the marketing labor autonomously.
+To survive this shift, this document proposes the **Magnet Vector** framework: a strategy that abandons outbound marketing in favor of constructing a shared latent space for humans and machines alike.
 
-To achieve this alignment, the architecture proposes a strict partitioning of data to serve two fundamentally different consumers: artificial intelligence agents and human reviewers. Any system or repository built under this framework should be evaluated against the following structural mandates.
+The core hypothesis is that instead of forcing a static document into a crowded digital void, a [repository](https://github.com/jzombie) can be engineered as a dense coordinate in a latent space. By mathematically aligning high value metadata, code, and documentation to the exact parameters automated algorithms seek, the system proposes to create a localized magnetic pull. The goal is to leverage algorithmic arbitrage, allowing discovery algorithms to perform the marketing labor autonomously.
 
-### 1. Generative Engine Optimization (GEO) & The Machine Vector
+### 1. The Physics of Semantic Gravity
 
-The Magnet Vector framework proposes abandoning traditional visual optimization in favor of Generative Engine Optimization (GEO), explicitly embracing Large Language Model (LLM) scrapers. The primary routing layer for this machine-to-machine interaction is proposed to be the [**`llms.txt` protocol (currently v2 specification)**](https://llmstxt.org/).
+The term _Magnet Vector_ captures the mechanics of this distribution model:
 
-To prevent context window truncation and token bloat during ingestion, repositories must expose curated, machine-readable entry points. Human context stays completely out of `llms.txt`:
+* **It is a Vector:** In modern AI search, concepts are high dimensional arrays. Your project is not judged on visual flair, it is a coordinate on a large map. Focus on deep semantic meaning over superficial keywords and your footprint sits at a specific, calculated location.
 
-* **Human Layer (`README.md` or Web UI):** Visual hierarchies, SVG animations, narrative biographies, interactive elements. This never goes in `llms.txt`.
+* **It is a Magnet:** When a project reaches semantic density, it exerts inbound pull. Because the meaning is structured, it draws anyone who lands on it, whether an AI agent parsing code or a human looking for a solution, deeper into the broader architecture.
 
-* **Machine Layer (`llms.txt`):** Strictly a terse, machine-parseable summary and routing map. No marketing slogans or SEO titles. Enforce a 5-10 item link limit and keep the file under 5,000 tokens so the agent routes only to the crown jewels.
+You are not marketing, you are building a beacon. Map your exact capabilities to the exact queries of your audience and you create pull.
 
-* **The Foundational Context Vector:** The `llms.txt` file must begin with a single H1 header containing the exact project name, immediately followed by a blockquote summary. This strict Markdown hierarchy is designed to provide the agent with an instantaneous, highly concentrated understanding of the repository, establishing the semantic anchor for the entire session.
+### 2. Auto-Marketing via Algorithmic Arbitrage
 
-* **Modular Fetching:** Target URLs must be grouped by H2 headers using standard Markdown lists, appended with a single-sentence descriptive context. This allows the agent to extract core facts without expending network requests or context tokens to fetch the underlying URL.
+The core is algorithmic arbitrage, treating a recommendation engine or retrieval pipeline as an inefficient market, and attention as the mispriced asset. You do not manually convince humans if you can mathematically convince their assistants.
 
-* **Model Context Protocol (MCP):** The framework proposes exposing capabilities dynamically via an MCP server. By utilizing progressive disclosure, AI applications can natively discover and execute external tools without requiring brittle, bespoke integration code.
+This engine operates across a few high level vectors:
 
-### 2. The Dual-Audience Architecture
+* **Generative Engine Optimization (GEO):** Answer engines and IDE agents are starved for structured, deterministic data. Provide pristine machine readable summaries and scrapers ingest your work, then synthesize and recommend it as the definitive solution.
 
-A critical challenge this framework seeks to solve is the "dual constituency problem", the friction between providing rich visual storytelling for human psychology and maintaining a strict token economy for AI agents.
+* **Autonomous Agent Discovery:** Expose tools as Model Context Protocol (MCP) servers on unified gateways. When a human prompts an AI to solve a problem, the AI searches the registry, calculates similarity between need and tool, and integrates your work without human intervention.
 
-Visualizing complex systems using inline text-to-diagram tools (such as [Mermaid.js](https://mermaid.js.org/)) is classified as a severe anti-pattern in this proposal. Inline rendering consumes thousands of context tokens on proprietary syntax, bankrupting the agent's peripheral budget and actively degrading its ability to reason about the codebase. The Magnet Vector framework resolves this via strict decoupling:
+* **Workflow Gravity:** Syndicate automated technical telemetry through RSS feeds. This captures power users, quants, and senior engineers who live on aggregators, bypassing social noise.
 
-* **For AI Agents:** Topological statistics and dependency maps should be rendered as dense Markdown tables. Language models parse these spatial relationships natively, achieving the highest possible density-to-token ratio.
+### 3. Are We in Alignment
 
-* **For Human Evaluators:** Complex architecture must be visualized using Scalable Vector Graphics (SVGs) generated as discrete, external assets. By referencing these files strictly via standard HTML `<img>` tags or Markdown image syntax, the underlying XML code is hidden from the crawler. This creates an impenetrable token firewall, the AI agent skips the file path and reads the table, while the human browser seamlessly renders the high-fidelity graph.
+This is the primary use of this document. When building a new feature in another repo, or creating new content for maximum impact, ask: are we in alignment?
 
-### 3. Surviving Aggressive Sanitization
+* Does this asset have one clear coordinate, one sentence that says what it is and who it is for?
+* Can both a human and a machine extract that in seconds, each in their preferred surface?
+* Does it route deeper, one link leading to the next layer, not a dead end?
+* Does it add density, or does it dilute the space with fluff?
+* If an agent had only the summary, would it cite us correctly?
 
-Deploying decoupled SVGs across strict Markdown environments (like GitHub) requires anticipating case-sensitive XML parsers designed to prevent CSS-based attacks. When utilizing advanced SVG tags (like `foreignObject`), relying on embedded CSS classes (e.g., `.label { overflow: visible; }`) causes silent failures and clipped typography because the host's HTML serializer aggressively normalizes tags to lowercase.
+If yes, ship it. If no, the feature or post is not ready for the latent space, regardless of how polished it looks.
 
-To guarantee visual legibility, the Magnet Vector pipeline proposes dynamically generating SVGs with the `overflow="visible"` attribute hardcoded directly inline on the SVG elements. This engineering bypass completely avoids the CSS matching engine, ensuring the graphics survive platform sanitization.
+### 4. Structural Foundation in Brief
 
-### 4. Telemetry and Passive Acquisition Alignment
+Implementation is secondary to the above, and will be detailed separately. High level only:
 
-The ultimate objective of the Magnet Vector framework is permanent, passive acquisition. The operational philosophy driving this alignment is detailed extensively in the foundational file **Magnet Vector / Resume Leverage / Personal Forensic Assessment**.
+The routing layer for machine discovery is proposed to be the [**`llms.txt` protocol (currently v2 specification)**](https://llmstxt.org/). Human context stays completely out of `llms.txt`. The human layer lives in `README.md` or Web UI with visuals and narrative. The machine layer stays terse, H1 plus blockquote plus H2 grouped links with single sentence context, limited to the crown jewels, under 5,000 tokens.
 
-To convert this theoretical pull into verifiable engagement, the framework proposes syndicating automated, highly technical events, such as anomaly detections or mdBook documentation compilations, directly to RSS feeds. This establishes a continuous broadcast of objective technical data, casting a targeted net for power-users, senior systems engineers, and quantitative analysts who rely on automated feed aggregators.
+Where `llms.txt` is the routing map, `llms-full.txt` is the full dump. Same source, single file with complete content for agents that want to ingest everything in one shot instead of following links.
+
+For repos that produce visual assets, prefer dense tables in text for topology and external SVGs linked via image tags for humans. Inline text to diagram tools (such as [Mermaid.js](https://mermaid.js.org/)) have a place where they fit, but they are not the core of this framework and should not dominate the article or the repo.
