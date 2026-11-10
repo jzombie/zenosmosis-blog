@@ -48,8 +48,6 @@ You may be wondering, **_Is it not just SEO?_**
 | **Where it overlaps** | Clear titles and good structure help agents too | Same: clarity helps humans too |
 | **Honest limits** | Mature, measured, gamed constantly | Younger evidence base; a file alone guarantees nothing; quality of the underlying work still decides |
 
-![The Magnet Vector as a coordinate in latent space, pulling AI agents left and humans right into human and machine layers](magnet-vector-autonomous-discovery-pipeline.jpg "Autonomous discovery pipeline: one dense coordinate pulls AI agents and humans into human and machine layers")
-
 ### 3. Are We in Alignment
 
 This is the primary use of this document. When building a new feature in another repo, or creating new content for maximum impact, ask: _are we in alignment?_
