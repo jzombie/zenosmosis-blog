@@ -18,7 +18,7 @@ The deployment runs two containers in one Docker network — `mosquitto` (`eclip
 
 The defining feature of the [`docker-compose.yml`](https://github.com/jzombie/docker-mqtt-mosquitto-cloudflare-tunnel/blob/main/docker-compose.yml) is what is missing: no published inbound host ports.
 
-Instead, the `cloudflared` container runs `tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}` to establish a persistent outbound connection to the [Cloudflare](https://www.cloudflare.com/) edge via [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/). The origin stays closed and invisible to the public internet. Tunnels are included in the [Cloudflare Zero Trust free tier](https://www.cloudflare.com/plans/) ($0 for up to 50 users). Full setup, including Zero Trust dashboard steps and `.env` configuration, is in the repo [README](https://github.com/jzombie/docker-mqtt-mosquitto-cloudflare-tunnel) and [docs site](https://docs.docker-mqtt-mosquitto-cloudflare-tunnel.zenosmosis.com/). See also the official [Connect networks docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/).
+Instead, the `cloudflared` container runs `tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}` to establish a persistent outbound connection to the [Cloudflare](https://www.cloudflare.com/) edge via [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/). The origin stays closed and invisible to the public internet. Full setup, including Zero Trust dashboard steps and `.env` configuration, is in the repo [README](https://github.com/jzombie/docker-mqtt-mosquitto-cloudflare-tunnel) and [docs site](https://docs.docker-mqtt-mosquitto-cloudflare-tunnel.zenosmosis.com/).
 
 ### Edge TLS and Internal Resolution
 
@@ -29,5 +29,9 @@ Public routing and cryptography are offloaded to Cloudflare:
 * **Local WebSocket handshake:** [`mosquitto.conf`](https://github.com/jzombie/docker-mqtt-mosquitto-cloudflare-tunnel/blob/main/mosquitto.conf) listens on `1883` (native MQTT, container-internal only) and `9001` with `protocol websockets`. The tunnel targets the WebSocket listener.
 
 Result: high-throughput MQTT-over-WebSockets without opening anything inbound.
+
+### Is it Free?
+
+Yes for this use case. [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/) is included in the [Cloudflare Zero Trust free tier](https://www.cloudflare.com/plans/) — $0 for up to 50 users. That covers the tunnel connector, Zero Trust Network Access, and device client. See the official [Connect networks docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/) for setup.
 
 > Note: the default `mosquitto.conf` on `main` uses `allow_anonymous true`. Treat it as a starting primitive, not a production policy. For hardening patterns — per-user ACLs and retained-message handling — see the [`protected-no-wildcard` branch](https://github.com/jzombie/docker-mqtt-mosquitto-cloudflare-tunnel/tree/protected-no-wildcard) and [compare view](https://github.com/jzombie/docker-mqtt-mosquitto-cloudflare-tunnel/compare/main...protected-no-wildcard).
