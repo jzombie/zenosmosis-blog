@@ -3,7 +3,7 @@ title: "The Magnet Vector: A Shared Latent Space for Autonomous Discovery"
 date: 2026-11-10T00:00:00Z
 description: "Shared latent space for humans and machines, designed for autonomous discovery and maximum impact."
 tags: ["systems-design", "algorithmic-arbitrage", "latent-space", "automation", "auto-marketing"]
-draft: true
+draft: false
 ---
 
 > _As of Nov 2026, this is a proposal. Parts described were directional at writing time._
