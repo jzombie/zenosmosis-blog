@@ -6,7 +6,7 @@ tags: ["systems-design", "algorithmic-arbitrage", "latent-space", "automation"]
 draft: true
 ---
 
-> As of Nov 2026, this is a proposal. Parts described were directional at writing time.
+> _As of Nov 2026, this is a proposal. Parts described were directional at writing time._
 
 The traditional push model of digital distribution, blindly submitting resumes into portals, publishing keyword stuffed SEO articles, and begging algorithms for attention, is functionally dead. Artificial intelligence and semantic search have rendered these outbound tactics obsolete.
 
