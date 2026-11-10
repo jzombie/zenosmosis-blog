@@ -211,6 +211,7 @@ a:hover {
 	border: none;
 	background: var(--accent);
 	color: white;
+	font: inherit;
 	font-weight: 600;
 	box-shadow: 0 15px 35px var(--glow);
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
