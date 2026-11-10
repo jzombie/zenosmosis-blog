@@ -16,7 +16,11 @@ To achieve this alignment, the architecture proposes a strict partitioning of da
 
 The Magnet Vector framework proposes abandoning traditional visual optimization in favor of Generative Engine Optimization (GEO), explicitly embracing Large Language Model (LLM) scrapers. The primary routing layer for this machine-to-machine interaction is proposed to be the [**`llms.txt` protocol (currently v2 specification)**](https://llmstxt.org/).
 
-To prevent context window truncation and token bloat during ingestion, repositories must expose curated, machine-readable entry points:
+To prevent context window truncation and token bloat during ingestion, repositories must expose curated, machine-readable entry points. Human context stays completely out of `llms.txt`:
+
+* **Human Layer (`README.md` or Web UI):** Visual hierarchies, SVG animations, narrative biographies, interactive elements. This never goes in `llms.txt`.
+
+* **Machine Layer (`llms.txt`):** Strictly a terse, machine-parseable summary and routing map. No marketing slogans or SEO titles. Enforce a 5-10 item link limit and keep the file under 5,000 tokens so the agent routes only to the crown jewels.
 
 * **The Foundational Context Vector:** The `llms.txt` file must begin with a single H1 header containing the exact project name, immediately followed by a blockquote summary. This strict Markdown hierarchy is designed to provide the agent with an instantaneous, highly concentrated understanding of the repository, establishing the semantic anchor for the entire session.
 
