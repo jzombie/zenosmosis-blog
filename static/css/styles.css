@@ -530,10 +530,27 @@ a:hover {
 }
 
 @media (max-width: 640px) {
+	.post,
+	.post__body {
+		overflow-x: hidden;
+	}
 	.post__body table {
-		display: block;
-		overflow-x: auto;
-		font-size: 0.85rem;
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		max-width: 100%;
+		font-size: 0.8rem;
+	}
+	.post__body th,
+	.post__body td {
+		white-space: normal;
+		min-width: 0;
+		overflow-wrap: anywhere;
+		word-break: break-word;
+	}
+	.post__body th:first-child,
+	.post__body td:first-child {
+		width: 18%;
 	}
 }
 
@@ -776,7 +793,20 @@ a:hover {
 		padding: 1.75rem;
 	}
 
+	.shell {
+		padding: 0 0.75rem;
+	}
+
+	.site-main {
+		padding: 1.5rem 0 2rem;
+	}
+
 	.post {
-		padding: 1.5rem;
+		padding: 1rem;
+	}
+
+	.post__body th,
+	.post__body td {
+		padding: 0.45rem 0.5rem;
 	}
 }
