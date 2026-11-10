@@ -53,8 +53,12 @@
   <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} activity RSS" href="/activity.xml">
   <link rel="alternate" type="application/atom+xml" title="{{ .Site.Title }} activity Atom" href="/activity.atom">
   <link rel="alternate" type="application/feed+json" title="{{ .Site.Title }} activity JSON" href="/activity.json">
-  <link rel="describedby" href="/llms.txt" type="text/plain">
-  <link rel="alternate" href="/llms-full.txt" type="text/plain" title="{{ .Site.Title }} full text">
+{{ with .Site.Home.OutputFormats.Get "LLMS" -}}
+  <link rel="describedby" href="{{ .Permalink }}" type="text/plain">
+{{- end }}
+{{ with .Site.Home.OutputFormats.Get "LLMSFULL" -}}
+  <link rel="alternate" href="{{ .Permalink }}" type="text/plain" title="{{ $.Site.Title }} full text">
+{{- end }}
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

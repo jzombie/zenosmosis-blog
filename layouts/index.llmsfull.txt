@@ -1,6 +1,6 @@
 {{- $site := .Site -}}
 {{- $posts := where $site.RegularPages "Section" "posts" -}}
-{{- $items := first 10 ($posts.ByDate.Reverse) -}}
+{{- $items := $posts.ByDate.Reverse -}}
 # {{ $site.Title }}
 
 > {{ with $site.Params.description }}{{ . }}{{ else }}Notes from {{ $site.Params.author }}.{{ end }}
@@ -21,6 +21,6 @@ Site: {{ strings.TrimSuffix "/" $site.BaseURL }}/
 Source: {{ .Permalink }}
 Published: {{ .Date.Format "2006-01-02" }}
 
-{{ .Plain }}
+{{ .RawContent }}
 
 {{ end }}
