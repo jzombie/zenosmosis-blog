@@ -11,8 +11,22 @@
 	--glow: rgba(141, 125, 255, 0.35);
 }
 
-* {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
+}
+
+html,
+body {
+	overflow-x: clip;
+}
+
+@supports not (overflow: clip) {
+	html,
+	body {
+		overflow-x: hidden;
+	}
 }
 
 body {
@@ -76,6 +90,10 @@ a:hover {
 	justify-content: space-between;
 	padding: 1.5rem 0;
 	gap: 1rem;
+}
+
+.masthead .masthead__inner {
+	padding-inline: 1.25rem;
 }
 
 .brand {
@@ -500,8 +518,10 @@ a:hover {
 
 .post__body table {
 	width: 100%;
+	max-width: 100%;
 	margin: 1.5rem 0;
 	border-collapse: collapse;
+	table-layout: fixed;
 	font-size: 0.95rem;
 	line-height: 1.5;
 }
@@ -512,12 +532,15 @@ a:hover {
 	padding: 0.6rem 0.8rem;
 	text-align: left;
 	vertical-align: top;
+	white-space: normal;
+	min-width: 0;
+	overflow-wrap: anywhere;
+	word-break: break-word;
 }
 
 .post__body th {
 	background: rgba(255, 255, 255, 0.06);
 	font-weight: 600;
-	white-space: nowrap;
 }
 
 .post__body tr:nth-child(even) td {
@@ -525,7 +548,6 @@ a:hover {
 }
 
 .post__body td:first-child {
-	white-space: nowrap;
 	font-weight: 500;
 }
 
@@ -795,6 +817,10 @@ a:hover {
 
 	.shell {
 		padding: 0 0.75rem;
+	}
+
+	.masthead .masthead__inner {
+		padding: 1rem 0.75rem;
 	}
 
 	.site-main {

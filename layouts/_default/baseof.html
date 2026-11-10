@@ -59,7 +59,8 @@
 {{ with .Site.Home.OutputFormats.Get "LLMSFULL" -}}
   <link rel="alternate" href="{{ .Permalink }}" type="text/plain" title="{{ $.Site.Title }} full text">
 {{- end }}
-  <link rel="stylesheet" href="/css/styles.css">
+  {{ $css := resources.Get "css/styles.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
