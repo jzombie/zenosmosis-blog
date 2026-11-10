@@ -7,7 +7,7 @@ tags: []
 
 I’m Jeremy ([jzombie](https://github.com/jzombie)), an independent systems engineer building infrastructure under the research studio [zenOSmosis](https://zenosmosis.com).
 
-This blog intends to document some of the underlying primitives, architectural mechanics, and sub-systems that compose a larger infrastructure stack which I have been composing primarily using the [Rust programming language](https://rust-lang.org/).
+This blog intends to document some of the underlying primitives, architectural mechanics, and sub-systems that compose a larger infrastructure stack which I have been building primarily using the [Rust programming language](https://rust-lang.org/).
 
 Some of the pieces that I have been building include:
 
@@ -19,5 +19,5 @@ Some of the pieces that I have been building include:
 ### Discovery & Machine Context
 
 This ecosystem is structured for both human engineers and autonomous agents:
-- **For humans:** Technical postmortems, architecture breakdowns, and benchmarks live across the [posts](/posts/) archive.
+- **For humans:** Technical breakdowns and benchmarks live across the [posts](/posts/) archive.
 - **For AI agents and IDE assistants:** Machine-readable routing maps and full context streams are published at [/llms.txt](/llms.txt) and [/llms-full.txt](/llms-full.txt).
