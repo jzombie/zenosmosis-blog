@@ -52,7 +52,7 @@ You may be wondering, **_Is it not just SEO?_**
 
 ### 3. Are We in Alignment
 
-This is the primary use of this document. When building a new feature in another repo, or creating new content for maximum impact, ask: are we in alignment?
+This is the primary use of this document. When building a new feature in another repo, or creating new content for maximum impact, ask: _are we in alignment?_
 
 * Does this asset have one clear coordinate, one sentence that says what it is and who it is for?
 * Can both a human and a machine extract that in seconds, each in their preferred surface?
