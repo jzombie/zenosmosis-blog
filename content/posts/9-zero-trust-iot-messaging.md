@@ -18,7 +18,7 @@ The deployment runs two containers in one Docker network — `mosquitto` (`eclip
 
 The defining feature of the [`docker-compose.yml`](https://github.com/jzombie/docker-mqtt-mosquitto-cloudflare-tunnel/blob/main/docker-compose.yml) is what is missing: no published inbound host ports.
 
-Instead, the `cloudflared` container runs `tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}` to establish a persistent outbound connection to the Cloudflare edge. The origin stays closed and invisible to the public internet. Full setup, including Zero Trust dashboard steps and `.env` configuration, is in the repo [README](https://github.com/jzombie/docker-mqtt-mosquitto-cloudflare-tunnel) and [docs site](https://docs.docker-mqtt-mosquitto-cloudflare-tunnel.zenosmosis.com/).
+Instead, the `cloudflared` container runs `tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}` to establish a persistent outbound connection to the [Cloudflare](https://www.cloudflare.com/) edge via [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/). The origin stays closed and invisible to the public internet. Tunnels are included in the [Cloudflare Zero Trust free tier](https://www.cloudflare.com/plans/) ($0 for up to 50 users). Full setup, including Zero Trust dashboard steps and `.env` configuration, is in the repo [README](https://github.com/jzombie/docker-mqtt-mosquitto-cloudflare-tunnel) and [docs site](https://docs.docker-mqtt-mosquitto-cloudflare-tunnel.zenosmosis.com/). See also the official [Connect networks docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/).
 
 ### Edge TLS and Internal Resolution
 
