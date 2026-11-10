@@ -1,7 +1,7 @@
 ---
 title: "The Magnet Vector Framework: A Proposal for Algorithmic Growth and Autonomous Discovery"
 date: 2026-11-10T00:00:00Z
-description: "Autonomous, programmatic inbound distribution pipeline — dense coordinates in latent space for humans and AI agents."
+description: "Autonomous, programmatic inbound distribution pipeline, dense coordinates in latent space for humans and AI agents."
 tags: ["systems-design", "GEO", "llms.txt", "algorithmic-arbitrage"]
 draft: true
 ---
@@ -26,13 +26,13 @@ To prevent context window truncation and token bloat during ingestion, repositor
 
 ### 2. The Dual-Audience Architecture
 
-A critical challenge this framework seeks to solve is the "dual constituency problem" — the friction between providing rich visual storytelling for human psychology and maintaining a strict token economy for AI agents.
+A critical challenge this framework seeks to solve is the "dual constituency problem", the friction between providing rich visual storytelling for human psychology and maintaining a strict token economy for AI agents.
 
 Visualizing complex systems using inline text-to-diagram tools (such as Mermaid.js) is classified as a severe anti-pattern in this proposal. Inline rendering consumes thousands of context tokens on proprietary syntax, bankrupting the agent's peripheral budget and actively degrading its ability to reason about the codebase. The Magnet Vector framework resolves this via strict decoupling:
 
 * **For AI Agents:** Topological statistics and dependency maps should be rendered as dense Markdown tables. Language models parse these spatial relationships natively, achieving the highest possible density-to-token ratio.
 
-* **For Human Evaluators:** Complex architecture must be visualized using Scalable Vector Graphics (SVGs) generated as discrete, external assets. By referencing these files strictly via standard HTML `<img>` tags or Markdown image syntax, the underlying XML code is hidden from the crawler. This creates an impenetrable token firewall — the AI agent skips the file path and reads the table, while the human browser seamlessly renders the high-fidelity graph.
+* **For Human Evaluators:** Complex architecture must be visualized using Scalable Vector Graphics (SVGs) generated as discrete, external assets. By referencing these files strictly via standard HTML `<img>` tags or Markdown image syntax, the underlying XML code is hidden from the crawler. This creates an impenetrable token firewall, the AI agent skips the file path and reads the table, while the human browser seamlessly renders the high-fidelity graph.
 
 ### 3. Surviving Aggressive Sanitization
 
@@ -44,4 +44,4 @@ To guarantee visual legibility, the Magnet Vector pipeline proposes dynamically 
 
 The ultimate objective of the Magnet Vector framework is permanent, passive acquisition. The operational philosophy driving this alignment is detailed extensively in the foundational file **Magnet Vector / Resume Leverage / Personal Forensic Assessment**.
 
-To convert this theoretical pull into verifiable engagement, the framework proposes syndicating automated, highly technical events — such as anomaly detections or mdBook documentation compilations — directly to RSS feeds. This establishes a continuous broadcast of objective technical data, casting a targeted net for power-users, senior systems engineers, and quantitative analysts who rely on automated feed aggregators.
+To convert this theoretical pull into verifiable engagement, the framework proposes syndicating automated, highly technical events, such as anomaly detections or mdBook documentation compilations, directly to RSS feeds. This establishes a continuous broadcast of objective technical data, casting a targeted net for power-users, senior systems engineers, and quantitative analysts who rely on automated feed aggregators.
