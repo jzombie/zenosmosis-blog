@@ -13,6 +13,7 @@ Site: {{ strings.TrimSuffix "/" $site.BaseURL }}/
 {{ range $items -}}
 - [{{ .Title }}]({{ .Permalink }}): {{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 200 }}{{ end }}
 {{ end }}
+
 ## Elsewhere
 
 - [Web]({{ $site.Params.websiteURL }}): professional site
