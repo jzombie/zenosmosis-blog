@@ -70,6 +70,8 @@ The routing layer for machine discovery is proposed to be the [**`llms.txt` prot
 
 Where `llms.txt` is the routing map, `llms-full.txt` is the full dump. Same source, single file with complete content for agents that want to ingest everything in one shot instead of following links.
 
+The [paper behind the name](https://arxiv.org/abs/2311.09735) puts it this way: “GEO can boost visibility by up to 40% in generative engine responses.” Astro went the other way, removing the files because “we have seen little uptake in usage, these files get very little traffic” ([withastro/docs#13538](https://github.com/withastro/docs/pull/13538)). This proposal bets the paper is the better read: low hits on a machine endpoint are not low value.
+
 Some major projects (such as [Astro in April 2026](https://github.com/withastro/docs/pull/13538)) abandoned these files entirely because they measured very little traffic. This is a misunderstanding of the latent space: they applied human metrics (pageviews) to a machine endpoint. Agent pull context is heavily cached, pre-fetched, and bursty, meaning a single, invisible fetch can seed dozens of downstream decisions. Low hits do not equal low value.
 
 We explicitly reject that removal logic and keep both. To prevent drift, both files are generated from the same source values. The `llms.txt` file serves as the default index, while `llms-full.txt` ships as an explicit, heavy carrier for agents that want to bulk ingest everything in one shot instead of following links.
