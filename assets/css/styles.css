@@ -1,26 +1,39 @@
 :root {
-	--bg: #040711;
-	--bg-alt: #090f21;
-	--card: rgba(13, 20, 41, 0.92);
+	--bg: #0a0a0c;
+	--bg-alt: #101014;
+	--card: rgba(18, 18, 22, 0.96);
 	--ink: #f4f6ff;
-	--muted: #9aa7d6;
-	--accent: #8d7dff;
-	--accent-soft: rgba(141, 125, 255, 0.18);
+	--muted: #8fa8cf;
+	--accent: #3c8fe0;
+	--accent-soft: rgba(14, 30, 50, 0.9);
 	--border: rgba(255, 255, 255, 0.08);
 	--shell: 1040px;
-	--glow: rgba(141, 125, 255, 0.35);
+	--glow: rgba(60, 143, 224, 0.35);
 }
 
-* {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
+}
+
+html,
+body {
+	overflow-x: clip;
+}
+
+@supports not (overflow: clip) {
+	html,
+	body {
+		overflow-x: hidden;
+	}
 }
 
 body {
 	font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 	margin: 0;
 	min-height: 100vh;
-	background: radial-gradient(circle at 15% 20%, rgba(141, 125, 255, 0.18), transparent 40%),
-		radial-gradient(circle at 80% 0%, rgba(38, 188, 255, 0.2), transparent 45%),
+	background: radial-gradient(circle at 50% -10%, rgba(60, 143, 224, 0.1), transparent 55%),
 		var(--bg);
 	color: var(--ink);
 	line-height: 1.6;
@@ -30,7 +43,7 @@ body::before {
 	content: "";
 	position: fixed;
 	inset: 0;
-	background: linear-gradient(160deg, rgba(9, 15, 33, 0.75), rgba(4, 7, 17, 0.85));
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 240px);
 	z-index: -1;
 }
 
@@ -41,7 +54,7 @@ a {
 }
 
 a:hover {
-	color: #c9c2ff;
+	color: #9fdcf3;
 }
 
 .shell {
@@ -65,7 +78,7 @@ a:hover {
 }
 
 .masthead {
-	background: linear-gradient(120deg, rgba(14, 20, 45, 0.95), rgba(6, 8, 21, 0.95));
+	background: #0d0d10;
 	border-bottom: 1px solid var(--border);
 	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
 }
@@ -76,6 +89,10 @@ a:hover {
 	justify-content: space-between;
 	padding: 1.5rem 0;
 	gap: 1rem;
+}
+
+.masthead .masthead__inner {
+	padding-inline: 1.25rem;
 }
 
 .brand {
@@ -124,7 +141,7 @@ a:hover {
 }
 
 .hero {
-	background: linear-gradient(135deg, rgba(18, 28, 68, 0.95), rgba(10, 15, 36, 0.95));
+	background: linear-gradient(180deg, #12161d, #0e1116);
 	border: 1px solid rgba(255, 255, 255, 0.06);
 	border-radius: 1.5rem;
 	padding: 2.75rem;
@@ -138,7 +155,7 @@ a:hover {
 	content: "";
 	position: absolute;
 	inset: 0;
-	background: radial-gradient(circle at 75% 20%, rgba(141, 125, 255, 0.35), transparent 40%);
+	background: radial-gradient(circle at 75% 20%, rgba(85, 206, 233, 0.22), transparent 40%);
 	opacity: 0.8;
 	pointer-events: none;
 }
@@ -159,7 +176,7 @@ a:hover {
 .hero__lead p {
 	margin: 0 0 1rem;
 	font-size: 1.1rem;
-	color: #ced4f9;
+	color: #c6d6ec;
 }
 
 .hero__cta {
@@ -201,7 +218,7 @@ a:hover {
 
 .button:hover {
 	transform: translateY(-1px);
-	box-shadow: 0 20px 45px rgba(141, 125, 255, 0.45);
+	box-shadow: 0 20px 45px rgba(60, 143, 224, 0.45);
 }
 
 .button--ghost {
@@ -314,7 +331,7 @@ a:hover {
 }
 
 .tag-list .tag:hover {
- 	background: rgba(141, 125, 255, 0.08);
+ 	background: rgba(85, 206, 233, 0.1);
 }
 
 .tag-list .tag-count {
@@ -328,7 +345,7 @@ a:hover {
 	align-items: center;
 	gap: 0.35rem;
 	font-weight: 600;
-	color: #cfd2ff;
+	color: #bcd7f2;
 	text-transform: uppercase;
 	font-size: 0.85rem;
 	letter-spacing: 0.08em;
@@ -351,7 +368,7 @@ a:hover {
 }
 
 .panel {
-	background: linear-gradient(145deg, rgba(12, 18, 39, 0.95), rgba(8, 11, 27, 0.95));
+	background: var(--card);
 	border: 1px solid rgba(255, 255, 255, 0.05);
 	border-radius: 1rem;
 	padding: 1.5rem;
@@ -431,7 +448,7 @@ a:hover {
 	height: 3px;
 	margin-bottom: 0.85rem;
 	border-radius: 999px;
-	background: linear-gradient(90deg, var(--accent), rgba(141, 125, 255, 0));
+	background: linear-gradient(90deg, var(--accent), rgba(60, 143, 224, 0));
 }
 
 .post__body hr {
@@ -448,7 +465,7 @@ a:hover {
 	height: 3px;
 	margin-bottom: 0.85rem;
 	border-radius: 999px;
-	background: linear-gradient(90deg, var(--accent), rgba(141, 125, 255, 0));
+	background: linear-gradient(90deg, var(--accent), rgba(60, 143, 224, 0));
 }
 
 .post__body h3 {
@@ -457,7 +474,7 @@ a:hover {
 	font-size: clamp(1.25rem, 2.6vw, 1.6rem);
 	text-transform: uppercase;
 	letter-spacing: 0.12em;
-	color: #b7c0ef;
+	color: #a3bede;
 }
 
 .post__body h4,
@@ -465,7 +482,7 @@ a:hover {
 	margin-top: 1.5rem;
 	margin-bottom: 0.35rem;
 	font-size: 1.05rem;
-	color: #c2c9f3;
+	color: #a9c6e4;
 	text-transform: uppercase;
 	letter-spacing: 0.16em;
 	padding-top: 0.75rem;
@@ -475,6 +492,87 @@ a:hover {
 .post__body img {
 	max-width: 100%;
 	border-radius: 0.75rem;
+}
+
+.post__figure {
+	margin: 1.75rem 0;
+}
+
+.post__figure img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: auto;
+	object-fit: contain;
+	border-radius: 0.75rem;
+}
+
+.post__figure figcaption {
+	margin-top: 0.6rem;
+	font-size: 0.9rem;
+	line-height: 1.5;
+	color: var(--muted);
+	text-align: center;
+}
+
+.post__body table {
+	width: 100%;
+	max-width: 100%;
+	margin: 1.5rem 0;
+	border-collapse: collapse;
+	table-layout: fixed;
+	font-size: 0.95rem;
+	line-height: 1.5;
+}
+
+.post__body th,
+.post__body td {
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	padding: 0.6rem 0.8rem;
+	text-align: left;
+	vertical-align: top;
+	white-space: normal;
+	min-width: 0;
+	overflow-wrap: anywhere;
+	word-break: break-word;
+}
+
+.post__body th {
+	background: rgba(255, 255, 255, 0.06);
+	font-weight: 600;
+}
+
+.post__body tr:nth-child(even) td {
+	background: rgba(255, 255, 255, 0.02);
+}
+
+.post__body td:first-child {
+	font-weight: 500;
+}
+
+@media (max-width: 640px) {
+	.post,
+	.post__body {
+		overflow-x: hidden;
+	}
+	.post__body table {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		max-width: 100%;
+		font-size: 0.8rem;
+	}
+	.post__body th,
+	.post__body td {
+		white-space: normal;
+		min-width: 0;
+		overflow-wrap: anywhere;
+		word-break: break-word;
+	}
+	.post__body th:first-child,
+	.post__body td:first-child {
+		width: 18%;
+	}
 }
 
 .post-nav {
@@ -490,7 +588,7 @@ a:hover {
 .site-footer {
 	border-top: 1px solid var(--border);
 	padding: 2rem 0;
-	background: rgba(4, 7, 17, 0.85);
+	background: rgba(10, 10, 12, 0.92);
 	color: var(--muted);
 	font-size: 0.95rem;
 }
@@ -631,7 +729,7 @@ a:hover {
 
 .toc {
 	margin: 1.5rem 0;
-	background: rgba(10, 15, 38, 0.85);
+	background: rgba(8, 8, 11, 0.92);
 	border: 1px dashed rgba(255, 255, 255, 0.12);
 	border-radius: 0.85rem;
 	padding: 1rem 1.25rem;
@@ -716,7 +814,24 @@ a:hover {
 		padding: 1.75rem;
 	}
 
+	.shell {
+		padding: 0 0.75rem;
+	}
+
+	.masthead .masthead__inner {
+		padding: 1rem 0.75rem;
+	}
+
+	.site-main {
+		padding: 1.5rem 0 2rem;
+	}
+
 	.post {
-		padding: 1.5rem;
+		padding: 1rem;
+	}
+
+	.post__body th,
+	.post__body td {
+		padding: 0.45rem 0.5rem;
 	}
 }
