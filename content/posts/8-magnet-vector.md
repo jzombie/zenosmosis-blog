@@ -28,8 +28,6 @@ You are not manually marketing in the traditional sense, you are building a beac
 
 The core is algorithmic arbitrage, treating a recommendation engine or retrieval pipeline as an inefficient market, and attention as the mispriced asset. You do not manually convince humans if you can mathematically convince their assistants.
 
-Algorithmic arbitrage does not rely on a single channel. GEO controls how generative engines cite text. Magnet Vector is the wider pipeline for discovery, execution, and inward routing:
-
 This engine operates across a few high level vectors:
 
 * **[Generative Engine Optimization (GEO)](https://arxiv.org/abs/2311.09735):** Per the paper, adding citations, quotations, and statistics can lift visibility in generated answers up to about 40 percent, with fluency helping and effects varying by domain. Keyword stuffing, the classic SEO move, does not transfer. Better odds of being cited, not a guarantee of being the definitive answer.
@@ -37,6 +35,8 @@ This engine operates across a few high level vectors:
 * **Autonomous Agent Discovery:** Expose tools as [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) servers on unified gateways. When a human prompts an AI to solve a problem, the AI searches the registry, calculates similarity between need and tool, and integrates your work without human intervention.
 
 * **Workflow Gravity:** Syndicate automated technical telemetry through [RSS](https://www.rssboard.org/rss-specification) feeds. This captures power users, quants, and senior engineers who live on aggregators, bypassing social noise.
+
+GEO controls how generative engines cite text. Magnet Vector is the wider pipeline for discovery, execution, and inward routing. It does not rely on a single channel.
 
 You may be wondering, **_Is it not just SEO or GEO?_**
 
