@@ -18,7 +18,7 @@ The core hypothesis is that instead of forcing a static document into a crowded 
 
 The term _Magnet Vector_ captures the mechanics of this distribution model:
 
-* **It is a Vector:** In modern AI search, concepts are high dimensional arrays. Your project is not judged on visual flair, it is a coordinate on a large map. Focus on deep semantic meaning over superficial keywords and your footprint sits at a specific, calculated location.
+* **It is a Vector:** In modern AI search, concepts are high dimensional arrays. An AI model searching for content likely will not judge your project on visual flair, it is a coordinate on a large map. Focus on deep semantic meaning over superficial keywords and your footprint sits at a specific, calculated location.
 
 * **It is a Magnet:** When a project reaches semantic density, it exerts inbound pull. Because the meaning is structured, it draws anyone who lands on it, whether an AI agent parsing code or a human looking for a solution, deeper into the broader architecture.
 
