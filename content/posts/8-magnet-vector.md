@@ -8,7 +8,7 @@ draft: true
 
 As the digital distribution landscape shifts away from legacy search engines toward AI scrapers and semantic search, traditional outbound marketing and visual SEO are rapidly losing efficacy. In response, this document outlines the proposed **Magnet Vector** framework: a theoretical blueprint for an autonomous, programmatic inbound distribution pipeline.
 
-The core hypothesis is that instead of forcing a static document into a crowded digital void, a repository can be engineered as a dense coordinate in a latent space. By mathematically aligning high-value metadata, code, and documentation to the exact parameters automated algorithms seek, the system proposes to create a localized "magnetic pull". The goal is to leverage algorithmic arbitrage, allowing discovery algorithms to perform the marketing labor autonomously.
+The core hypothesis is that instead of forcing a static document into a crowded digital void, a [repository](https://github.com/jzombie) can be engineered as a dense coordinate in a latent space. By mathematically aligning high-value metadata, code, and documentation to the exact parameters automated algorithms seek, the system proposes to create a localized "magnetic pull". The goal is to leverage algorithmic arbitrage, allowing discovery algorithms to perform the marketing labor autonomously.
 
 To achieve this alignment, the architecture proposes a strict partitioning of data to serve two fundamentally different consumers: artificial intelligence agents and human reviewers. Any system or repository built under this framework should be evaluated against the following structural mandates.
 
