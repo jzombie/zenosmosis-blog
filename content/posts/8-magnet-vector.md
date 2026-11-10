@@ -38,7 +38,7 @@ This engine operates across a few high level vectors:
 
 GEO controls how generative engines cite text. Magnet Vector is the wider pipeline for discovery, execution, and inward routing. It does not rely on a single channel.
 
-You may be wondering, **_Is it not just SEO or GEO?_**
+**A brief comparison of methodologies:**
 
 | | Traditional SEO | GEO | Magnet Vector (this proposal) |
 |---|---|---|---|
