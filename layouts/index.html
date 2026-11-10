@@ -9,7 +9,7 @@
     <div class="hero__cta">
       <a class="button" href="/posts/">Browse all posts</a>
       <button class="button button--ghost" type="button" data-search-open>Search notes</button>
-      <a class="button button--ghost" href="mailto:info@zenosmosis.com">Say hello</a>
+      <a class="button button--ghost" href="mailto:{{ .Site.Params.email }}">Say hello</a>
     </div>
   </section>
 
@@ -44,7 +44,7 @@
     <aside class="sidebar">
       <section class="panel">
         <h3>About</h3>
-        <p>I'm <a href="https://github.com/jzombie" target="_blank" rel="noopener">jzombie</a>, experimenting with setting up this blog.</p>
+        <p>I'm <a href="{{ .Site.Params.githubPersonalURL }}" target="_blank" rel="noopener">{{ .Site.Params.author }}</a>, experimenting with setting up this blog.</p>
       </section>
 
       <!-- <section class="panel">
@@ -59,9 +59,9 @@
       <section class="panel">
         <h3>Elsewhere</h3>
         <ul>
-          <li><a href="https://zenosmosis.com" target="_blank" rel="noopener">Web</a></li>
-          <li><a href="https://github.com/zenosmosis" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="mailto:info@zenosmosis.com">Email</a></li>
+          <li><a href="{{ .Site.Params.websiteURL }}" target="_blank" rel="noopener">Web</a></li>
+          <li><a href="{{ .Site.Params.githubOrgURL }}" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:{{ .Site.Params.email }}">Email</a></li>
         </ul>
       </section>
       <section class="panel">

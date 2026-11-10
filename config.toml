@@ -47,6 +47,10 @@ section = ["HTML", "JSON"]
 
 [params]
 author = "jzombie"
+githubPersonalURL = "https://github.com/jzombie"
+githubOrgURL = "https://github.com/zenosmosis"
+websiteURL = "https://zenosmosis.com"
+email = "info@zenosmosis.com"
 description = "Quietly ambitious software, in public."
 socialImage = "/social/zenOSmosis-blog-card-1200x630.jpg"
 socialImageAlt = "zenOSmosis blog"
