@@ -6,6 +6,8 @@ tags: ["systems-design", "algorithmic-arbitrage", "latent-space", "automation"]
 draft: true
 ---
 
+> As of Nov 2026, this is a proposal. Parts described were directional at writing time.
+
 The traditional push model of digital distribution, blindly submitting resumes into portals, publishing keyword stuffed SEO articles, and begging algorithms for attention, is functionally dead. Artificial intelligence and semantic search have rendered these outbound tactics obsolete.
 
 To survive this shift, this document proposes the **Magnet Vector** framework: a strategy that abandons outbound marketing in favor of constructing a shared latent space for humans and machines alike.
