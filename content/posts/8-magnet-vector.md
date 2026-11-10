@@ -54,4 +54,8 @@ The routing layer for machine discovery is proposed to be the [**`llms.txt` prot
 
 Where `llms.txt` is the routing map, `llms-full.txt` is the full dump. Same source, single file with complete content for agents that want to ingest everything in one shot instead of following links.
 
+Some major projects (such as [Astro in April 2026](https://github.com/withastro/docs/pull/13538)) abandoned these files entirely because they measured very little traffic. This is a misunderstanding of the latent space: they applied human metrics (pageviews) to a machine endpoint. Agent pull context is heavily cached, pre-fetched, and bursty, meaning a single, invisible fetch can seed dozens of downstream decisions. Low hits do not equal low value.
+
+We explicitly reject that removal logic and keep both. To prevent drift, both files are generated from the same source values. The `llms.txt` file serves as the default index, while `llms-full.txt` ships as an explicit, heavy carrier for agents that want to bulk ingest everything in one shot instead of following links.
+
 For repos that produce visual assets, prefer dense tables in text for topology and external SVGs linked via image tags for humans. Inline text to diagram tools (such as [Mermaid.js](https://mermaid.js.org/)) have a place where they fit, but they are not the core of this framework and should not dominate the article or the repo.
