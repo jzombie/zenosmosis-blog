@@ -30,7 +30,7 @@ The core is algorithmic arbitrage, treating a recommendation engine or retrieval
 
 This engine operates across a few high level vectors:
 
-* **[Generative Engine Optimization (GEO)](https://arxiv.org/abs/2311.09735):** Answer engines and IDE agents are starved for structured, deterministic data. Provide pristine machine readable summaries and scrapers ingest your work, then synthesize and recommend it as the definitive solution.
+* **[Generative Engine Optimization (GEO)](https://arxiv.org/abs/2311.09735):** Per the paper, adding citations, quotations, and statistics can lift visibility in generated answers up to about 40 percent, with fluency helping and effects varying by domain. Keyword stuffing, the classic SEO move, does not transfer. Better odds of being cited, not a guarantee of being the definitive answer.
 
 * **Autonomous Agent Discovery:** Expose tools as [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) servers on unified gateways. When a human prompts an AI to solve a problem, the AI searches the registry, calculates similarity between need and tool, and integrates your work without human intervention.
 
