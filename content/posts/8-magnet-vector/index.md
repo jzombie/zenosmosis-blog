@@ -36,6 +36,18 @@ This engine operates across a few high level vectors:
 
 * **Workflow Gravity:** Syndicate automated technical telemetry through [RSS](https://www.rssboard.org/rss-specification) feeds. This captures power users, quants, and senior engineers who live on aggregators, bypassing social noise.
 
+You may be wondering, **_Is it not just SEO?_**
+
+| | SEO | GEO (this proposal) |
+|---|---|---|
+| **Consumer** | Human scanning results | Agent assembling an answer or code |
+| **Goal** | Earn the click | Earn correct execution or citation without a visit |
+| **Surface** | Results page | Generated response, IDE agent loop |
+| **Main signals** | Backlinks, keywords, meta tags, page experience | Structured summaries, `llms.txt` routing, MCP tools, clean prose |
+| **Success metric** | Rankings, CTR, traffic | Task success, citation accuracy, tokens spent |
+| **Where it overlaps** | Clear titles and good structure help agents too | Same: clarity helps humans too |
+| **Honest limits** | Mature, measured, gamed constantly | Younger evidence base; a file alone guarantees nothing; quality of the underlying work still decides |
+
 ![The Magnet Vector as a coordinate in latent space, pulling AI agents left and humans right into human and machine layers](magnet-vector-autonomous-discovery-pipeline.jpg "Autonomous discovery pipeline: one dense coordinate pulls AI agents and humans into human and machine layers")
 
 ### 3. Are We in Alignment

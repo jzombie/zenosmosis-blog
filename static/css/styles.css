@@ -498,6 +498,45 @@ a:hover {
 	text-align: center;
 }
 
+.post__body table {
+	width: 100%;
+	margin: 1.5rem 0;
+	border-collapse: collapse;
+	font-size: 0.95rem;
+	line-height: 1.5;
+}
+
+.post__body th,
+.post__body td {
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	padding: 0.6rem 0.8rem;
+	text-align: left;
+	vertical-align: top;
+}
+
+.post__body th {
+	background: rgba(255, 255, 255, 0.06);
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.post__body tr:nth-child(even) td {
+	background: rgba(255, 255, 255, 0.02);
+}
+
+.post__body td:first-child {
+	white-space: nowrap;
+	font-weight: 500;
+}
+
+@media (max-width: 640px) {
+	.post__body table {
+		display: block;
+		overflow-x: auto;
+		font-size: 0.85rem;
+	}
+}
+
 .post-nav {
 	display: flex;
 	justify-content: space-between;
