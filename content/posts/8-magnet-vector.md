@@ -28,6 +28,8 @@ You are not manually marketing in the traditional sense, you are building a beac
 
 The core is algorithmic arbitrage, treating a recommendation engine or retrieval pipeline as an inefficient market, and attention as the mispriced asset. You do not manually convince humans if you can mathematically convince their assistants.
 
+Algorithmic arbitrage does not rely on a single channel. GEO controls how generative engines cite text. Magnet Vector is the wider pipeline for discovery, execution, and inward routing:
+
 This engine operates across a few high level vectors:
 
 * **[Generative Engine Optimization (GEO)](https://arxiv.org/abs/2311.09735):** Per the paper, adding citations, quotations, and statistics can lift visibility in generated answers up to about 40 percent, with fluency helping and effects varying by domain. Keyword stuffing, the classic SEO move, does not transfer. Better odds of being cited, not a guarantee of being the definitive answer.
@@ -36,17 +38,17 @@ This engine operates across a few high level vectors:
 
 * **Workflow Gravity:** Syndicate automated technical telemetry through [RSS](https://www.rssboard.org/rss-specification) feeds. This captures power users, quants, and senior engineers who live on aggregators, bypassing social noise.
 
-You may be wondering, **_Is it not just SEO?_**
+You may be wondering, **_Is it not just SEO or GEO?_**
 
-| | SEO | GEO (this proposal) |
-|---|---|---|
-| **Consumer** | Human scanning results | Agent assembling an answer or code |
-| **Goal** | Earn the click | Earn correct execution or citation without a visit |
-| **Surface** | Results page | Generated response, IDE agent loop |
-| **Main signals** | Backlinks, keywords, meta tags, page experience | Structured summaries, `llms.txt` routing, MCP tools, clean prose |
-| **Success metric** | Rankings, CTR, traffic | Task success, citation accuracy, tokens spent |
-| **Where it overlaps** | Clear titles and good structure help agents too | Same: clarity helps humans too |
-| **Honest limits** | Mature, measured, gamed constantly | Younger evidence base; a file alone guarantees nothing; quality of the underlying work still decides |
+| | Traditional SEO | GEO | Magnet Vector (this proposal) |
+|---|---|---|---|
+| **Consumer** | Human scanning results | Agent assembling an answer | Agent executing code or solving a task |
+| **Goal** | Earn the click | Earn the citation | Earn execution, adoption, and inward routing |
+| **Surface** | Results page | Generated response | Generated response, agent loop, registry |
+| **Main signals** | Backlinks, keywords, meta tags, page experience | Citations, statistics, quotations, fluency, clean structure | Structured summaries, `llms.txt` routing, MCP tools, registry presence, clean prose |
+| **Success metric** | Rankings, CTR, traffic | Citation visibility and accuracy | Task success, tool use, traversal depth |
+| **Scope** | Single URL | Single passage | Multi-node ecosystem where each entry routes deeper |
+| **Honest limits** | Mature, measured, gamed constantly | Younger evidence base, domain dependent | A file or listing alone guarantees nothing; quality of the underlying work still decides |
 
 ### 3. Are We in Alignment
 
