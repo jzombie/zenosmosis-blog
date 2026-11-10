@@ -28,11 +28,11 @@ The core is algorithmic arbitrage, treating a recommendation engine or retrieval
 
 This engine operates across a few high level vectors:
 
-* **Generative Engine Optimization (GEO):** Answer engines and IDE agents are starved for structured, deterministic data. Provide pristine machine readable summaries and scrapers ingest your work, then synthesize and recommend it as the definitive solution.
+* **[Generative Engine Optimization (GEO)](https://arxiv.org/abs/2311.09735):** Answer engines and IDE agents are starved for structured, deterministic data. Provide pristine machine readable summaries and scrapers ingest your work, then synthesize and recommend it as the definitive solution.
 
-* **Autonomous Agent Discovery:** Expose tools as Model Context Protocol (MCP) servers on unified gateways. When a human prompts an AI to solve a problem, the AI searches the registry, calculates similarity between need and tool, and integrates your work without human intervention.
+* **Autonomous Agent Discovery:** Expose tools as [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) servers on unified gateways. When a human prompts an AI to solve a problem, the AI searches the registry, calculates similarity between need and tool, and integrates your work without human intervention.
 
-* **Workflow Gravity:** Syndicate automated technical telemetry through RSS feeds. This captures power users, quants, and senior engineers who live on aggregators, bypassing social noise.
+* **Workflow Gravity:** Syndicate automated technical telemetry through [RSS](https://www.rssboard.org/rss-specification) feeds. This captures power users, quants, and senior engineers who live on aggregators, bypassing social noise.
 
 ### 3. Are We in Alignment
 
