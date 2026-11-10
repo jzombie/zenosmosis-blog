@@ -1,6 +1,6 @@
 services:
   dev:
-    image: klakegg/hugo:ext-alpine
+    image: klakegg/hugo:0.111.3-ext-alpine
     working_dir: /src
     command: server -D --bind 0.0.0.0 --port 1313 --baseURL http://localhost:1313
     volumes:

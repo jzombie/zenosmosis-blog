@@ -1,5 +1,5 @@
 # Multi-stage build: use an official Hugo image to build the static site, then serve with nginx
-FROM klakegg/hugo:ext-alpine AS builder
+FROM klakegg/hugo:0.111.3-ext-alpine AS builder
 
 WORKDIR /src
 # copy the whole repository (site sources)
