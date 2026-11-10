@@ -36,6 +36,8 @@ This engine operates across a few high level vectors:
 
 * **Workflow Gravity:** Syndicate automated technical telemetry through [RSS](https://www.rssboard.org/rss-specification) feeds. This captures power users, quants, and senior engineers who live on aggregators, bypassing social noise.
 
+![The Magnet Vector as a coordinate in latent space, pulling AI agents left and humans right into human and machine layers](magnet-vector-autonomous-discovery-pipeline.jpg "Autonomous discovery pipeline: one dense coordinate pulls AI agents and humans into human and machine layers")
+
 ### 3. Are We in Alignment
 
 This is the primary use of this document. When building a new feature in another repo, or creating new content for maximum impact, ask: are we in alignment?

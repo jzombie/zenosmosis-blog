@@ -477,6 +477,27 @@ a:hover {
 	border-radius: 0.75rem;
 }
 
+.post__figure {
+	margin: 1.75rem 0;
+}
+
+.post__figure img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: auto;
+	object-fit: contain;
+	border-radius: 0.75rem;
+}
+
+.post__figure figcaption {
+	margin-top: 0.6rem;
+	font-size: 0.9rem;
+	line-height: 1.5;
+	color: var(--muted);
+	text-align: center;
+}
+
 .post-nav {
 	display: flex;
 	justify-content: space-between;
