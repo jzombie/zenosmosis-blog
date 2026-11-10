@@ -2,7 +2,7 @@
 title: "The Magnet Vector: A Shared Latent Space for Autonomous Discovery"
 date: 2026-11-10T00:00:00Z
 description: "Shared latent space for humans and machines, designed for autonomous discovery and maximum impact."
-tags: ["systems-design", "algorithmic-arbitrage", "latent-space", "automation"]
+tags: ["systems-design", "algorithmic-arbitrage", "latent-space", "automation", "auto-marketing"]
 draft: true
 ---
 
@@ -50,7 +50,7 @@ GEO controls how generative engines cite text. Magnet Vector is the wider pipeli
 | **Scope** | Single URL | Single passage | Multi-node ecosystem where each entry routes deeper |
 | **Honest limits** | Mature, measured, gamed constantly | Younger evidence base, domain dependent | A file or listing alone guarantees nothing; quality of the underlying work still decides |
 
-### 3. Are We in Alignment
+### 3. Are We in Alignment?
 
 This is the primary use of this document. When building a new feature in another repo, or creating new content for maximum impact, ask: _are we in alignment?_
 
