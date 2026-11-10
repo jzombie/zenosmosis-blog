@@ -9,7 +9,7 @@ I’m Jeremy ([jzombie](https://github.com/jzombie)), an independent systems eng
 
 This blog intends to document some of the underlying primitives, architectural mechanics, and sub-systems that compose a larger infrastructure stack which I have been composing primarily using the [Rust programming language](https://rust-lang.org/).
 
-Some of pieces that I have been building include:
+Some of the pieces that I have been building include:
 
 - **Terminal Desktop Environments:** [`term-wm`](https://github.com/jzombie/term-wm) — A spatial tiling window manager and remote desktop designed to run entirely inside terminal emulators over low-bandwidth SSH links.
 - **Process Orchestration & Build DSLs:** [`rust-oxdock`](https://github.com/jzombie/rust-oxdock) — A containerless automation engine and build DSL that isolates process execution, asset embedding, and synchronized dual-target documentation.
