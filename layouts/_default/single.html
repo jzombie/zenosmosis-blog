@@ -3,6 +3,7 @@
     <header class="post__header">
       <p class="eyebrow">{{ humanize .Section }}</p>
       <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="post__dek">{{ . }}</p>{{ end }}
       <p class="post__meta">Published {{ .Date.Format "02 Jan 2006" }} · {{ .ReadingTime }} min read</p>
       {{ with .Params.tags }}
         <div class="post__tags">
