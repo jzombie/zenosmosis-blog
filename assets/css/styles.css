@@ -118,11 +118,36 @@ a:hover {
 	font-weight: 700;
 	font-size: 1.25rem;
 	color: white;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	text-decoration: none;
+}
+
+.brand__logo {
+	height: 32px;
+	width: auto;
+	display: block;
+}
+
+.brand__suffix {
+	font-weight: 600;
+	letter-spacing: 0.01em;
 }
 
 .tagline {
 	margin: 0.25rem 0 0;
 	color: var(--muted);
+}
+
+.tagline__link {
+	color: inherit;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+.tagline__link:hover {
+	color: white;
 }
 
 .nav {
