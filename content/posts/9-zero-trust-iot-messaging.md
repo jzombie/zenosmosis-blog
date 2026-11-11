@@ -12,7 +12,7 @@ Exposing port 1883 on a public server to run an MQTT broker is a liability. It i
 
 The [`docker-mqtt-mosquitto-cloudflare-tunnel`](https://github.com/jzombie/docker-mqtt-mosquitto-cloudflare-tunnel) repository provides a structural fix: eliminate the inbound attack surface entirely.
 
-### The Outbound-Only Architecture
+## The Outbound-Only Architecture
 
 The deployment runs two containers in one Docker network: `mosquitto` (`eclipse-mosquitto:latest`) and `cloudflared` (`cloudflare/cloudflared:latest`).
 
@@ -22,7 +22,7 @@ Instead, the `cloudflared` container runs `tunnel --no-autoupdate run --token ${
 
 Note the dashboard screenshots have not been re-verified recently and may have drifted, so treat the [official docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/) as source of truth.
 
-### Edge TLS and Internal Resolution
+## Edge TLS and Internal Resolution
 
 Public routing and cryptography are offloaded to Cloudflare:
 
@@ -32,7 +32,7 @@ Public routing and cryptography are offloaded to Cloudflare:
 
 Result: high-throughput MQTT-over-WebSockets without opening anything inbound.
 
-### Is it Free?
+## Is it Free?
 
 Yes for this use case. [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/) is included in the [Cloudflare Zero Trust free tier](https://www.cloudflare.com/plans/) at $0 for up to 50 users. That covers the tunnel connector, Zero Trust Network Access, and device client.
 
