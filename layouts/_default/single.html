@@ -1,7 +1,7 @@
 {{ define "main" }}
   <article class="post">
     <header class="post__header">
-      <p class="eyebrow">{{ humanize .Section }}</p>
+      <p class="eyebrow eyebrow--link"><a href="{{ printf "/%s/" .Section | relURL }}">← {{ humanize .Section }}</a></p>
       <h1>{{ .Title }}</h1>
       {{ with .Description }}<p class="post__dek">{{ . }}</p>{{ end }}
       <p class="post__meta">Published {{ .Date.Format "02 Jan 2006" }} · {{ .ReadingTime }} min read</p>

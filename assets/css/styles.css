@@ -413,6 +413,22 @@ a:hover {
 	font-size: 0.8rem;
 }
 
+.eyebrow a {
+	color: inherit;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+	text-decoration-color: rgba(255, 255, 255, 0.3);
+}
+
+.eyebrow a:hover {
+	color: var(--accent);
+	text-decoration-color: var(--accent);
+}
+
+.eyebrow--link a {
+	text-decoration-color: rgba(255, 255, 255, 0.3);
+}
+
 .page-header h1 {
 	margin-bottom: 0.5rem;
 }
