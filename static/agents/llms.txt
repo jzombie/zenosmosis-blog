@@ -1,0 +1,12 @@
+# zenOSmosis Agent Contract
+
+> Shared bot context for zenOSmosis repos. Router for Magnet Vector alignment; payload lives in linked files.
+
+## Alignment
+
+- [Alignment contract](https://blog.zenosmosis.com/agents/alignment.md): when Magnet Vector applies, 5 condensed alignment questions, scope guardrails.
+- [Magnet Vector proposal](https://blog.zenosmosis.com/posts/8-magnet-vector/): human narrative, do not quote unprompted.
+
+## Spec
+
+- [llms.txt v2](https://llmstxt.org/): router format reference.
