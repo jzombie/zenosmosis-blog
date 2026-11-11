@@ -14,7 +14,7 @@ To survive this shift, this document proposes the **Magnet Vector** framework: a
 
 The core hypothesis is that instead of forcing a static document into a crowded digital void, a [repository](https://github.com/jzombie) can be engineered as a dense coordinate in a latent space. By mathematically aligning high value metadata, code, and documentation to the exact parameters automated algorithms seek, the system proposes to create a localized magnetic pull. The goal is to leverage algorithmic arbitrage, allowing discovery algorithms to perform the marketing labor autonomously.
 
-### 1. The Physics of Semantic Gravity
+## 1. The Physics of Semantic Gravity
 
 The term _Magnet Vector_ captures the mechanics of this distribution model:
 
@@ -24,7 +24,7 @@ The term _Magnet Vector_ captures the mechanics of this distribution model:
 
 You are not manually marketing in the traditional sense, you are building a beacon. Map your technical capabilities to the semantic intent of your audience and you create pull.
 
-### 2. Auto-Marketing via Algorithmic Arbitrage
+## 2. Auto-Marketing via Algorithmic Arbitrage
 
 The core is algorithmic arbitrage, treating a recommendation engine or retrieval pipeline as an inefficient market, and attention as the mispriced asset. You do not manually convince humans if you can mathematically convince their assistants.
 
@@ -50,7 +50,7 @@ GEO controls how generative engines cite text. Magnet Vector is the wider pipeli
 | **Scope** | Single URL | Single passage | Multi-node ecosystem where each entry routes deeper |
 | **Honest limits** | Mature, measured, gamed constantly | Younger evidence base, domain dependent | A file or listing alone guarantees nothing; quality of the underlying work still decides |
 
-### 3. Are We in Alignment?
+## 3. Are We in Alignment?
 
 This is the primary use of this document. When building a new feature in another repo, or creating new content for maximum impact, ask: _are we in alignment?_
 
@@ -62,7 +62,7 @@ This is the primary use of this document. When building a new feature in another
 
 If yes, ship it. If no, the feature or post is not ready for the latent space, regardless of how polished it looks.
 
-### 4. Structural Foundation in Brief
+## 4. Structural Foundation in Brief
 
 Implementation is secondary to the above, and will be detailed separately. High level only:
 
