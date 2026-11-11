@@ -1,0 +1,7 @@
+{{ $isExternal := false }}
+{{ if or (hasPrefix .Destination "http://") (hasPrefix .Destination "https://") (hasPrefix .Destination "//") }}
+  {{ $siteHost := (urls.Parse site.BaseURL).Hostname }}
+  {{ $destHost := (urls.Parse .Destination).Hostname }}
+  {{ if ne $destHost $siteHost }}{{ $isExternal = true }}{{ end }}
+{{ end }}
+<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $isExternal }} class="external-link" target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Text | safeHTML }}{{ if $isExternal }}<span class="external-icon" aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span>{{ end }}</a>
