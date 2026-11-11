@@ -1,7 +1,7 @@
 ---
 title: "Zero-Trust IoT Messaging: Dockerized Mosquitto and Cloudflare Tunnels"
 date: 2026-11-10T00:00:00Z
-description: "Dockerized Eclipse Mosquitto MQTT broker with outbound-only Cloudflare Tunnel with no inbound ports, for secure IoT messaging."
+description: "Dockerized Eclipse Mosquitto MQTT broker with outbound-only Cloudflare Tunnel and no inbound ports, for secure IoT messaging."
 tags: ["mqtt", "mosquitto", "cloudflare", "docker", "iot", "zero-trust"]
 draft: false
 ---
