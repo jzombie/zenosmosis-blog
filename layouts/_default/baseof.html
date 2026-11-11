@@ -86,8 +86,8 @@
   <header class="masthead">
     <div class="shell masthead__inner">
       <div>
-        <a class="brand" href="/">{{ .Site.Title }}</a>
-        <p class="tagline">{{ with .Site.Params.author }}By {{ . }}{{ end }}</p>
+        <a class="brand" href="/" aria-label="{{ .Site.Title }} — home"><img class="brand__logo" src="/images/zenOSmosis-logo.svg" alt="zenOSmosis" width="180" height="36" /><span class="brand__suffix">Blog</span></a>
+        <p class="tagline">{{ with .Site.Params.author }}By <a class="tagline__link" href="{{ $.Site.Params.githubPersonalURL }}" target="_blank" rel="noopener">{{ . }}</a>{{ end }}</p>
       </div>
       <nav class="nav">
         <a href="/" class="nav__link {{ if .IsHome }}is-active{{ end }}">Home</a>
