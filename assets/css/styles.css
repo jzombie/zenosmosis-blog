@@ -410,6 +410,17 @@ a:hover {
 	color: var(--muted);
 }
 
+.post__dek {
+	margin: 0.75rem 0 0.25rem;
+	font-size: 1.15rem;
+	line-height: 1.5;
+	color: #9fb4d0;
+	font-style: italic;
+	max-width: 62ch;
+	padding-left: 0.85rem;
+	border-left: 3px solid var(--accent);
+}
+
 .post__tags {
 	display: flex;
 	gap: 0.35rem;
