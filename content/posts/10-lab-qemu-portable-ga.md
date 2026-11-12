@@ -53,7 +53,7 @@ Releases are also buildable on demand: the `build-qemu-portable` / `build-wimlib
 
 - The **Windows zip is CI smoke-tested** but hasn't been run manually on physical Windows. The validated path today is headless Windows guests driven from macOS/Linux over SSH. Native Windows run reports welcome.
 - **Windows ARM64 WHPX** needs Windows 11 24H2 + the April/May 2025 updates; older builds should drop `-accel whpx` and take TCG.
-- **macOS is adhoc-signed**: run `xattr -cr qemu-portable` after download to clear quarantine.
+- **macOS is adhoc-signed.** Quarantine only applies to browser downloads; if you fetched the archive programmatically (as a tool install would), no action is needed. After a browser download, run `xattr -cr qemu-portable` to clear it.
 
 ----
 
