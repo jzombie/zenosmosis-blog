@@ -14,6 +14,14 @@ Hugo blog (`config.toml`, `content/`, `layouts/`, `assets/css/styles.css`). No e
 
 Required: `title`, `date` (ISO-8601 UTC), `description` (used as `.post__dek`), `tags` (lowercase, hyphenated).
 
+### Em-dashes: never (`—`, `--`, `&mdash;`)
+
+Do not use em-dashes anywhere in a post (body, headings, frontmatter). They read as machine-generated and are banned in published prose.
+
+- Replace with a colon, comma, semicolon, parentheses, or a plain sentence break, whichever fits the sentence.
+- En-dashes (`–`) in ranges (`10–20`) are fine. Hyphens in compounds and tags are fine.
+- Applies to quotes/blockquotes too.
+
 ### Heading hierarchy (enforced)
 
 Root cause of past inconsistency (e.g. `8-magnet-vector.md` used `###` for top-level sections while `7-rust-other-book.md` used `##`): the two levels render completely differently.
