@@ -1,7 +1,7 @@
 ---
 title: "Forensic Memory Mining: Recovering Lost Thoughts and the Information Flywheel Effect"
 date: 2026-11-14T00:00:00Z
-description: "I blanked in job interviews on work I had actually done, so I turned police interview tactics on myself to capture dense, auditable history in plain text."
+description: "For engineers who blank in interviews: I turned police interview tactics on myself to capture dense, auditable career history in plain text."
 tags: ["career", "ai-agents", "memory", "systems-design", "magnet-vector"]
 draft: true
 ---
