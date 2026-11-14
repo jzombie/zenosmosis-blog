@@ -93,6 +93,8 @@ There is no vector database, no embedding pipeline, no resume generator. The cur
 
 That plainness is the payoff today. Because the corpora live in the workspace as structured text, coding agents already read verified history when drafting docs, scoping tradeoffs, or building workflow tooling. They pull the actual constraint or the actual workaround instead of guessing from a thin bio. Atomic XYZ units are kept clean so future tooling could consume them without re-extraction, but that tooling is not claimed as built.
 
+Why do this at all? I wanted a record I could trust the next time I had to explain my work, without reconstructing it under pressure or letting a tool invent details. In total I spent about 12 hours answering questions across sessions, not in one sitting. Memory keeps fading and new work keeps piling up, so it helps to run another session after a while to catch what surfaced late or what changed.
+
 Replicating this takes less infrastructure than you expect and more discipline than you want.
 
 Start with the spec and the template. Index every role era, allowing approximate dates and stub status rather than false precision. Run phase one alone with no accomplishment talk. Dump one system to exhaustion in the next session and mine one PAR immediately with XYZ. Walk the same system backward without overwriting the forward dump, so both views survive. Attempt perspectives even when uncomfortable. Mark a file complete only when the anchor is vivid, the dump is exhausted, the backward chain reaches kickoff, at least one XYZ entry exists, and no investigation item is silently dropped.
