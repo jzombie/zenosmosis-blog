@@ -50,7 +50,7 @@ The agent is strictly forbidden from condensing, reordering, or topic hopping. O
 
 Start at delivery, layoff, acquisition, or quit. Then step backward: what broke last, what changed the week before, what slipped the deadline, who was in the kickoff room.
 
-A telehealth video bridge reads completely differently in reverse. Forward version: migrated video to a new provider. Backward version: delivery after codec artifacts, WebRTC to telephony mismatch, segfaults on shared servers, a rejected headless-browser proposal, eventual approval, delivered after two prior vendors burned $500k+ (not sure if it was in total, per vendor, or was an outright lie to make me motivated). The backward walk surfaces judgment under constraint: diagnosing the fault early, persisting through rejection, shimming browser clients onto server runtimes. Forward recall would have smoothed all of that away.
+A telehealth video bridge reads completely differently in reverse. Forward version: migrated video to a new provider. Backward version: delivery after codec artifacts, WebRTC to telephony mismatch, segfaults on shared servers, a rejected headless-browser proposal, eventual approval, delivered after two prior vendors burned ~$500k+ (unverified figure; unclear if total, per vendor, or motivational). The backward walk surfaces judgment under constraint: diagnosing the fault early, persisting through rejection, shimming browser clients onto server runtimes. Forward recall would have smoothed all of that away.
 
 ### 4. Changing perspectives: ask the room
 
@@ -64,7 +64,7 @@ The enforcement mechanism is tone. The agent must command, not suggest. Describe
 
 ## Terms used in this post
 
-Hiring writing reuses a small set of frameworks. These labels appear in my template and notes. I did not study each one deliberately, so take this as a glossary of what the files reference, not a claim of mastery.
+This post references the following hiring frameworks that appear in the repository templates. I did not study each one deliberately; this is a glossary of what the files reference.
 
 * **PAR**: Problem, Action, Result. Also written CAR for Challenge, Action, Result. For firefighting, outages, and shipped fixes. Most of my filed entries carry this label.
 * **STAR**: Situation, Task, Action, Result. For cross team or leadership work where scope and assignment need context before the action.
