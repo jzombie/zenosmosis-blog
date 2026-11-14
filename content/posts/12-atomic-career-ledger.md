@@ -28,7 +28,7 @@ The third failure is the tool most of us reach for first. Ask a default large la
 
 ## The protocol: four phases borrowed from eyewitness psychology
 
-The approach borrows the Cognitive Interview developed by Fisher and Geiselman in the 1980s for eyewitness recall. Police psychologists learned that chronological free recall produces the thinnest reports. Four specific retrieval cues produce thicker ones: reinstate context, report everything, reverse order, change perspective. I researched those cues and started applying each one as a phase to myself, kept as a short 108-line `AGENTS.md` file that any coding agent can follow.
+The approach borrows the [Cognitive Interview](https://en.wikipedia.org/wiki/Cognitive_interview) developed by Fisher and Geiselman in the 1980s for eyewitness recall. Police psychologists learned that chronological free recall produces the thinnest reports. Four specific retrieval cues produce thicker ones: reinstate context, report everything, reverse order, change perspective. I researched those cues and started applying each one as a phase to myself, kept as a short 108-line `AGENTS.md` file that any coding agent can follow.
 
 ### 1. Mental reinstatement: anchor before accomplishments
 
@@ -50,7 +50,7 @@ The agent is strictly forbidden from condensing, reordering, or topic hopping. O
 
 Start at delivery, layoff, acquisition, or quit. Then step backward: what broke last, what changed the week before, what slipped the deadline, who was in the kickoff room.
 
-A telehealth video bridge reads completely differently in reverse. Forward version: migrated video to a new provider. Backward version: delivery after codec artifacts, WebRTC to telephony mismatch, segfaults on shared servers, a rejected headless-browser proposal, eventual approval, delivered after two prior vendors burned ~$500k+ (not sure if it was in total, per vendor, or was an outright lie to make me motivated). The backward walk surfaces judgment under constraint: diagnosing the fault early, persisting through rejection, shimming browser clients onto server runtimes. Forward recall would have smoothed all of that away.
+"A telehealth video bridge" reads completely differently in reverse. Forward version: migrated video to a new provider. Backward version: delivery after codec artifacts, WebRTC to telephony mismatch, segfaults on shared servers, a rejected headless-browser proposal, eventual approval, delivered after two prior vendors burned ~$500k+ (not sure if it was in total, per vendor, or was an outright lie to make me motivated). The backward walk surfaces judgment under constraint: diagnosing the fault early, persisting through rejection, shimming browser clients onto server runtimes. Forward recall would have smoothed all of that away.
 
 ### 4. Changing perspectives: ask the room
 
