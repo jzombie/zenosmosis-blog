@@ -34,7 +34,7 @@ The approach borrows the [Cognitive Interview](https://en.wikipedia.org/wiki/Cog
 
 No accomplishment talk until the environment is vivid. The agent opens with commands, not questions:
 
-> Describe your monitors and what was pinned to your dock. Who sat to your left? What channels did you keep open daily? What time did you start, and what did you check first?
+> _Describe your monitors and what was pinned to your dock. Who sat to your left? What channels did you keep open daily? What time did you start, and what did you check first?_
 
 Good anchors are spatial, social, sensory, and routine. One gold standard session captured building layout, desk orientation, monitor sizes, neighbor seating, window views, dress code, daily rhythm, and first day memory before a single project was named. Thin anchors, common for short remote contracts, might only list a laptop, a chat app, and a time zone. That gap matters. Thin anchors correlate with the most forgotten impact, which is itself a finding worth logging rather than skipping.
 
@@ -42,7 +42,7 @@ Good anchors are spatial, social, sensory, and routine. One gold standard sessio
 
 Once anchored, the instruction is blunt:
 
-> Tell me everything about this system. Every script, bug, meeting, and boring task. Do not edit, do not summarize.
+> _Tell me everything about this system. Every script, bug, meeting, and boring task. Do not edit, do not summarize._
 
 The agent is strictly forbidden from condensing, reordering, or topic hopping. One heading per system, dates in a separate tenure block, verbatim emotion preserved. A multi-language SaaS session captured nearly 1,000 hand-translated strings, a self-initiated OCR adapter built as a favor, and a tower of duplicated backends that eventually prompted a resignation to save sanity. None of that sounds like a resume bullet in raw form. That is the point. Raw first, packaging later.
 
@@ -56,7 +56,7 @@ Start at delivery, layoff, acquisition, or quit. Then step backward: what broke 
 
 The final cue is the least comfortable and the least completed in my own corpus, present in only two of seven sampled files. The prompts:
 
-> How would QA describe your contribution? What would a junior learn watching you that week? What did the PM never understand about what you built?
+> _How would QA describe your contribution? What would a junior learn watching you that week? What did the PM never understand about what you built?_
 
 One strong session captured a philosophy clash over duplicated clients versus shared interfaces, plus a frank junior view on fragmented services and early meeting bloat. Another produced a single honest line: the junior would have learned the author was absolutely winging it. That mines poorly into metrics and richly into character. I disclose the gap because it is load bearing. Perspective shift is either too threatening, too easy to deprioritize, or both.
 
@@ -79,7 +79,8 @@ Mining happens immediately after each phase, never batched at the end. In my fil
 
 Continuing that same SaaS extraction, that raw recall became a PAR:
 
-Problem: isolated string files, duplicated effort, inconsistent behavior across locales. Action: built a semi-automatic fetch pipeline with provider auto-fetch on new content plus an audit queue. Result: zero-touch localization with no empty text states.
+- **Problem:** isolated string files, duplicated effort, inconsistent behavior across locales.
+- **Action:** built a semi-automatic fetch pipeline with provider auto-fetch on new content plus an audit queue. Result: zero-touch localization with no empty text states.
 
 X is roughly 1,000 strings moved from manual to pipeline. Y is elimination of manual merge time and missing key incidents. Z is identifying the scaling break, learning the internationalization framework on the job, building the fetch layer, and wiring it into the release workflow.
 
