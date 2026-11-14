@@ -62,20 +62,9 @@ One strong session captured a philosophy clash over duplicated clients versus sh
 
 The enforcement mechanism is tone. The agent must command, not suggest. Describe, walk backward, tell me from QA view. No preamble, no how can I help, no summary until exhaustion. This inverts the default assistant behavior, which is why the spec fits in 108 lines. Anything longer degrades attention. Anything politer invites hallucinated compliance.
 
-## Terms used in this post
-
-This post references the following hiring frameworks from the repository templates as a working glossary, not a claim of mastery:
-
-* **PAR**: Problem, Action, Result. Also written CAR for Challenge, Action, Result. For firefighting, outages, and shipped fixes. Most of my filed entries carry this label.
-* **STAR**: Situation, Task, Action, Result. For cross team or leadership work where scope and assignment need context before the action.
-* **SOAR**: Situation, Obstacle, Action, Result. For strategic work tied to a business objective. In the template but I do not recall using it.
-* **SHARE**: Situation, Hindrance, Action, Result, Evaluation. For sideways or failed work where the lesson matters as much as the outcome. In the template but I do not recall using it.
-* **PARLA**: Problem, Action, Result, Learning, Application. For early career work where transferable learning is the point. In the template but I do not recall using it.
-* **XYZ**: a quantification line attached to PAR or STAR. X is what you accomplished, quantified. Y is how it was measured, by metric or direct observation. Z is the specific technical steps you took.
-
 ## From raw recall to atomic ledger
 
-Mining happens immediately after each phase, never batched at the end. In my files, almost everything ended up labeled PAR, even work that could qualify as STAR. The other formats stayed in the template. Every entry also carries an XYZ line as defined above.
+Mining happens immediately after each phase, never batched at the end. In my files, almost everything ended up labeled PAR, even work that could qualify as STAR. The other formats stayed in the template. Every entry also carries an XYZ line as defined in the [glossary below](#glossary).
 
 Continuing that same SaaS extraction, that raw recall became a PAR:
 
@@ -224,3 +213,23 @@ Two honest limits ship with the method. The referenced `CORE.md` methodology dee
 The initial pass took about 12 hours in one sitting, plus a single update session so far. Because my logging hooks already capture every agent conversation to both the agent's internal store and an external conversation log, even the sessions used to conceptualize and audit this post are persisted on disk. That history can feed back into future mining passes. Each pass makes the next recall easier: the ledger captures the work, the logs are already capturing the capture, and future sessions can mine both.
 
 Memory will keep compressing. Parsers will keep shredding. Default AI will keep polishing. The alternative is to treat your own career like a cold case: reinstate the room, dump everything, walk it backward, ask the witnesses, and write down what you can prove with the math showing.
+
+## Glossary
+
+This post references the following hiring frameworks from the repository templates as a working glossary, not a claim of mastery:
+
+### Accomplishment frameworks
+
+* **PAR**: Problem, Action, Result. Also written CAR for Challenge, Action, Result. For firefighting, outages, and shipped fixes. Most of my filed entries carry this label.
+* **STAR**: Situation, Task, Action, Result. For cross team or leadership work where scope and assignment need context before the action.
+* **SOAR**: Situation, Obstacle, Action, Result. For strategic work tied to a business objective. In the template but I do not recall using it.
+* **SHARE**: Situation, Hindrance, Action, Result, Evaluation. For sideways or failed work where the lesson matters as much as the outcome. In the template but I do not recall using it.
+* **PARLA**: Problem, Action, Result, Learning, Application. For early career work where transferable learning is the point. In the template but I do not recall using it.
+
+### Quantification
+
+* **XYZ**: a quantification line attached to PAR or STAR. X is what you accomplished, quantified. Y is how it was measured, by metric or direct observation. Z is the specific technical steps you took.
+
+### Agent protocol
+
+* **AGENTS.md**: the short rule file my agent reads on session start. It tells the agent to interrogate instead of assist, read the existing corpora, run the four phases in order, and mine XYZ entries to disk. Full copy in [How to replicate](#how-to-replicate).
