@@ -64,7 +64,7 @@ The enforcement mechanism is tone. The agent must command, not suggest. Describe
 
 ## From raw recall to atomic ledger
 
-Mining happens immediately after each phase, never batched at the end. In my files, almost everything ended up labeled PAR, even work that could qualify as STAR. The other formats stayed in the template. Every entry also carries an XYZ line as defined in the [glossary below](#glossary).
+Mining happens immediately after each phase, never batched at the end. In my files, almost everything ended up labeled PAR (Problem, Action, Result), even work that could qualify as STAR (Situation, Task, Action, Result). The other formats stayed in the template. Every entry also carries an XYZ line (what, measured how, steps taken) as defined in the [glossary below](#glossary).
 
 Continuing that same SaaS extraction, that raw recall became a PAR:
 
