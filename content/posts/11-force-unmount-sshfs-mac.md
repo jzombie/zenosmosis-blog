@@ -41,16 +41,22 @@ diskutil unmount force /path/to/mountpoint
 
 If Finder is completely locked up and even `diskutil` hangs, the background `sshfs` process itself has likely become completely unresponsive. You need to find the specific process ID (PID) and terminate it directly.
 
-First, list all running processes and filter for SSHFS:
+First, list matching processes without a grep artifact to filter:
 
 ```sh
-ps aux | grep sshfs
+pgrep -a sshfs
 ```
 
-Look for the line that corresponds to your stuck mount and find the PID (the first number in the row). The `grep sshfs` line itself will also show up in the output; ignore it. Then, force kill that process:
+Find the PID for your stuck mount in the first column. Then, force kill that process:
 
 ```sh
 kill -9 <PID>
+```
+
+Or kill all matching processes directly:
+
+```sh
+pkill -9 sshfs
 ```
 
 Once the process is dead, macOS will eventually realize the volume is gone, and your frozen terminal and Finder windows will instantly release. It is a harsh way to end a session, but when you are dealing with a network drop on a remote server, it is often the only way out.
