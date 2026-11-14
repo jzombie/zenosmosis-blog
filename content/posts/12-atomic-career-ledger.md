@@ -1,5 +1,5 @@
 ---
-title: "Forensic Memory Mining: Using Police Tactics on Myself to Recover Lost Thoughts"
+title: "Forensic Memory Mining: Recovering Lost Thoughts and the Information Flywheel Effect"
 date: 2026-11-14T00:00:00Z
 description: "I blanked in job interviews on work I had actually done, so I turned police interview tactics on myself to capture dense, auditable history in plain text."
 tags: ["career", "ai-agents", "memory", "systems-design", "magnet-vector"]
@@ -95,12 +95,16 @@ That plainness is the payoff today. Because the corpora live in the workspace as
 
 In _[Magnet Vector](/posts/8-magnet-vector/)_ terms, this is the upstream density work before any public discovery layer exists. A keyword-stuffed resume is outbound noise pushed into a void. Anchored recall paired with quantified XYZ lines produces dense, auditable units that future discovery layers can actually index without guessing.
 
-Why do this at all? I wanted a record I could trust the next time I had to explain my work, without reconstructing it under pressure or letting a tool invent details. Part of it was also avoiding manual fork drift. Maintaining separate tailored resumes for different target roles multiplies proofreading overhead and makes it easy to lose track of which claims went where. A single canonical ledger keeps every verified detail in one place instead of scattered across ad-hoc document variants. In total I spent about 12 hours answering questions across sessions, not in one sitting. Memory keeps fading and new work keeps piling up, so it helps to run another session after a while to catch what surfaced late or what changed. I include the storage detail for context. The process forces honesty with yourself, which is harder than it sounds. I am not sure most people would sit with it that long.
+Why do this at all? I wanted a record I could trust the next time I had to explain my work, without reconstructing it under pressure or letting a tool invent details. Part of it was also avoiding manual fork drift. Maintaining separate tailored resumes for different target roles multiplies proofreading overhead and makes it easy to lose track of which claims went where. A single canonical ledger keeps every verified detail in one place instead of scattered across ad-hoc document variants. Memory keeps fading and new work keeps piling up, so it helps to run another session after a while to catch what surfaced late or what changed. I include the storage detail for context. The process forces honesty with yourself, which is harder than it sounds. I am not sure most people would sit with it that long.
 
 Replicating this takes less infrastructure than you expect and more discipline than you want.
 
 Start with the spec and the template. Index every role era, allowing approximate dates and stub status rather than false precision. Run phase one alone with no accomplishment talk. Dump one system to exhaustion in the next session and mine one PAR immediately with XYZ. Walk the same system backward without overwriting the forward dump, so both views survive. Attempt perspectives even when uncomfortable. Mark a file complete only when the anchor is vivid, the dump is exhausted, the backward chain reaches kickoff, at least one XYZ entry exists, and no investigation item is silently dropped.
 
 Two honest limits ship with the method. The referenced `CORE.md` methodology deep dive does not exist on disk, so every session runs on the short spec plus prior corpora as implicit examples. Either write it or remove the reference. And phase four remains underused. Softer prompts or explicit worked examples for failure and early career formats may be needed before the coverage claim holds.
+
+## The flywheel effect
+
+The initial pass took about 12 hours in one sitting, plus a single update session so far. Because my logging hooks already capture every agent conversation to both the agent's internal store and an external conversation log, even the sessions used to conceptualize and audit this post are persisted on disk. That history can feed back into future mining passes. Each pass makes the next recall easier: the ledger captures the work, the logs are already capturing the capture, and future sessions can mine both.
 
 Memory will keep compressing. Parsers will keep shredding. Default AI will keep polishing. The alternative is to treat your own career like a cold case: reinstate the room, dump everything, walk it backward, ask the witnesses, and write down what you can prove with the math showing.
