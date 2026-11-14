@@ -3,7 +3,7 @@ title: "Forensic Memory Mining: Recovering Lost Thoughts and the Information Fly
 date: 2026-11-14T00:00:00Z
 description: "For engineers who blank in interviews: I turned police interview tactics on myself to capture dense, auditable career history in plain text."
 tags: ["career", "ai-agents", "memory", "systems-design", "magnet-vector"]
-draft: true
+draft: false
 ---
 
 I started this because I blanked in job interviews. Asked for specifics on work I had actually done, my mind went empty. Years of messy engineering collapsed into kickoff, build, launch, leaving no late-night debugging, no shelved prototype, and no boring time-saving script within reach when I needed it.
