@@ -44,7 +44,7 @@ Once anchored, the instruction is blunt:
 
 > Tell me everything about this system. Every script, bug, meeting, and boring task. Do not edit, do not summarize.
 
-The agent is _[thoretically]_ forbidden from condensing, reordering, or topic hopping (obviously helps to use a good agent). One heading per system, dates in a separate tenure block, verbatim emotion preserved. A multi-language SaaS session captured nearly 1,000 hand-translated strings, a self-initiated OCR adapter built as a favor, and a tower of duplicated backends that eventually prompted a resignation to save sanity. None of that sounds like a resume bullet in raw form. That is the point. Raw first, packaging later.
+The agent is strictly forbidden from condensing, reordering, or topic hopping. One heading per system, dates in a separate tenure block, verbatim emotion preserved. A multi-language SaaS session captured nearly 1,000 hand-translated strings, a self-initiated OCR adapter built as a favor, and a tower of duplicated backends that eventually prompted a resignation to save sanity. None of that sounds like a resume bullet in raw form. That is the point. Raw first, packaging later.
 
 ### 3. Reverse order recall: walk backward from the end
 
@@ -72,19 +72,15 @@ Every entry must also carry XYZ:
 * Y: how it was measured, by metric or direct observation
 * Z: the specific technical steps you took
 
-Here is one sanitized end-to-end example from a multi-language SaaS role. Honesty note: this corpus has anchor plus Phase 2 dump notes but no documented Phase 3 walk, so I mine it from those two only and leave the backward chain open. For a full backward chain, see the bridge example below.
-
-Anchor: small colocated team, two-person web ownership, manual release checks, translation files edited by hand. Dump: roughly 1,000 UI strings translated manually, growing with every feature, constant risk of empty text on language switch. Mined PAR:
+Continuing that same SaaS extraction, that raw recall became a PAR:
 
 Problem: isolated string files, duplicated effort, inconsistent behavior across locales. Action: built a semi-automatic fetch pipeline with provider auto-fetch on new content plus an audit queue. Result: zero-touch localization with no empty text states.
 
 X is roughly 1,000 strings moved from manual to pipeline. Y is elimination of manual merge time and missing key incidents. Z is identifying the scaling break, learning the internationalization framework on the job, building the fetch layer, and wiring it into the release workflow.
 
-Two more wins show the audit model.
+A second example uses that same bridge to show the PAR conversion. X names a real-time interpreter bridge delivered after prior failures, Y names delivery under contractual obligation against explicit vendor skepticism, and Z names segfault diagnosis, the headless-browser proposal, and codec resolution through trial and error. Numbers keep their tilde honesty. Roughly 12 endpoints, several hundred pages. Precision is not claimed where telemetry is gone.
 
-The reverse-order bridge described above mined into a PAR where X names a real-time interpreter bridge delivered after prior failures, Y names delivery under contractual obligation against explicit vendor skepticism, and Z names segfault diagnosis, the headless-browser proposal, and codec resolution through trial and error. Numbers keep their tilde honesty. Roughly 12 endpoints, several hundred pages, $500k+ in prior burn. Precision is not claimed where telemetry is gone.
-
-The anti-confabulation rule is the differentiator. A price notification system had three microservices. The third is recorded as unrecalled and left open. A document ingestion side project is logged as specifics unknown and moved to Active Investigation. When measurement is missing, the protocol uses defensive estimation with visible math. Fifty invoices per day at eight minutes each, reduced to thirty seconds, even if off by half, still exceeds five hours per week. Show the arithmetic, mark the uncertainty, never invent a dashboard.
+The anti-confabulation rule is the differentiator. A price notification system had three microservices. The third is recorded as unrecalled and left open. A document ingestion side project is logged as specifics unknown and left open as unresolved. When measurement is missing, the protocol uses defensive estimation with visible math. Fifty invoices per day at eight minutes each, reduced to thirty seconds, even if off by half, still exceeds five hours per week. Show the arithmetic, mark the uncertainty, never invent a dashboard.
 
 ## The artifact is plain text on purpose
 
