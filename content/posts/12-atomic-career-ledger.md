@@ -97,11 +97,11 @@ In _[Magnet Vector](/posts/8-magnet-vector/)_ terms, this is the upstream densit
 
 ## Why do this at all?
 
-I wanted a record I could trust the next time I had to explain my work, without reconstructing it under pressure or letting a tool invent details. Part of it was also avoiding manual fork drift. Maintaining separate tailored resumes for different target roles multiplies proofreading overhead and makes it easy to lose track of which claims went where. A single canonical ledger keeps every verified detail in one place instead of scattered across ad-hoc document variants. Memory keeps fading and new work keeps piling up, so it helps to run another session after a while to catch what surfaced late or what changed. I include the storage detail for context. The process forces honesty with yourself, which is harder than it sounds. I am not sure most people would sit with it that long.
+I wanted a record I could trust the next time I had to explain my work, without reconstructing it under pressure or letting a tool invent details. Part of it was also avoiding manual fork drift. Maintaining separate tailored resumes for different target roles multiplies proofreading overhead and makes it easy to lose track of which claims went where. A single canonical ledger keeps every verified detail in one place instead of scattered across ad-hoc document variants. Memory keeps fading and new work keeps piling up, so it helps to run another session after a while to catch what surfaced late or what changed. The process forces honesty with yourself, which is harder than it sounds. I am not sure most people would sit with it that long.
 
 ## How to replicate
 
-You do not need to write the spec. Borrow mine. Drop this `AGENTS.md` into an empty repo and ask your agent to run it. Em-dashes from the source are replaced with commas and colons to match publication style.
+You do not need to write the spec. Borrow mine. Drop this AGENTS.md into an empty repo and ask your agent to run it.
 
 ```md
 # Atomic Career Ledger: Forensic Cognitive Elicitation Protocol
@@ -214,7 +214,7 @@ When the user signals they're done:
 Re-read all files. Resume from Active Investigation. Do not restart the protocol from Phase 1 unless there are no existing entries.
 ```
 
-Start one index row per role era, allowing approximate dates and stub status. Run phase one with no accomplishment talk. Dump one system to exhaustion, then mine one PAR with XYZ. Walk the same system backward without overwriting the forward dump. Attempt perspectives even when uncomfortable. Mark complete only when the anchor is vivid, the backward chain reaches kickoff, at least one XYZ entry exists, and no open item is silently dropped.
+Start one index row per role era, allowing approximate dates and stub status. Run phase one with no accomplishment talk. Dump one system to exhaustion, then mine one PAR with XYZ. Walk the same system backward without overwriting the forward dump. Attempt perspectives even when uncomfortable. Mark a corpus complete only when the anchor is vivid, the dump is exhausted, the backward chain reaches kickoff, at least one XYZ entry exists, and no open item is silently dropped.
 
 Two honest limits ship with the method. The referenced `CORE.md` methodology deep dive does not exist on disk, so every session runs on the short spec plus prior corpora as implicit examples. Either write it or remove the reference. And phase four remains underused. Softer prompts or explicit worked examples for failure and early career formats may be needed before the coverage claim holds.
 
