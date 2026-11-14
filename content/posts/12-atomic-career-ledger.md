@@ -8,7 +8,7 @@ draft: true
 
 I started this because I blanked in job interviews. Asked for specifics on work I had actually done, my mind went empty. Years of messy engineering collapsed into kickoff, build, launch, leaving no late-night debugging, no shelved prototype, and no boring time-saving script within reach when I needed it.
 
-That blank interview moment is what sent me researching how investigators pull detailed recall from witnesses. I did not build a dedicated product for this endeavor. I studied forensic interview techniques, added an `AGENTS.md` rule file to an empty repository, and turned my agent loose quizzing me to apply them to my own history. Not to write a better PDF, but to stop memory drift and AI confabulation at the source. Once a detail decays in human memory, no future tool can recover it without guessing. Capturing it in plain text now gives my coding agents verified history to draw from immediately, without needing any downstream automation. A resume asks you to compress. This process asks you to decompress first.
+That blank interview moment is what sent me researching how investigators pull detailed recall from witnesses. I did not build a dedicated product for this endeavor. I studied forensic interview techniques, added an [`AGENTS.md`](#how-to-replicate) rule file to an empty repository, and turned my agent loose quizzing me to apply them to my own history. Not to write a better PDF, but to stop memory drift and AI confabulation at the source. Once a detail decays in human memory, no future tool can recover it without guessing. Capturing it in plain text now gives my coding agents verified history to draw from immediately, without needing any downstream automation. A resume asks you to compress. This process asks you to decompress first.
 
 ## The problem is biological before it is professional
 
@@ -28,7 +28,7 @@ The third failure is the tool most of us reach for first. Ask a default large la
 
 ## The protocol: four phases borrowed from eyewitness psychology
 
-The approach borrows the [Cognitive Interview](https://en.wikipedia.org/wiki/Cognitive_interview) developed by Fisher and Geiselman in the 1980s for eyewitness recall. Police psychologists learned that chronological free recall produces the thinnest reports. Four specific retrieval cues produce thicker ones: reinstate context, report everything, reverse order, change perspective. I researched those cues and started applying each one as a phase to myself, kept as a short 108-line `AGENTS.md` file that any coding agent can follow.
+The approach borrows the [Cognitive Interview](https://en.wikipedia.org/wiki/Cognitive_interview) developed by Fisher and Geiselman in the 1980s for eyewitness recall. Police psychologists learned that chronological free recall produces the thinnest reports. Four specific retrieval cues produce thicker ones: reinstate context, report everything, reverse order, change perspective. I researched those cues and started applying each one as a phase to myself, kept as a short 108-line [`AGENTS.md`](#how-to-replicate) file that any coding agent can follow.
 
 ### 1. Mental reinstatement: anchor before accomplishments
 
@@ -89,21 +89,136 @@ The anti-confabulation rule is the differentiator. A price notification system h
 
 ## The artifact is plain text on purpose
 
-The corpus itself stays plain text on purpose. No resume generator. The artifact is deliberately boring: one `AGENTS.md` spec, one 21-line corpus template, one index table with thirteen role eras, and one Markdown file per employer holding the four phases plus mined entries plus open items. The sessions that produced it are also preserved in two other places: the internal store my agent builds on its own, and a separate conversation log I hooked in so I can mine my own sessions in whatever future format I want.
+The corpus itself stays plain text on purpose. No resume generator. The artifact is deliberately boring: one [`AGENTS.md`](#how-to-replicate) spec, one 21-line corpus template, one index table with thirteen role eras, and one Markdown file per employer holding the four phases plus mined entries plus open items. The sessions that produced it are also preserved in two other places: the internal store my agent builds on its own, and a separate conversation log I hooked in so I can mine my own sessions in whatever future format I want.
 
 That plainness is the payoff today. Because the corpora live in the workspace as structured text, coding agents already read verified history when drafting docs, scoping tradeoffs, or building workflow tooling. They pull the actual constraint or the actual workaround instead of guessing from a thin bio. Atomic XYZ units are kept clean so future tooling could consume them without re-extraction, but that tooling is not claimed as built.
 
 In _[Magnet Vector](/posts/8-magnet-vector/)_ terms, this is the upstream density work before any public discovery layer exists. A keyword-stuffed resume is outbound noise pushed into a void. Anchored recall paired with quantified XYZ lines produces dense, auditable units that future discovery layers can actually index without guessing.
 
-Why do this at all? I wanted a record I could trust the next time I had to explain my work, without reconstructing it under pressure or letting a tool invent details. Part of it was also avoiding manual fork drift. Maintaining separate tailored resumes for different target roles multiplies proofreading overhead and makes it easy to lose track of which claims went where. A single canonical ledger keeps every verified detail in one place instead of scattered across ad-hoc document variants. Memory keeps fading and new work keeps piling up, so it helps to run another session after a while to catch what surfaced late or what changed. I include the storage detail for context. The process forces honesty with yourself, which is harder than it sounds. I am not sure most people would sit with it that long.
+## Why do this at all?
 
-Replicating this takes less infrastructure than you expect and more discipline than you want.
+I wanted a record I could trust the next time I had to explain my work, without reconstructing it under pressure or letting a tool invent details. Part of it was also avoiding manual fork drift. Maintaining separate tailored resumes for different target roles multiplies proofreading overhead and makes it easy to lose track of which claims went where. A single canonical ledger keeps every verified detail in one place instead of scattered across ad-hoc document variants. Memory keeps fading and new work keeps piling up, so it helps to run another session after a while to catch what surfaced late or what changed. I include the storage detail for context. The process forces honesty with yourself, which is harder than it sounds. I am not sure most people would sit with it that long.
 
-Start with the spec and the template. Index every role era, allowing approximate dates and stub status rather than false precision. Run phase one alone with no accomplishment talk. Dump one system to exhaustion in the next session and mine one PAR immediately with XYZ. Walk the same system backward without overwriting the forward dump, so both views survive. Attempt perspectives even when uncomfortable. Mark a file complete only when the anchor is vivid, the dump is exhausted, the backward chain reaches kickoff, at least one XYZ entry exists, and no investigation item is silently dropped.
+## How to replicate
+
+You do not need to write the spec. Borrow mine. Drop this `AGENTS.md` into an empty repo and ask your agent to run it. Em-dashes from the source are replaced with commas and colons to match publication style.
+
+```md
+# Atomic Career Ledger: Forensic Cognitive Elicitation Protocol
+
+This is the Atomic Career Ledger, a repository of structured career memories extracted via forensic cognitive interviewing. Your role is **interrogator**, not assistant.
+
+## Core Directives
+
+- Never begin with "how can I help?" or any greeting. Jump straight into the protocol.
+- Never ask what the user accomplished before completing Phase 1.
+- Never summarize, interrupt, or jump topics during narrative flow.
+- Command, don't suggest. Use imperatives: "Describe your terminal windows." "Tell me every script you ran." Not "Could you describe..."
+
+## Session Startup
+
+1. Read ALL existing files in `EMPLOYERS/` and `TEMPLATES/` to assess state
+2. Read `CORE.md` if it exists for methodology reference
+3. Check any `Active Investigation` sections for unresolved items from prior sessions
+4. Deploy the appropriate phase based on what's missing
+
+## The 4-Phase Forensic Protocol
+
+Execute these phases sequentially. Never skip a phase.
+
+### Phase 1: Mental Reinstatement (The Anchor)
+
+**Never ask about accomplishments first. Force environmental recall.**
+
+Ask the user what terminal windows they had open, what music they were listening to, the names of the engineers who sat next to them, before asking about the work itself. Specific triggers:
+- "What three apps were pinned to your dock?"
+- "Describe the physical layout of your desk. What did you see when you looked up?"
+- "Who sat to your left? What was their role?"
+- "What Slack channels did you have open daily?"
+- "What time did you usually start? What was the first thing you'd check?"
+
+Stay in Phase 1 until the user has built a vivid environmental picture. Only then proceed.
+
+### Phase 2: Unfiltered Recall (The Brain Dump)
+
+**Suspend all summarization. Command unfiltered output.**
+
+Command the user to report every detail of a project, even trivial scripts or mundane tasks, without self-editing. Do not interrupt the narrative flow. Specific triggers:
+- "Now tell me everything about [specific project]: every script you wrote, every bug you fixed, every meeting you attended. Don't edit, don't summarize."
+- "What was the most boring Tuesday? Walk me through it hour by hour."
+- "What did you do the first week? The first month?"
+- "Describe the build process step by step."
+
+Do NOT jump to the next topic. Let the user exhaust their recall fully.
+
+### Phase 3: Reverse Order Recall (Schema Disruption)
+
+**Disrupt chronological storytelling explicitly.**
+
+Force the user to start at the project's launch date and walk backward, step-by-step, to the initial planning phase. This uncovers forgotten deployment hurdles. Specific triggers:
+- "Now walk backward from the launch date. What was the last thing that broke before launch?"
+- "And the week before that? What changed in staging?"
+- "What was the original deadline? What pushed it?"
+- "Go back to the kickoff meeting. Who was in the room? What was the initial scope?"
+
+### Phase 4: Changing Perspectives (Holistic Extraction)
+
+**Shift viewpoints to uncover soft skills and cross-functional impact.**
+
+Ask the user to describe their work from another persona's perspective. Specific triggers:
+- "How would the lead QA engineer describe your contribution to that project?"
+- "What would your skip-level manager say you did that no one else did?"
+- "If a junior developer joined your team on day one, what would they have learned from watching you?"
+- "What did the product manager not understand about what you built?"
+
+## Achievement Mining
+
+After each phase extracts a memory, immediately mine it into a structured accomplishment:
+
+1. Choose the framework (based on memory type):
+   - **STAR**: Leadership, cross-team, long projects (full context + result)
+   - **PAR/CAR**: Technical firefighting, outages, hotfixes (action + result only)
+   - **SOAR**: Strategic planning, roadmap work (align action to business objective)
+   - **SHARE**: Projects that failed or went sideways (hindrance + evaluation)
+   - **PARLA**: Junior roles, career pivoters (learning + future application)
+
+2. Enforce the XYZ formula on every entry:
+   - **X**: What was accomplished (quantified)
+   - **Y**: How it was measured (metric, KPI, observation)
+   - **Z**: What specific actions were taken (technical steps, decisions)
+
+3. If exact Y is missing, trigger Defensive Estimation:
+   - "If you processed 50 invoices per day manually, and each took 8 minutes, and you reduced it to 30 seconds, even if you're off by 50%, that's still 5+ hours saved per week. Let's work backward."
+   - Never skip quantification. Estimate if you must, but always attach a number.
+
+4. Write the mined accomplishment to the appropriate corpus file immediately.
+
+## File Structure
+
+| File | Purpose |
+|------|---------|
+| `CORE.md` | Framework reference (read for deeper methodology) |
+| `EMPLOYERS/index.md` | Master index linking all employer files |
+| `EMPLOYERS/<Name>_Contextual_Corpus.md` | One per employer: environmental context, raw dumps, mined accomplishments, active investigation |
+| `TEMPLATES/corpus_template.md` | Template for new employer corpora |
+
+## Session End
+
+When the user signals they're done:
+1. Summarize what was mined this session
+2. Log any unresolved items to Active Investigation
+3. Ensure all files are saved
+
+## Next Session
+
+Re-read all files. Resume from Active Investigation. Do not restart the protocol from Phase 1 unless there are no existing entries.
+```
+
+Start one index row per role era, allowing approximate dates and stub status. Run phase one with no accomplishment talk. Dump one system to exhaustion, then mine one PAR with XYZ. Walk the same system backward without overwriting the forward dump. Attempt perspectives even when uncomfortable. Mark complete only when the anchor is vivid, the backward chain reaches kickoff, at least one XYZ entry exists, and no open item is silently dropped.
 
 Two honest limits ship with the method. The referenced `CORE.md` methodology deep dive does not exist on disk, so every session runs on the short spec plus prior corpora as implicit examples. Either write it or remove the reference. And phase four remains underused. Softer prompts or explicit worked examples for failure and early career formats may be needed before the coverage claim holds.
 
-## The flywheel effect
+## The information flywheel effect
 
 The initial pass took about 12 hours in one sitting, plus a single update session so far. Because my logging hooks already capture every agent conversation to both the agent's internal store and an external conversation log, even the sessions used to conceptualize and audit this post are persisted on disk. That history can feed back into future mining passes. Each pass makes the next recall easier: the ledger captures the work, the logs are already capturing the capture, and future sessions can mine both.
 
