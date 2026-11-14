@@ -62,15 +62,20 @@ One strong session captured a philosophy clash over duplicated clients versus sh
 
 The enforcement mechanism is tone. The agent must command, not suggest. Describe, walk backward, tell me from QA view. No preamble, no how can I help, no summary until exhaustion. This inverts the default assistant behavior, which is why the spec fits in 108 lines. Anything longer degrades attention. Anything politer invites hallucinated compliance.
 
+## Terms used in this post
+
+Hiring writing reuses a small set of frameworks. These labels appear in my template and notes. I did not study each one deliberately, so take this as a glossary of what the files reference, not a claim of mastery.
+
+* **PAR**: Problem, Action, Result. Also written CAR for Challenge, Action, Result. For firefighting, outages, and shipped fixes. Most of my filed entries carry this label.
+* **STAR**: Situation, Task, Action, Result. For cross team or leadership work where scope and assignment need context before the action.
+* **SOAR**: Situation, Obstacle, Action, Result. For strategic work tied to a business objective. In the template but I do not recall using it.
+* **SHARE**: Situation, Hindrance, Action, Result, Evaluation. For sideways or failed work where the lesson matters as much as the outcome. In the template but I do not recall using it.
+* **PARLA**: Problem, Action, Result, Learning, Application. For early career work where transferable learning is the point. In the template but I do not recall using it.
+* **XYZ**: a quantification line attached to PAR or STAR. X is what you accomplished, quantified. Y is how it was measured, by metric or direct observation. Z is the specific technical steps you took.
+
 ## From raw recall to atomic ledger
 
-Mining happens immediately after each phase, never batched at the end. Almost everything in practice becomes _PAR_ (for Problem, Action, Result) even work that could qualify as _STAR_ (Situation, Task, Action, Result). Strategic and failure formats from the original spec remain unused, which suggests collapsing the taxonomy rather than pretending at coverage.
-
-Every entry must also carry XYZ:
-
-* X: what you accomplished, quantified
-* Y: how it was measured, by metric or direct observation
-* Z: the specific technical steps you took
+Mining happens immediately after each phase, never batched at the end. In my files, almost everything ended up labeled PAR, even work that could qualify as STAR. The other formats stayed in the template. Every entry also carries an XYZ line as defined above.
 
 Continuing that same SaaS extraction, that raw recall became a PAR:
 
