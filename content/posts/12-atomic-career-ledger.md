@@ -1,14 +1,14 @@
 ---
 title: "Forensic Memory Mining: Using Police Tactics on Myself to Recover Lost Thoughts"
 date: 2026-11-14T00:00:00Z
-description: "Resumes compress a messy career into smooth fiction, so I researched forensic interview techniques and started applying reverse recall, verbatim dumps, and auditable XYZ entries to my own history before any polish."
+description: "I blanked in job interviews on work I had actually done, so I turned police interview tactics on myself to capture dense, auditable history in plain text."
 tags: ["career", "ai-agents", "memory", "systems-design", "magnet-vector"]
 draft: true
 ---
 
-Sit down to update your resume and watch what happens. Three years of messy engineering collapse into a smooth story: kickoff, build, launch. The late-night debugging, the shelved prototype, the boring script that saved the team hours each week, all gone. What remains is a highlight reel that feels true and is mostly reconstruction.
+I started this because I blanked in job interviews. Asked for specifics on work I had actually done, my mind went empty. Years of messy engineering collapsed into kickoff, build, launch, leaving no late-night debugging, no shelved prototype, and no boring time-saving script within reach when I needed it.
 
-That blank page moment is what sent me researching how investigators pull detailed recall from witnesses. I did not build a dedicated product for this endeavor. I studied forensic interview techniques, laid down ground rules in an empty repository `AGENTS.md` file, and turned my agent loose quizzing me to apply them to my own history. Not to write a better PDF, but to stop memory drift and AI confabulation at the source. Once a detail decays in human memory, no future tool can recover it without guessing. Capturing it in plain text now gives my coding agents verified history to draw from immediately, without needing any downstream automation. A resume asks you to compress. This process asks you to decompress first.
+That blank interview moment is what sent me researching how investigators pull detailed recall from witnesses. I did not build a dedicated product for this endeavor. I studied forensic interview techniques, added an `AGENTS.md` rule file to an empty repository, and turned my agent loose quizzing me to apply them to my own history. Not to write a better PDF, but to stop memory drift and AI confabulation at the source. Once a detail decays in human memory, no future tool can recover it without guessing. Capturing it in plain text now gives my coding agents verified history to draw from immediately, without needing any downstream automation. A resume asks you to compress. This process asks you to decompress first.
 
 ## The problem is biological before it is professional
 
