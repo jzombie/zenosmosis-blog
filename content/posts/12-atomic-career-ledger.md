@@ -16,9 +16,9 @@ Human memory is reconstructive, not a recording. Ask it for a chronological care
 
 In my own extraction sessions, the missing material fell into three buckets:
 
-1. Gnarly debugging that never made a status report, like a WebRTC to telephony codec mismatch that segfaulted on underpowered servers, or a demo-day import failure caused by unresolved module paths.
-2. Dead architectures that felt embarrassing to mention, like a state unification layer that proved incompatible with the existing codebase and was shelved after weeks of shimming.
-3. Trivial automation that felt too boring to list, like a Wikipedia SVG parser that turned static maps into interactive regions, or a proxy plus search layer built with zero database access.
+1. Gnarly debugging that never made a status report, like a WebRTC to telephony bridge hit by codec mismatches and segfaults in a vendor library, or tracking down why SSH to a development server spiked with latency at the same time each day.
+2. Dead architectures that never shipped because the company was acquired by a company running a different backend, which felt awkward to explain in an interview.
+3. Trivial automation and unglamorous workarounds that felt too boring to list, like a Wikipedia SVG parser that turned static maps into interactive regions, or a scraper and frontend proxy overlay that let departments query a several-hundred-page financial services compliance site like a database when direct database access was unavailable.
 
 Chronology is the enemy here. Forward recall rewards the rehearsed narrative. The detail you need for a credible accomplishment lives in the boring Tuesdays, the week before launch, the thing that broke last.
 
