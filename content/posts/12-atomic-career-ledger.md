@@ -93,6 +93,8 @@ The corpus itself stays plain text on purpose. No resume generator. The artifact
 
 That plainness is the payoff today. Because the corpora live in the workspace as structured text, coding agents already read verified history when drafting docs, scoping tradeoffs, or building workflow tooling. They pull the actual constraint or the actual workaround instead of guessing from a thin bio. Atomic XYZ units are kept clean so future tooling could consume them without re-extraction, but that tooling is not claimed as built.
 
+In _[Magnet Vector](/posts/8-magnet-vector/)_ terms, this is a density play, not a push play. A keyword stuffed resume is outbound marketing into a void. Anchored recall plus quantified XYZ lines is a dense coordinate: extractable in seconds, routable to the next detail, citable from summary alone. That is why this post carries the magnet vector tag.
+
 Why do this at all? I wanted a record I could trust the next time I had to explain my work, without reconstructing it under pressure or letting a tool invent details. In total I spent about 12 hours answering questions across sessions, not in one sitting. Memory keeps fading and new work keeps piling up, so it helps to run another session after a while to catch what surfaced late or what changed. I include the storage detail for context. The process forces honesty with yourself, which is harder than it sounds. I am not sure most people would sit with it that long.
 
 Replicating this takes less infrastructure than you expect and more discipline than you want.
