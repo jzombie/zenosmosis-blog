@@ -1,5 +1,5 @@
 ---
-title: "Forensic Memory Mining: Treating My Career Like a Cold Case"
+title: "Forensic Memory Mining: Using Police Tactics on Myself to Recover Lost Thoughts"
 date: 2026-11-14T00:00:00Z
 description: "Resumes compress a messy career into smooth fiction, so I researched forensic interview techniques and started applying reverse recall, verbatim dumps, and auditable XYZ entries to my own history before any polish."
 tags: ["career", "ai-agents", "memory", "systems-design", "magnet-vector"]
