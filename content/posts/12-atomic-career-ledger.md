@@ -6,17 +6,17 @@ tags: ["career", "ai-agents", "memory", "systems-design", "magnet-vector"]
 draft: true
 ---
 
-Sit down to update your resume and watch what happens. Three years of messy engineering collapse into a smooth story: kickoff, build, launch. The late night debugging, the shelved prototype, the boring script that saved the team hours each week, all gone. What remains is a highlight reel that feels true and is mostly reconstruction.
+Sit down to update your resume and watch what happens. Three years of messy engineering collapse into a smooth story: kickoff, build, launch. The late-night debugging, the shelved prototype, the boring script that saved the team hours each week, all gone. What remains is a highlight reel that feels true and is mostly reconstruction.
 
-That blank page moment is what sent me researching how investigators pull detailed recall from witnesses. I did not build a product. I started studying forensic interview techniques and applying them to my own career history. Not to write a better PDF, but to stop memory drift and AI confabulation at the source. A resume asks you to compress. This process asks you to decompress first.
+That blank page moment is what sent me researching how investigators pull detailed recall from witnesses. I did not build a product. I started studying forensic interview techniques and applying them to my own career history. Not to write a better PDF, but to stop memory drift and AI confabulation at the source. Once a detail decays in human memory, no future tool can recover it without guessing. Capturing it in plain text now gives my coding agents verified history to draw from immediately, without needing any downstream automation. A resume asks you to compress. This process asks you to decompress first.
 
 ## The problem is biological before it is professional
 
-Human memory is reconstructive, not a recording. Ask it for a chronological career story and it obliges with script driven guessing. It paves a clean road from kickoff to launch and erases everything that does not fit the arc.
+Human memory is reconstructive, not a recording. Ask it for a chronological career story and it obliges with script-driven guessing. It paves a clean road from kickoff to launch and erases everything that does not fit the arc.
 
 In my own extraction sessions, the missing material fell into three buckets:
 
-1. Gnarly debugging that never made a status report, like a WebRTC to telephony codec mismatch that segfaulted on underpowered servers, or a demo day import failure caused by unresolved module paths.
+1. Gnarly debugging that never made a status report, like a WebRTC to telephony codec mismatch that segfaulted on underpowered servers, or a demo-day import failure caused by unresolved module paths.
 2. Dead architectures that felt embarrassing to mention, like a state unification layer that proved incompatible with the existing codebase and was shelved after weeks of shimming.
 3. Trivial automation that felt too boring to list, like a Wikipedia SVG parser that turned static maps into interactive regions, or a proxy plus search layer built with zero database access.
 
@@ -28,7 +28,7 @@ The third failure is the tool most of us reach for first. Ask a default large la
 
 ## The protocol: four phases borrowed from eyewitness psychology
 
-The approach borrows the Cognitive Interview developed by Fisher and Geiselman in the 1980s for eyewitness recall. Police psychologists learned that chronological free recall produces the thinnest reports. Four specific retrieval cues produce thicker ones: reinstate context, report everything, reverse order, change perspective. I researched those cues and started applying each one as a phase to myself, kept as a short 108 line `AGENTS.md` file that any coding agent can follow.
+The approach borrows the Cognitive Interview developed by Fisher and Geiselman in the 1980s for eyewitness recall. Police psychologists learned that chronological free recall produces the thinnest reports. Four specific retrieval cues produce thicker ones: reinstate context, report everything, reverse order, change perspective. I researched those cues and started applying each one as a phase to myself, kept as a short 108-line `AGENTS.md` file that any coding agent can follow.
 
 ### 1. Mental reinstatement: anchor before accomplishments
 
@@ -44,13 +44,13 @@ Once anchored, the instruction is blunt:
 
 > Tell me everything about this system. Every script, bug, meeting, and boring task. Do not edit, do not summarize.
 
-The agent is forbidden from condensing, reordering, or topic hopping. One heading per system, dates in a separate tenure block, verbatim emotion preserved. A multi language SaaS session captured nearly 1,000 hand translated strings, a self initiated OCR adapter built as a favor, and a tower of duplicated backends that eventually prompted a resignation to save sanity. None of that sounds like a resume bullet in raw form. That is the point. Raw first, packaging later.
+The agent is _[thoretically]_ forbidden from condensing, reordering, or topic hopping (obviously helps to use a good agent). One heading per system, dates in a separate tenure block, verbatim emotion preserved. A multi-language SaaS session captured nearly 1,000 hand-translated strings, a self-initiated OCR adapter built as a favor, and a tower of duplicated backends that eventually prompted a resignation to save sanity. None of that sounds like a resume bullet in raw form. That is the point. Raw first, packaging later.
 
 ### 3. Reverse order recall: walk backward from the end
 
 Start at delivery, layoff, acquisition, or quit. Then step backward: what broke last, what changed the week before, what slipped the deadline, who was in the kickoff room.
 
-A telehealth video bridge reads completely differently in reverse. Forward version: migrated video to a new provider. Backward version: delivery after codec artifacts, WebRTC to telephony mismatch, segfaults on shared servers, a rejected headless browser proposal, eventual approval, success after two prior vendors had burned over 500k. The backward walk surfaces judgment under constraint: diagnosing the fault early, persisting through rejection, shimming browser clients onto server runtimes. Forward recall would have smoothed all of that away.
+A telehealth video bridge reads completely differently in reverse. Forward version: migrated video to a new provider. Backward version: delivery after codec artifacts, WebRTC to telephony mismatch, segfaults on shared servers, a rejected headless-browser proposal, eventual approval, delivered after two prior vendors burned $500k+ (not sure if it was in total, per vendor, or was an outright lie to make me motivated). The backward walk surfaces judgment under constraint: diagnosing the fault early, persisting through rejection, shimming browser clients onto server runtimes. Forward recall would have smoothed all of that away.
 
 ### 4. Changing perspectives: ask the room
 
@@ -72,25 +72,25 @@ Every entry must also carry XYZ:
 * Y: how it was measured, by metric or direct observation
 * Z: the specific technical steps you took
 
-Here is one sanitized end to end example from a multi language SaaS role.
+Here is one sanitized end-to-end example from a multi-language SaaS role. Honesty note: this corpus has anchor plus Phase 2 dump notes but no documented Phase 3 walk, so I mine it from those two only and leave the backward chain open. For a full backward chain, see the bridge example below.
 
-Anchor: small colocated team, two person web ownership, manual release checks, translation files edited by hand. Dump: roughly 1,000 UI strings translated manually, growing with every feature, constant risk of empty text on language switch. Reverse walk: the last break before the fix was a release with missing keys in production for one locale, the week before that a spreadsheet merge conflict, the kickoff realization that the team could not staff manual translation. Mined PAR:
+Anchor: small colocated team, two-person web ownership, manual release checks, translation files edited by hand. Dump: roughly 1,000 UI strings translated manually, growing with every feature, constant risk of empty text on language switch. Mined PAR:
 
-Problem: isolated string files, duplicated effort, inconsistent behavior across locales. Action: built a semi automatic fetch pipeline with provider auto fetch on new content plus an audit queue. Result: zero touch localization with no empty text states.
+Problem: isolated string files, duplicated effort, inconsistent behavior across locales. Action: built a semi-automatic fetch pipeline with provider auto-fetch on new content plus an audit queue. Result: zero-touch localization with no empty text states.
 
 X is roughly 1,000 strings moved from manual to pipeline. Y is elimination of manual merge time and missing key incidents. Z is identifying the scaling break, learning the internationalization framework on the job, building the fetch layer, and wiring it into the release workflow.
 
 Two more wins show the audit model.
 
-The reverse order bridge described above mined into a PAR where X names a real time interpreter bridge delivered after prior failures, Y names delivery under contractual obligation against explicit vendor skepticism, and Z names segfault diagnosis, the headless browser proposal, and codec resolution through trial and error. Numbers keep their tilde honesty. Roughly 12 endpoints, several hundred pages, over 500k in prior burn. Precision is not claimed where telemetry is gone.
+The reverse-order bridge described above mined into a PAR where X names a real-time interpreter bridge delivered after prior failures, Y names delivery under contractual obligation against explicit vendor skepticism, and Z names segfault diagnosis, the headless-browser proposal, and codec resolution through trial and error. Numbers keep their tilde honesty. Roughly 12 endpoints, several hundred pages, $500k+ in prior burn. Precision is not claimed where telemetry is gone.
 
-The anti confabulation rule is the differentiator. A price notification system had three microservices. The third is recorded as unrecalled and left open. A document ingestion side project is logged as specifics unknown and moved to Active Investigation. When measurement is missing, the protocol uses defensive estimation with visible math. Fifty invoices per day at eight minutes each, reduced to thirty seconds, even if off by half, still exceeds five hours per week. Show the arithmetic, mark the uncertainty, never invent a dashboard.
+The anti-confabulation rule is the differentiator. A price notification system had three microservices. The third is recorded as unrecalled and left open. A document ingestion side project is logged as specifics unknown and moved to Active Investigation. When measurement is missing, the protocol uses defensive estimation with visible math. Fifty invoices per day at eight minutes each, reduced to thirty seconds, even if off by half, still exceeds five hours per week. Show the arithmetic, mark the uncertainty, never invent a dashboard.
 
 ## The artifact is plain text on purpose
 
-There is no vector database, no embedding pipeline, no resume generator. The current artifact is deliberately boring: one `AGENTS.md` spec, one 21 line corpus template, one index table with thirteen role eras, and one Markdown corpus file per employer containing all four phases plus mined entries plus open investigation items.
+There is no vector database, no embedding pipeline, no resume generator. The current artifact is deliberately boring: one `AGENTS.md` spec, one 21-line corpus template, one index table with thirteen role eras, and one Markdown corpus file per employer containing all four phases plus mined entries plus open investigation items.
 
-That plainness is the payoff today. Because the corpora live in the workspace as structured text, coding agents already read verified history when drafting docs, scoping tradeoffs, or building workflow tooling. They pull the actual constraint or the actual workaround instead of guessing from a thin bio. Atomic XYZ units are kept clean so future tooling could consume them without re extraction, but that tooling is not claimed as built.
+That plainness is the payoff today. Because the corpora live in the workspace as structured text, coding agents already read verified history when drafting docs, scoping tradeoffs, or building workflow tooling. They pull the actual constraint or the actual workaround instead of guessing from a thin bio. Atomic XYZ units are kept clean so future tooling could consume them without re-extraction, but that tooling is not claimed as built.
 
 Replicating this takes less infrastructure than you expect and more discipline than you want.
 
