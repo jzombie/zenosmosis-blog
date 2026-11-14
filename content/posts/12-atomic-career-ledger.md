@@ -89,11 +89,11 @@ The anti-confabulation rule is the differentiator. A price notification system h
 
 ## The artifact is plain text on purpose
 
-There is no vector database, no embedding pipeline, no resume generator. The current artifact is deliberately boring: one `AGENTS.md` spec, one 21-line corpus template, one index table with thirteen role eras, and one Markdown corpus file per employer containing all four phases plus mined entries plus open investigation items.
+The corpus itself stays plain text on purpose. No resume generator. The artifact is deliberately boring: one `AGENTS.md` spec, one 21-line corpus template, one index table with thirteen role eras, and one Markdown file per employer holding the four phases plus mined entries plus open items. The sessions that produced it are also preserved in two other places: the internal store my agent builds on its own, and a separate conversation log I hooked in so I can mine my own sessions in whatever future format I want.
 
 That plainness is the payoff today. Because the corpora live in the workspace as structured text, coding agents already read verified history when drafting docs, scoping tradeoffs, or building workflow tooling. They pull the actual constraint or the actual workaround instead of guessing from a thin bio. Atomic XYZ units are kept clean so future tooling could consume them without re-extraction, but that tooling is not claimed as built.
 
-Why do this at all? I wanted a record I could trust the next time I had to explain my work, without reconstructing it under pressure or letting a tool invent details. In total I spent about 12 hours answering questions across sessions, not in one sitting. Memory keeps fading and new work keeps piling up, so it helps to run another session after a while to catch what surfaced late or what changed.
+Why do this at all? I wanted a record I could trust the next time I had to explain my work, without reconstructing it under pressure or letting a tool invent details. In total I spent about 12 hours answering questions across sessions, not in one sitting. Memory keeps fading and new work keeps piling up, so it helps to run another session after a while to catch what surfaced late or what changed. I include the storage detail for context. The process forces honesty with yourself, which is harder than it sounds. I am not sure most people would sit with it that long.
 
 Replicating this takes less infrastructure than you expect and more discipline than you want.
 
