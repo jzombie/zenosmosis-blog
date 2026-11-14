@@ -8,7 +8,7 @@ draft: true
 
 Sit down to update your resume and watch what happens. Three years of messy engineering collapse into a smooth story: kickoff, build, launch. The late-night debugging, the shelved prototype, the boring script that saved the team hours each week, all gone. What remains is a highlight reel that feels true and is mostly reconstruction.
 
-That blank page moment is what sent me researching how investigators pull detailed recall from witnesses. I did not build a product. I started studying forensic interview techniques and applying them to my own career history. Not to write a better PDF, but to stop memory drift and AI confabulation at the source. Once a detail decays in human memory, no future tool can recover it without guessing. Capturing it in plain text now gives my coding agents verified history to draw from immediately, without needing any downstream automation. A resume asks you to compress. This process asks you to decompress first.
+That blank page moment is what sent me researching how investigators pull detailed recall from witnesses. I did not build a dedicated product for this endeavor. I studied forensic interview techniques, laid down ground rules in an empty repository `AGENTS.md` file, and turned my agent loose quizzing me to apply them to my own history. Not to write a better PDF, but to stop memory drift and AI confabulation at the source. Once a detail decays in human memory, no future tool can recover it without guessing. Capturing it in plain text now gives my coding agents verified history to draw from immediately, without needing any downstream automation. A resume asks you to compress. This process asks you to decompress first.
 
 ## The problem is biological before it is professional
 
