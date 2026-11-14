@@ -102,7 +102,7 @@ I wanted a record I could trust the next time I had to explain my work, without 
 
 ## How to replicate
 
-You do not need to write the spec. Borrow mine. Drop this AGENTS.md into an empty repo and ask your agent to run it.
+You do not need to write the spec. Borrow mine. Drop this `AGENTS.md` into an empty repo and ask your agent to run it.
 
 ```md
 # Atomic Career Ledger: Forensic Cognitive Elicitation Protocol
