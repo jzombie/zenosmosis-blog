@@ -8,7 +8,7 @@ draft: true
 
 > [windows-headless](https://github.com/jzombie/windows-headless) is in alpha: one command turns a Microsoft retail ISO into an SSH-ready Windows 11 VM, headless, with no daemon, no GUI, no host packages, and no Docker. Also published on [crates.io](https://crates.io/crates/windows-headless). Source: [jzombie/windows-headless](https://github.com/jzombie/windows-headless).
 
-Right now this is a tool for [Rust](https://rust-lang.org/) users on macOS or Linux: developers who need to compile for Windows locally or debug Windows behavior without leaving their machine. If that is you, the pitch is simple. Input: a retail ISO (amd64 or arm64, matching your host). Output: an SSH shell running Windows 11. The installer runs unattended inside an in-process QEMU guest, and the CLI blocks until the shell is reachable.
+Right now this is a tool for [Rust](https://rust-lang.org/) users on macOS or Linux: developers who need to compile for Windows locally or debug Windows behavior without leaving their machine. If that is you, the pitch is simple. Input: a retail ISO (amd64 or arm64, matching your host). Output: an SSH shell running Windows 11. The installer runs unattended inside an in-process QEMU guest, and the CLI drops you into the guest shell once SSH is reachable.
 
 Distribution is source-only for now. There are no prebuilt binaries to download; you build it yourself with Cargo (details below).
 
@@ -17,7 +17,7 @@ Distribution is source-only for now. There are no prebuilt binaries to download;
 ## The one command
 
 ```sh
-# Build the installer, boot the VM, land at a Command Prompt in the same terminal.
+# Build the installer, boot the VM, and drop into the guest shell over SSH.
 # Always use release. Debug builds slow every status tick.
 cargo run --release -- run --win-iso <PATH_TO_WIN_ISO>
 ```
@@ -29,13 +29,14 @@ cargo run --release -- build --win-iso <PATH_TO_WIN_ISO>
 cargo run --release -- run
 ```
 
-Sizing follows Docker style: `--memory 8g --cpus 8 --disk-size 128g` (defaults: `4g`, `4`, `64g`). When ready, the CLI prints the connect line, typically `ssh -p 2232 AdminUser@127.0.0.1`. VNC is available at `vnc://127.0.0.1:5910` for watching. Requires a Rust toolchain (`cargo` 1.85+); nothing prebuilt is published yet, so the commands below build from source first. Everything else downloads automatically on first run and executes from the cache.
+Sizing takes Docker-style flags (`--memory`, `--cpus`, `--disk-size`). When SSH is reachable, the CLI drops you into the guest shell in the same terminal. VNC is available for watching. Requires a Rust toolchain. Nothing prebuilt is published yet, so the commands above build from source. Remaining dependencies download automatically on first run and execute from the cache.
 
 ## What you get
 
 A real VM, provisioned in process:
 
 - **Unattended install.** The tool builds installer media from your ISO (answer file selects the Windows 11 Pro image, `en-US`) and boots it. Typical time to SSH on macOS: 10 to 15 minutes from first boot, with outliers to 18.
+- **No virtual TPM.** The answer file sets `LabConfig` bypasses for the TPM 2.0, Secure Boot, RAM, CPU, and disk checks, so Setup proceeds with no `swtpm` to configure.
 - **Portable hypervisor.** QEMU, wimlib, and the virtio-win driver pack come from [lab-qemu-portable](https://github.com/jzombie/lab-qemu-portable) as zero-install archives, SHA-256 verified against pins in `src/pins.rs`. The host stays clean.
 - **One driver, automatic.** The specialize pass installs the Red Hat VirtIO NetKVM driver so the guest gets network, hence SSH. Storage stays on inbox NVMe (`stornvme`), graphics on `ramfb`. No driver hunting.
 - **Library surface.** Thin CLI over exported `VmConfig`, `HeadlessVmBuilder`, and `DiskManager` if you want to drive it programmatically.
@@ -44,9 +45,14 @@ A real VM, provisioned in process:
 
 Headless does not mean blind. During the install phase only, screenshots land in `<cache>/vms/win11/screenshots/` every 60 seconds, and an in-memory classifier labels frames between saves (installer progress, OOBE, firmware boot art, lock/idle, plus error states like modal dialogs, UEFI shell, and recovery). Capture stops once the install completes.
 
+Setup walks through installer progress unattended:
+
 ![Windows installer at 16 percent](installer-16pct.png "Unattended setup, early progress")
 ![Windows installer at 56 percent](installer-56pct.png "Unattended setup, mid progress")
 ![Windows installer at 94 percent](installer-94pct.png "Unattended setup, nearly done")
+
+Then a reboot through TianoCore firmware, ending at the lock screen that means the guest is up and SSH is reachable:
+
 ![TianoCore firmware boot art](reboot-tianocore.png "Reboot through TianoCore firmware")
 ![Windows lock screen, SSH ready](lock-idle.png "Lock screen means the guest is up and SSH is reachable")
 
@@ -54,10 +60,10 @@ Two caveats, stated plainly in the [README](https://github.com/jzombie/windows-h
 
 ## Snapshots: golden rewind by default
 
-The first proven boot saves a golden snapshot automatically. Every later `run` rewinds to it first, so a dirty stop (Ctrl-C) cannot leave the next boot in Recovery.
+The first proven boot saves a golden snapshot automatically. Every later `run` rewinds to it first, so a dirty stop (Ctrl-C) cannot leave the next boot in Recovery. One snapshot at a time: the QMP control channel admits a single client.
 
 ```sh
-# Terminal 1: boot and leave it running (run blocks).
+# Terminal 1: boot and leave it running (you land in the guest shell).
 cargo run --release -- run
 ```
 
@@ -80,4 +86,4 @@ The standing advice for bug reports: use all defaults for the first install. A g
 
 ----
 
-*Repo: [jzombie/windows-headless](https://github.com/jzombie/windows-headless). Installs from source via `cargo run --release`. Issues and run reports: [github.com/jzombie/windows-headless/issues](https://github.com/jzombie/windows-headless/issues). Dependency layer: [lab-qemu-portable](https://github.com/jzombie/lab-qemu-portable).*
+*Repo: [jzombie/windows-headless](https://github.com/jzombie/windows-headless). Get it with `cargo install windows-headless`, or clone and run: `git clone https://github.com/jzombie/windows-headless && cd windows-headless && cargo run --release -- run --win-iso <PATH_TO_WIN_ISO>`. Issues and run reports: [github.com/jzombie/windows-headless/issues](https://github.com/jzombie/windows-headless/issues). Dependency layer: [lab-qemu-portable](https://github.com/jzombie/lab-qemu-portable).*
