@@ -6,6 +6,7 @@ title = "zenOSmosis blog"
 [outputs]
 home = ["HTML", "JSON", "ActivityRSS", "ActivityAtom", "ActivityJSON", "LLMS", "LLMSFULL"]
 section = ["HTML", "JSON"]
+page = ["HTML", "MARKDOWN"]
 
 [mediaTypes]
 	[mediaTypes."application/atom+xml"]
@@ -13,6 +14,9 @@ section = ["HTML", "JSON"]
 
 	[mediaTypes."application/feed+json"]
 		suffixes = ["json"]
+
+	[mediaTypes."text/markdown"]
+		suffixes = ["md"]
 
 [outputFormats]
 	[outputFormats.ActivityRSS]
@@ -52,6 +56,13 @@ section = ["HTML", "JSON"]
 		mediaType = "text/plain"
 		baseName = "llms-full"
 		suffix = "txt"
+		rel = "alternate"
+			isPlainText = true
+
+	[outputFormats.MARKDOWN]
+		name = "MARKDOWN"
+		mediaType = "text/markdown"
+		baseName = "index"
 		rel = "alternate"
 			isPlainText = true
 

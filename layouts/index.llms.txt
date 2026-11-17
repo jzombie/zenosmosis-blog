@@ -11,7 +11,8 @@ Site: {{ strings.TrimSuffix "/" $site.BaseURL }}/
 ## Posts
 
 {{ range $items -}}
-- [{{ .Title }}]({{ .Permalink }}): {{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 200 }}{{ end }}
+{{ $md := .OutputFormats.Get "MARKDOWN" -}}
+- [{{ .Title }}]({{ if $md }}{{ $md.Permalink }}{{ else }}{{ .Permalink }}{{ end }}): {{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 200 }}{{ end }}
 {{ end }}
 
 ## Elsewhere
@@ -19,3 +20,6 @@ Site: {{ strings.TrimSuffix "/" $site.BaseURL }}/
 - [Web]({{ $site.Params.websiteURL }}): professional site
 - [GitHub org]({{ $site.Params.githubOrgURL }}): professional work
 - [GitHub personal]({{ $site.Params.githubPersonalURL }}): personal projects
+{{- with $site.Home.OutputFormats.Get "LLMSFULL" }}
+- [Full text]({{ .Permalink }}): complete contents of all posts in one file for bulk ingestion
+{{- end }}
