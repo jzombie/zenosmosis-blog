@@ -91,7 +91,7 @@ Live snapshots also save RAM. Apple Silicon with cache on external USB tends to 
 
 ## Alpha status and tested surface
 
-Status is alpha, with a clear split: rock solid and performant on macOS Apple Silicon (M1+), working on Linux amd64 and arm64, with older circa-2015 Intel Linux hosts occasionally struggling at the initial SSH handoff. Intel Macs are unsupported. Windows hosts are untested (the portable tree ships a Windows QEMU build, but the install path there is unexercised).
+Status is alpha, with a clear split: rock solid and performant on macOS Apple Silicon (M1+), working on Linux amd64 and arm64, with older circa-2015 Intel Linux hosts occasionally struggling at the initial SSH handoff. Intel Macs are unsupported. Windows hosts are untested ([the portable tree](https://github.com/jzombie/lab-qemu-portable) ships a Windows QEMU build, but the install path there is unexercised).
 
 Proven installs are logged to `tested-isos.jsonl` with a Tested table in the README covering macOS HVF, Linux KVM, and TCG fallback runs. Untested by design: non-English media, non-retail ISOs (Enterprise, OEM), mixed arch guests (x64 Windows on ARM hosts), and cross-arch TCG in general.
 
