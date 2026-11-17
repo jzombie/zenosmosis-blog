@@ -93,7 +93,7 @@ cargo run --release -- snapshot
 
 ### Live resume, experimental
 
-Live snapshots also save RAM. Apple Silicon with cache on external USB tends to favor rewind (about 19s spawn-to-SSH versus about 23s live in the README's comparison). Older Intel i7 machines with internal SSDs tend to favor live. Both types coexist as separate sidecars, and `run` selects by flag. Benchmark both on your hardware and default to rewind unless live measures faster.
+Live snapshots also save the guest's RAM contents to a file beside the disk, so resume restores the running machine with no boot. Apple Silicon with cache on external USB tends to favor rewind (about 19s spawn-to-SSH versus about 23s live in the README's comparison). Older Intel i7 machines with internal SSDs tend to favor live. Both types coexist as separate sidecars, and `run` selects by flag. Benchmark both on your hardware and default to rewind unless live measures faster.
 
 ## Alpha status and tested surface
 
