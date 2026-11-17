@@ -10,7 +10,7 @@ draft: true
 
 Right now this is a tool for [Rust](https://rust-lang.org/) users on macOS or Linux: developers who need to compile for Windows locally or debug Windows behavior without leaving their machine. If that is you, the pitch is simple. Input: a retail ISO (amd64 or arm64, matching your host). Output: an SSH shell running Windows 11. The installer runs unattended inside an in-process QEMU guest, and the CLI drops you into the guest shell once SSH is reachable.
 
-Distribution is source-only for now. There are no prebuilt binaries to download; you build it yourself with Cargo (details below).
+Distribution is source-only for now. There are no prebuilt binaries to download; you build it yourself with [Cargo](https://doc.rust-lang.org/cargo/) (details below).
 
 ![SSH into Windows 11 from a macOS terminal](win-ssh-on-mac.png "PowerShell over SSH, invoked directly by command line from macOS, served by the headless guest")
 
