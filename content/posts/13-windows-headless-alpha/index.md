@@ -16,6 +16,12 @@ Distribution is source-only for now. There are no prebuilt binaries to download;
 
 ## Setup and run
 
+### Prerequisites
+
+- Host: macOS on Apple Silicon, or Linux on amd64 or arm64. Intel Macs are unsupported; Windows hosts are untested.
+- A retail Windows 11 ISO for your host arch (ARM Windows on Apple Silicon, x64 Windows on x64 Linux). Only `en-US` media is tested.
+- A [Rust toolchain](https://rust-lang.org/tools/install/). Everything else downloads on first run.
+
 ### Install the tool
 
 Clone first. Running from the checkout keeps the whole cache (VM disk, snapshots, screenshots, installer media) in `./.cache`, gitignored where it is easy to watch.
