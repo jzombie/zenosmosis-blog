@@ -60,7 +60,7 @@
      this page's own markdown version, not the whole-site carrier. The llms-full
      carrier stays discoverable via the llms.txt listing, not via rel="alternate". */}}
 {{ with .OutputFormats.Get "MARKDOWN" -}}
-  <link rel="alternate" href="{{ .Permalink }}" type="text/markdown" title="{{ $.Title }} markdown">
+  <link rel="alternate" href="{{ .Permalink }}" type="text/markdown" title="{{ $.Title }} (Markdown version)">
 {{- end }}
 {{/* Discovery uses HTML <link> elements only. The site is served by GitHub Pages
      (server: GitHub.com), which cannot emit custom HTTP Link: headers. This is a
