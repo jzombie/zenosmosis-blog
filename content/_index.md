@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Quietly ambitious software, in public."
 date: 2026-11-10T00:00:00Z
 description: "Systems engineering, open-source infrastructure, and developer tooling by jzombie / zenOSmosis."
 tags: []
