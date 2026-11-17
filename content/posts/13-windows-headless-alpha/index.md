@@ -54,7 +54,7 @@ Sizing takes Docker-style flags (`--memory`, `--cpus`, `--disk-size`). When SSH 
 
 A real VM, provisioned in process:
 
-- **Unattended install.** The tool builds installer media from your ISO (answer file selects the Windows 11 Pro image, `en-US`) and boots it. Typical time to SSH on macOS: 10 to 15 minutes from first boot, with outliers to 18.
+- **Unattended install.** The tool builds installer media from your ISO (answer file selects the Windows 11 Pro image, `en-US`) and boots it. The first install takes a while: typical time to SSH on macOS is 10 to 15 minutes from first boot, with outliers to 18. Later boots rewind to the golden snapshot and reach SSH in seconds.
 - **No virtual TPM.** The answer file sets `LabConfig` bypasses for the TPM 2.0, Secure Boot, RAM, CPU, and disk checks, so Setup proceeds with no `swtpm` to configure.
 - **Portable hypervisor.** QEMU, wimlib, and the virtio-win driver pack come from [lab-qemu-portable](https://github.com/jzombie/lab-qemu-portable) as zero-install archives, SHA-256 verified against pins in `src/pins.rs`. The host stays clean.
 - **One driver, automatic.** The specialize pass installs the Red Hat VirtIO NetKVM driver so the guest gets network, hence SSH. Storage stays on inbox NVMe (`stornvme`), graphics on `ramfb`. No driver hunting.
