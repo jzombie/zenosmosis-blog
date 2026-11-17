@@ -54,11 +54,18 @@
   <link rel="alternate" type="application/atom+xml" title="{{ .Site.Title }} activity Atom" href="/activity.atom">
   <link rel="alternate" type="application/feed+json" title="{{ .Site.Title }} activity JSON" href="/activity.json">
 {{ with .Site.Home.OutputFormats.Get "LLMS" -}}
-  <link rel="describedby" href="{{ .Permalink }}" type="text/plain">
+  <link rel="describedby" href="{{ .Permalink }}" type="text/markdown">
 {{- end }}
-{{ with .Site.Home.OutputFormats.Get "LLMSFULL" -}}
-  <link rel="alternate" href="{{ .Permalink }}" type="text/plain" title="{{ $.Site.Title }} full text">
+{{/* Per-page clean markdown mirror (llms.txt v2 item 1). rel="alternate" must point at
+     this page's own markdown version, not the whole-site carrier. The llms-full
+     carrier stays discoverable via the llms.txt listing, not via rel="alternate". */}}
+{{ with .OutputFormats.Get "MARKDOWN" -}}
+  <link rel="alternate" href="{{ .Permalink }}" type="text/markdown" title="{{ $.Title }} markdown">
 {{- end }}
+{{/* Discovery uses HTML <link> elements only. The site is served by GitHub Pages
+     (server: GitHub.com), which cannot emit custom HTTP Link: headers. This is a
+     platform limitation, not a spec gap: v2 allows "either as HTML <link> elements,
+     or as an HTTP Link: response header". Do not re-litigate unless hosting changes. */}}
   {{ $css := resources.Get "css/styles.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">

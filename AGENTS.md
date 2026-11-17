@@ -8,6 +8,13 @@ Hugo blog (`config.toml`, `content/`, `layouts/`, `assets/css/styles.css`). No e
 - Static files only: `docker run --rm -v "$PWD":/src klakegg/hugo:ext-alpine`
 - Live reload: `docker compose -f docker-compose.dev.yml up --remove-orphans`
 
+## Discovery / llms.txt v2
+
+- Per-page clean markdown mirrors are Hugo-native: `page = ["HTML", "MARKDOWN"]` with `baseName = "index"` serves `/posts/x/index.md` alongside `index.html` via `layouts/_default/single.markdown.md`.
+- In `<head>`, `rel="alternate" type="text/markdown"` must point at the page's own markdown version. The whole-site `llms-full.txt` carrier stays discoverable via the `llms.txt` listing, never via `rel="alternate"`.
+- Machine payloads (`llms.txt`, `llms-full.txt`, per-page `.md`) use `type="text/markdown"` (RFC 7763).
+- Discovery uses HTML `<link>` elements only. The site is served by GitHub Pages, which cannot emit custom HTTP `Link:` headers. This is a platform limitation, not a spec gap: v2 allows either channel. Do not re-litigate unless hosting changes.
+
 ## Blog post style guide
 
 ### Frontmatter (`content/posts/*.md`)
