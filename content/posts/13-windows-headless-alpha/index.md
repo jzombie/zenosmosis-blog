@@ -1,12 +1,12 @@
 ---
-title: "windows-headless Alpha: One Command to an SSH-ready Windows 11 VM"
+title: "windows-headless Alpha: An SSH-ready Windows 11 VM from a Retail ISO"
 date: 2026-11-16T00:00:00Z
-description: "Provision a headless Windows 11 VM from a retail ISO in one command: unattended setup, portable QEMU, SSH when ready, golden snapshots on every run."
+description: "windows-headless provisions a headless Windows 11 VM from a retail ISO: unattended setup, portable QEMU, SSH when ready, golden snapshots on every run."
 tags: ["windows", "virtualization", "qemu", "ssh", "rust", "macos", "linux"]
 draft: true
 ---
 
-> [windows-headless](https://github.com/jzombie/windows-headless) is in alpha: one command turns a Microsoft retail ISO into an SSH-ready Windows 11 VM, headless, with no daemon, no GUI, no host packages, and no Docker. Also published on [crates.io](https://crates.io/crates/windows-headless). Source: [jzombie/windows-headless](https://github.com/jzombie/windows-headless).
+> [windows-headless](https://github.com/jzombie/windows-headless) is in alpha: turn a Microsoft retail ISO into an SSH-ready Windows 11 VM, headless, with no daemon, no GUI, no host packages, and no Docker. Also published on [crates.io](https://crates.io/crates/windows-headless). Source: [jzombie/windows-headless](https://github.com/jzombie/windows-headless).
 
 Right now this is a tool for [Rust](https://rust-lang.org/) users on macOS or Linux: developers who need to compile for Windows locally or debug Windows behavior without leaving their machine. If that is you, the pitch is simple. Input: a retail ISO (amd64 or arm64, matching your host). Output: an SSH shell running Windows 11. The installer runs unattended inside an in-process QEMU guest, and the CLI drops you into the guest shell once SSH is reachable.
 
@@ -14,15 +14,28 @@ Distribution is source-only for now. There are no prebuilt binaries to download;
 
 ![SSH into Windows 11 from a macOS terminal](win-ssh-on-mac.png "PowerShell over SSH, invoked directly by command line from macOS, served by the headless guest")
 
-## The one command
+## Setup and run
+
+### Install the tool
+
+Clone first. Running from the checkout keeps the whole cache (VM disk, snapshots, screenshots, installer media) in `./.cache`, gitignored where it is easy to watch.
 
 ```sh
-# Build the installer, boot the VM, and drop into the guest shell over SSH.
-# Always use release. Debug builds slow every status tick.
+git clone https://github.com/jzombie/windows-headless
+cd windows-headless
+```
+
+> _From the Cargo registry instead: `cargo install windows-headless`, then substitute `windows-headless` for `cargo run --release --` in the commands below. Installed runs fall back to the OS user cache instead of `./.cache`._
+
+### Run
+
+Build the installer, boot the VM, and drop into the guest shell over SSH (always release; debug builds slow every status tick):
+
+```sh
 cargo run --release -- run --win-iso <PATH_TO_WIN_ISO>
 ```
 
-Or split the phases:
+Or split the phases (build once, boot on demand):
 
 ```sh
 cargo run --release -- build --win-iso <PATH_TO_WIN_ISO>
