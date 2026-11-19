@@ -2,7 +2,7 @@
 title: "How to Force Unmount SSHFS on Mac (And Fix \"Device Busy\" Frozen Terminals)"
 date: 2026-11-12T12:00:00Z
 description: "Three escalating commands to unmount a frozen SSHFS mount on macOS: umount, diskutil unmount force, and killing the stuck sshfs process."
-tags: ["sshfs", "macos", "terminal", "sysadmin", "docker"]
+tags: ["sshfs", "macos", "terminal", "sysadmin", "docker", "ssh"]
 draft: false
 ---
 

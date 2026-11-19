@@ -2,7 +2,7 @@
 title: "Portable QEMU Builds: lab-qemu-portable Is Generally Available"
 date: 2026-11-12T00:00:00Z
 description: "Portable QEMU and wimlib builds for Linux (x64/ARM), macOS (Apple Silicon), and Windows (x64/ARM), plus a virtio-win driver mirror, published with stable tags, checksums, and build provenance for bundling into your own tools."
-tags: ["qemu", "virtualization", "wimlib", "virtio", "windows", "macos", "linux", "ci-cd"]
+tags: ["qemu", "virtualization", "wimlib", "virtio", "windows", "macos", "linux", "ci-cd", "automation"]
 draft: false
 ---
 

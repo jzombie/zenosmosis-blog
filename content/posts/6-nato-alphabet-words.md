@@ -2,7 +2,7 @@
 title: "NATO Phonetic Alphabet Words"
 date: 2025-12-24T00:00:00Z
 description: "A simple guide to remembering and using the NATO phonetic alphabet clearly over the phone."
-tags: ["nato-alphabet", "phonetic-alphabet", "spelling-out-letters"]
+tags: ["nato-alphabet", "phonetic-alphabet"]
 ---
 
 We have all been there. You are on the phone with customer support, the connection is slightly crackly, and you are desperately trying to spell out your email address.

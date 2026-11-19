@@ -2,7 +2,7 @@
 title: "windows-headless Alpha: An SSH-ready Windows 11 VM from a Retail ISO"
 date: 2026-11-16T00:00:00Z
 description: "windows-headless provisions a headless Windows 11 VM from a retail ISO: unattended setup, portable QEMU, SSH when ready, golden snapshots on every run."
-tags: ["windows", "virtualization", "qemu", "ssh", "rust", "macos", "linux"]
+tags: ["windows", "virtualization", "qemu", "ssh", "rust", "macos", "linux", "automation", "terminal"]
 draft: false
 ---
 

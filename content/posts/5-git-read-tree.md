@@ -2,7 +2,7 @@
 title: "Git read-tree: Carbon-Copy without Merge Hell"
 date: 2025-12-02T00:00:00Z
 description: "`git read-tree` is a photocopier. It copies the state of another branch directly into your staging area. It doesn't care about history, ancestors, or shared code. It just puts the files where you want them."
-tags: ["git", "version-control", "merge-conflicts"]
+tags: ["git", "merge-conflicts"]
 ---
 
 Have you ever tried to merge a branch, knowing it would end in *merge hell*, when all you actually wanted was the code itself?
