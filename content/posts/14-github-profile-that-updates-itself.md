@@ -73,7 +73,7 @@ The graph they consume is simple to describe: nodes stand for repos and carry re
 
 The SVGs are part of the same test. The charts and status badges are all generated from that same graph on every run, and they ship as separate image files linked from the page, so the visual layer gets exercised nightly instead of only when I feel like checking it. GitHub strips JavaScript out of SVGs, so any motion has to live in the markup and styles instead. That turns out to be a feature. Because every chart comes out of the same template, shared touches like the breathing pulse ride along everywhere for free.
 
-That makes my front page the canary. If a template change breaks rendering, if a chart goes stale, if the sweep fails and holds back a commit, I see it where everyone else sees it. That friction is intentional. Running my own visible surface through an unfinished language slows me down in exactly the places the language still needs work.
+My front page is the last stop, not the first casualty. I can proof a change on another branch before it lands, so a broken template never has to greet visitors. The friction is still real. Running my own visible surface through an unfinished language slows me down in exactly the places the language still needs work.
 
 The same precomputed graph has a second consumer. My [website](https://zenosmosis.com) build reads it when assembling [llms-full.txt](https://llmstxt.org/), the full carrier that sits alongside the shorter routing map, so agents get one file that shows how the projects relate instead of piecing it together repo by repo. I may find other uses for that data next. For now the profile and that file are the two readers, which is enough to keep the schema honest.
 
