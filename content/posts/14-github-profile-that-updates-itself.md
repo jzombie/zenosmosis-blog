@@ -52,6 +52,14 @@ The top of the page names the focus in one line. Below that sit language share, 
 
 Nothing there is hand counted. That sentence is the feature.
 
+## It helps dogfood my research pipeline
+
+The profile is also a live test of the tooling underneath it. The nightly sweep, the charts, and the page assembly all run through [OxDock](https://github.com/jzombie/rust-oxdock), the small pipeline language I use everywhere else. The graph they consume is simple to describe: nodes stand for repos and carry recent velocity with them, edges stand for real reuse between repos and only exist when the evidence holds. The profile then publishes whatever that pipeline produced.
+
+That makes my front page the canary. If a template change breaks rendering, if a chart goes stale, if the sweep fails and holds back a commit, I see it where everyone else sees it. That friction is intentional. Running my own visible surface through an unfinished language slows me down in exactly the places the language still needs work.
+
+One honest note on measurement. My recent [Google Search Console](https://search.google.com/search-console/about/) check showed AI Overview impressions rising, led by practical how to posts, not by strategy posts. This profile piece is unlikely to move that line. Its bet is on the other scoreboard: the agent and pull channel, where clear summaries and structured proof pages get reused inside assistant sessions. Different surface, different win.
+
 ## What I deliberately left manual
 
 Automation made the page fresher, but it also made something else obvious. Fresh numbers cannot supply judgment. The collector knows what changed. It does not know what matters, what was hard, or what should never be claimed without proof.
