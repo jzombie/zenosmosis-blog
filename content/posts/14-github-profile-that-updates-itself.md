@@ -1,6 +1,6 @@
 ---
 title: "My GitHub Profile Updates Itself While I Sleep"
-date: 2026-11-21T00:00:00Z
+date: 2026-11-22T00:00:00Z
 description: "I never had a real profile page, just the default GitHub grid. Now a nightly job recounts the work, redraws the map, and publishes the fresh proof."
 tags: ["automation", "github", "systems-design", "rust", "magnet-vector"]
 draft: true
