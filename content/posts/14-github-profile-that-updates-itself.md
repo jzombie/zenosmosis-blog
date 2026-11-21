@@ -67,7 +67,7 @@ Nothing there is hand counted. That sentence is the feature.
 
 ## It helps dogfood my research pipeline
 
-The profile is also a live test of the tooling underneath it. The nightly sweep, the charts, and the page assembly all run through [OxDock](https://github.com/jzombie/rust-oxdock), the small pipeline language I use everywhere else. It has other consumers too: several internal pipelines, and it is embedded in my terminal window manager [term-wm](https://github.com/jzombie/term-wm).
+The profile is also a live test of the tooling underneath it. The nightly sweep, the charts, and the page assembly all run through [OxDock](https://github.com/jzombie/rust-oxdock), the small pipeline language I use everywhere else. It has other consumers too: several internal pipelines, and it is embedded in my terminal window manager [term-wm](https://github.com/jzombie/term-wm). The curious can read the whole thing. The [nightly entry point](https://github.com/jzombie/jzombie-graph/blob/main/.github/scripts/pipeline.oxfile) is one call, the [lane definitions](https://github.com/jzombie/jzombie-graph/blob/main/scripts/lanes-steps.oxfile) hold the steps, and the [workflow file](https://github.com/jzombie/jzombie-graph/blob/main/.github/workflows/nightly.yml) owns the schedule.
 
 The graph they consume is simple to describe: nodes stand for repos and carry recent velocity with them, edges stand for real reuse between repos and only exist when the evidence holds. The profile then publishes whatever that pipeline produced.
 
