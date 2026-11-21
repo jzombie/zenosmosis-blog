@@ -3,7 +3,7 @@ title: "My GitHub Profile Updates Itself While I Sleep"
 date: 2026-11-21T00:00:00Z
 description: "I never had a real profile page, just the default GitHub grid. Now a nightly job recounts the work, redraws the map, and publishes the fresh proof."
 tags: ["automation", "github", "graphql", "systems-design", "rust", "magnet-vector"]
-draft: true
+draft: false
 ---
 
 > _Disclaimer: I'm not suggesting that I have a perfect GitHub profile page. What I am proposing is that most of it be automated. This kind of profile cannot be written without building the thing first. If you want a shortcut or a different direction, start with [Rahul Jain's guide](https://dev.to/rahuldkjain/how-i-improved-my-github-profile-480c)._
