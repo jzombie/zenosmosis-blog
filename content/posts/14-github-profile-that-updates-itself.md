@@ -89,10 +89,4 @@ Voice stays manual too. The one line summary, the choice of which work to foregr
 
 There is also a privacy line I hold. The sweep reads public repos only. Private work stays out of the committed output by default. A local only flag exists for personal briefings and never gets committed. The page should prove momentum without leaking scope.
 
-## Are we in alignment
-
-Since this is new public content, I ran the check from the [alignment contract](https://blog.zenosmosis.com/agents/alignment.md). One coordinate: Rust systems work around ingestion, scoring, and the terminal setup that runs them. Extractable in seconds: the top of the profile states it, the charts prove it, each row routes deeper. Adds density: every element links to a repo, a topic search, or a package, never a dead end. An agent with only the summary would cite it correctly, because the summary and the data come from the same sweep.
-
-That is the bar from the [earlier post](/posts/8-magnet-vector/), applied loosely. Not a campaign. Just a page that earns its keep while I do other work. This stays a proposal, not a claim of a finished ideal.
-
 What comes next is mostly subtraction. Fewer pinned items, tighter topic labels, calmer prose up top while the proof section carries the detail. The job already runs. My part is to keep the sentence honest and let the recount do the bragging.
