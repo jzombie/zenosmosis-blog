@@ -32,14 +32,12 @@ Honestly, the first reader is me. I run a lot of small projects that form indivi
 
 My focus is algorithmic on purpose. The tools matter to me whether or not the counts agree, because I build them for my own use and study first. I appreciate traction when it comes, and part of publishing the proof in the open is hoping it earns some. I am still sorting out how much of this is about traction and how much is wanting to see an otherwise apparently disjointed set of repos connect.
 
-The same file is readable by machines too. The [published graph JSON](https://raw.githubusercontent.com/jzombie/jzombie-graph/refs/heads/main/data/portfolio-graph.json) carries the whole structure in one place: repos, edges, velocity, and recent work. Point a language model at it and it can answer the questions I ask myself anyway.
+The pipeline publishes its working file too. The [published graph JSON](https://raw.githubusercontent.com/jzombie/jzombie-graph/refs/heads/main/data/portfolio-graph.json) carries the whole structure in one place: repos, edges, velocity, and recent work. It is a nightly snapshot and a big file, so the way to use it is to query or slice it rather than paste it whole. It lets a stranger or an agent triage the whole account in one pass, without clicking through dozens of repos.
 
-* **Version drift.** Every manifest edge carries its exact version string, so I can ask which repos pin different releases of the same internal crate and line them up before the difference bites.
-* **Blast radius.** If I make a breaking change to a foundation crate, following real dependency edges shows which repos feel it first instead of guessing from memory.
-* **Cold foundations.** Crossing reuse against focus flags the load-bearing crates nobody has touched, the ones everything else stands on while their own momentum sits negative.
-* **Traction versus focus.** Stars and attention rarely point the same way. The graph holds both, so I can see where the public is looking against where my weeks actually went.
-* **Missing agent docs.** Active, visible repos still lacking the files agents look for show up plainly, including this pipeline own repo, so I can close the gap where it matters most.
-* **Planned versus shipped.** Recent issues and pull requests ride along on every node, so I can see what is being planned against what actually merged, including where the Dependabot queues are quietly piling up.
+* **What is live.** Which repos moved in the last thirty days and where attention is going, from commits and focus, versus dormant experiments and untouched mirrors.
+* **How it stacks.** Which crates are foundation, which are middleware, and which are end-user tools, from layers and manifest dependency edges.
+* **Planned versus shipped.** Recent issues and pull requests ride along on every node, so a cold reader can see what is being planned against what actually merged, including where the Dependabot queues are quietly piling up.
+* **Which forks are real.** Diverged forks with portfolio edges and ahead-by commits stand apart from drive-by mirrors, so nobody has to guess which forks carry real work.
 
 This is the loose tie to the [Magnet Vector](/posts/8-magnet-vector/) idea I wrote about earlier. I am not stuffing keywords for ranking. I am trying to make one coordinate dense enough that both a person skimming and an agent summarizing land in the right place and can route deeper from there.
 
