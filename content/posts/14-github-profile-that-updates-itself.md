@@ -6,7 +6,7 @@ tags: ["automation", "github", "systems-design", "rust", "magnet-vector"]
 draft: true
 ---
 
-> _Disclaimer: I'm not suggesting that I have a perfect GitHub profile page. What I am proposing that most of it be automated._
+> _Disclaimer: I'm not suggesting that I have a perfect GitHub profile page. What I am proposing is that most of it be automated._
 
 I never had a profile page. Just the default GitHub grid, a few pins I set once, and no sentence explaining what the scattered repos added up to.
 
@@ -38,9 +38,9 @@ This is the loose tie to the [Magnet Vector](/posts/8-magnet-vector/) idea I wro
 
 Once a day, in the small hours, a collector wakes up and sweeps my public repos. It asks ordinary questions. What exists, what changed in the last thirty days, which repos depend on which others, what topics they declare, how big they are, where the docs live.
 
-That sweep becomes a single data file plus a schema file, refreshed together so they never disagree. A second step turns the data into pictures and fragments: share and focus charts, a cluster map, per repo radar images, and indicator badges for heating or cooling or steady or dormant. A renderer then assembles those pieces into a proof page, the same page every time, with the timestamp of the sweep printed on it.
+That sweep becomes a single data file plus a schema file, refreshed together so they never disagree. A second step turns the data into pictures and fragments: share and focus charts, a cluster map, per repo radar images, and indicator badges for heating or cooling or steady or dormant. A renderer then assembles those pieces into a proof page, stamped with the rebuild time.
 
-Then the profile repo does the simplest possible thing. It copies the fresh proof page and its pictures into its own front page. No editing, no merging by hand. If the sweep produced no changes, there is no commit. Last good proof keeps serving.
+Then the profile repo does the simplest possible thing. It copies the fresh proof page and its pictures into its own front page. No editing, no merging by hand. If any step fails, the run stops and the last good proof keeps serving.
 
 ### What counts as a connection
 
@@ -60,11 +60,11 @@ The profile is also a live test of the tooling underneath it. The nightly sweep,
 
 The graph they consume is simple to describe: nodes stand for repos and carry recent velocity with them, edges stand for real reuse between repos and only exist when the evidence holds. The profile then publishes whatever that pipeline produced.
 
-The SVGs are part of the same test. The charts and status badges are all generated from that same graph on every run, so the visual layer gets exercised nightly instead of only when I feel like checking it.
+The SVGs are part of the same test. The charts and status badges are all generated from that same graph on every run, and they ship as separate image files linked from the page, so the visual layer gets exercised nightly instead of only when I feel like checking it.
 
 That makes my front page the canary. If a template change breaks rendering, if a chart goes stale, if the sweep fails and holds back a commit, I see it where everyone else sees it. That friction is intentional. Running my own visible surface through an unfinished language slows me down in exactly the places the language still needs work.
 
-The same precomputed graph has a second consumer. My website build reads it when assembling [llms-full.txt](https://llmstxt.org/), so agents get one file that shows how the projects relate instead of piecing it together repo by repo. I may find other uses for that data next. For now the profile and that file are the two readers, which is enough to keep the schema honest.
+The same precomputed graph has a second consumer. [My website build](https://zenosmosis.com/llms-full.txt) reads it when assembling [llms-full.txt](https://llmstxt.org/), the full carrier that sits alongside the shorter routing map, so agents get one file that shows how the projects relate instead of piecing it together repo by repo. I may find other uses for that data next. For now the profile and that file are the two readers, which is enough to keep the schema honest.
 
 One honest note on measurement. My recent [Google Search Console](https://search.google.com/search-console/about/) check showed AI Overview impressions rising, led by practical how to posts, not by strategy posts. This profile piece is unlikely to move that line. Its bet is on the other scoreboard: the agent and pull channel, where clear summaries and structured proof pages get reused inside assistant sessions. Different surface, different win.
 
