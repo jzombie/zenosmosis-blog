@@ -58,6 +58,8 @@ The profile is also a live test of the tooling underneath it. The nightly sweep,
 
 That makes my front page the canary. If a template change breaks rendering, if a chart goes stale, if the sweep fails and holds back a commit, I see it where everyone else sees it. That friction is intentional. Running my own visible surface through an unfinished language slows me down in exactly the places the language still needs work.
 
+The same precomputed graph has a second consumer. My website build reads it when assembling [llms-full.txt](https://llmstxt.org/), so agents get one file that shows how the projects relate instead of piecing it together repo by repo. I may find other uses for that data next. For now the profile and that file are the two readers, which is enough to keep the schema honest.
+
 One honest note on measurement. My recent [Google Search Console](https://search.google.com/search-console/about/) check showed AI Overview impressions rising, led by practical how to posts, not by strategy posts. This profile piece is unlikely to move that line. Its bet is on the other scoreboard: the agent and pull channel, where clear summaries and structured proof pages get reused inside assistant sessions. Different surface, different win.
 
 ## What I deliberately left manual
