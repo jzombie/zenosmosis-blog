@@ -36,7 +36,7 @@ This is the loose tie to the [Magnet Vector](/posts/8-magnet-vector/) idea I wro
 
 Once a day, in the small hours, a collector wakes up and sweeps my public repos. It asks ordinary questions. What exists, what changed in the last thirty days, which repos depend on which others, what topics they declare, how big they are, where the docs live.
 
-That sweep becomes a single data file plus a schema file, refreshed together so they never disagree. A second step turns the data into pictures and fragments: a share pie, a focus ranking, a cluster map, small radar shapes per repo, indicator badges for heating or cooling or steady or dormant. A renderer then assembles those pieces into a proof page, the same page every time, with the timestamp of the sweep printed on it.
+That sweep becomes a single data file plus a schema file, refreshed together so they never disagree. A second step turns the data into pictures and fragments: share and focus charts, a cluster map, per repo radar images, and indicator badges for heating or cooling or steady or dormant. A renderer then assembles those pieces into a proof page, the same page every time, with the timestamp of the sweep printed on it.
 
 Then the profile repo does the simplest possible thing. It copies the fresh proof page and its pictures into its own front page. No editing, no merging by hand. If the sweep produced no changes, there is no commit. Last good proof keeps serving.
 
@@ -54,7 +54,11 @@ Nothing there is hand counted. That sentence is the feature.
 
 ## It helps dogfood my research pipeline
 
-The profile is also a live test of the tooling underneath it. The nightly sweep, the charts, and the page assembly all run through [OxDock](https://github.com/jzombie/rust-oxdock), the small pipeline language I use everywhere else. The graph they consume is simple to describe: nodes stand for repos and carry recent velocity with them, edges stand for real reuse between repos and only exist when the evidence holds. The profile then publishes whatever that pipeline produced.
+The profile is also a live test of the tooling underneath it. The nightly sweep, the charts, and the page assembly all run through [OxDock](https://github.com/jzombie/rust-oxdock), the small pipeline language I use everywhere else.
+
+The graph they consume is simple to describe: nodes stand for repos and carry recent velocity with them, edges stand for real reuse between repos and only exist when the evidence holds. The profile then publishes whatever that pipeline produced.
+
+The SVGs are part of the same test. The charts and status badges are all generated from that same graph on every run, so the visual layer gets exercised nightly instead of only when I feel like checking it.
 
 That makes my front page the canary. If a template change breaks rendering, if a chart goes stale, if the sweep fails and holds back a commit, I see it where everyone else sees it. That friction is intentional. Running my own visible surface through an unfinished language slows me down in exactly the places the language still needs work.
 
