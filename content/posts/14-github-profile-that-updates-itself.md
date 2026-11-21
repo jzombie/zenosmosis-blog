@@ -52,6 +52,8 @@ The current picture is a cluster, not a list. Storage and fetching crates sit ne
 
 The top of the page names the focus in one line. Below that sit language share, selected work ordered by reuse signal, the cluster map, focus and share charts, and a commit data table with layers and reuse notes per repo. Every chart carries a version stamp in its URL so caches refetch instead of showing last month. Every repo row links out to the repo itself, its topics, and its package page where one exists.
 
+What I like most is how customizable the whole thing is. The [cluster map](https://github.com/jzombie#portfolio-cluster) is my favorite example. It draws the connections with braille characters inside a plain text block, and every repo name in it is a real link you can click. A text table underneath names the same repos for screen readers. None of that layout came from a generator preset. It looks the way it does because the pipeline lets me say so.
+
 Nothing there is hand counted. That sentence is the feature.
 
 ## It helps dogfood my research pipeline
