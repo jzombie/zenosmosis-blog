@@ -24,7 +24,7 @@ The rule I settled on is simple. Words that describe identity stay hand written 
 
 ## What I wanted instead of a resume page
 
-I wanted one sentence a stranger and a machine could both use. Mine is close to this: systems work in Rust, focused on ingestion and scoring pipelines plus the [windowing terminal environment](https://github.com/jzombie/term-wm) I use to run them.
+I wanted one sentence a stranger and a machine could both use. Mine is close to this: systems work primarily in Rust, focused on ingestion and scoring pipelines plus the [windowing terminal environment](https://github.com/jzombie/term-wm) I use to run them.
 
 Everything else on the page exists to back up that sentence or it gets cut. Recent work ranked by reuse first, then by outside pull, then by recency. A dependency map that shows which repos actually build on each other. Language share and commit share charts that refresh on their own. A commit table with enough context that a click leads somewhere real.
 
