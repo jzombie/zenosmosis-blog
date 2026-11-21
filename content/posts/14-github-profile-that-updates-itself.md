@@ -36,7 +36,7 @@ My focus is algorithmic on purpose. The tools matter to me whether or not the co
 
 The pipeline publishes its working file too. The [published graph JSON](https://raw.githubusercontent.com/jzombie/jzombie-graph/refs/heads/main/data/portfolio-graph.json) carries the whole structure in one place: repos, edges, velocity, and recent work. It is a nightly snapshot and a big file, so the way to use it is to query or slice it rather than paste it whole. It lets a stranger or an agent triage the whole account in one pass, without clicking through dozens of repos.
 
-* **What is live.** Which repos moved in the last thirty days and where attention is going, from commits and focus, versus dormant experiments and untouched mirrors.
+* **What is live.** Which repos moved lately versus dormant experiments and untouched mirrors. Rolling windows out to thirty days track commit and issue activity, paired with a focus score measured against each repo's own trailing baseline.
 * **How it stacks.** Which crates are foundation, which are middleware, and which are end-user tools, from layers and manifest dependency edges.
 * **Planned versus shipped.** Recent issues and pull requests ride along on every node, so a cold reader can see what is being planned against what actually merged, including where the Dependabot queues are quietly piling up.
 * **Which forks are real.** Diverged forks with portfolio edges and ahead-by commits stand apart from drive-by mirrors, so nobody has to guess which forks carry real work.
