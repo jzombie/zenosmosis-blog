@@ -10,7 +10,7 @@ draft: true
 
 I never had a customized [GitHub profile page](https://github.com/jzombie). Just the default grid, a few pins I set once, and no sentence explaining what the scattered repos added up to.
 
-Part of the reason was maintenance, and part was not wanting to deal with it. I knew that if I wrote the page by hand on a motivated Sunday, it would freeze there while the real work moved somewhere else. Every manual profile works this way. It is a snapshot pretending to be a signal.
+Part of the reason was maintenance, and part was not wanting to deal with it. I knew that if I wrote the page by hand on a motivated Sunday, it would freeze there while the real work moved somewhere else. Every manual profile works this way. It is a snapshot pretending to be a signal. Plenty of generators will happily tile your stars and forks into cards, like [github-stats-extended](https://github.com/stats-organization/github-stats-extended) or [github-profile-readme-generator](https://github.com/rahuldkjain/github-profile-readme-generator). Those are fine. I wanted a different signal, one that does not move with vanity metrics.
 
 So instead of writing a profile by hand, I started feeding one.
 
