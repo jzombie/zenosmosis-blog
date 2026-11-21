@@ -6,7 +6,7 @@ tags: ["automation", "github", "systems-design", "rust", "magnet-vector"]
 draft: true
 ---
 
-> _Disclaimer: I'm not suggesting that I have a perfect GitHub profile page. What I am proposing is that most of it be automated. This one cannot be written without building the thing first. If you want a shortcut or a different direction, start with [Rahul Jain's guide](https://dev.to/rahuldkjain/how-i-improved-my-github-profile-480c)._
+> _Disclaimer: I'm not suggesting that I have a perfect GitHub profile page. What I am proposing is that most of it be automated. This kind of profile cannot be written without building the thing first. If you want a shortcut or a different direction, start with [Rahul Jain's guide](https://dev.to/rahuldkjain/how-i-improved-my-github-profile-480c)._
 
 I never had a customized [GitHub profile page](https://github.com/jzombie). Just the default grid, a few pins I set once, and no sentence explaining what the scattered repos added up to.
 
