@@ -2,7 +2,7 @@
 title: "My GitHub Profile Updates Itself While I Sleep"
 date: 2026-11-21T00:00:00Z
 description: "I never had a real profile page, just the default GitHub grid. Now a nightly job recounts the work, redraws the map, and publishes the fresh proof."
-tags: ["automation", "github", "systems-design", "rust", "magnet-vector"]
+tags: ["automation", "github", "graphql", "systems-design", "rust", "magnet-vector"]
 draft: true
 ---
 
@@ -45,7 +45,7 @@ This is the loose tie to the [Magnet Vector](/posts/8-magnet-vector/) idea I wro
 
 ## The nightly loop in plain language
 
-Once a day, in the small hours, a collector wakes up and sweeps my public repos. It asks ordinary questions. What exists, what changed in the last thirty days, which repos depend on which others, what topics they declare, how big they are, where the docs live.
+Once a day, in the small hours, a collector wakes up and sweeps my public repos. It pulls the data in batched queries over the [GitHub GraphQL API](https://docs.github.com/en/graphql), fetching branch velocity and recent pull requests together instead of crawling repo by repo. The sweep asks ordinary questions. What exists, what changed in the last thirty days, which repos depend on which others, what topics they declare, how big they are, where the docs live.
 
 That sweep becomes a single data file plus a schema file, refreshed together so they never disagree. A second step turns the data into pictures and fragments: share and focus charts, a cluster map, per repo radar images, and indicator badges for heating or cooling or steady or dormant. A renderer then assembles those pieces into a proof page, stamped with the rebuild time.
 
