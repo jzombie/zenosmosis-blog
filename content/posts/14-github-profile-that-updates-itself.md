@@ -77,7 +77,7 @@ My front page is the last stop, not the first casualty. I can proof a change on 
 
 The same precomputed graph has a second consumer. My [website](https://zenosmosis.com) build reads it when assembling [llms-full.txt](https://llmstxt.org/), the full carrier that sits alongside the shorter routing map, so agents get one file that shows how the projects relate instead of piecing it together repo by repo. I may find other uses for that data next. For now the profile and that file are the two readers, which is enough to keep the schema honest.
 
-One honest note on measurement. My recent [Google Search Console](https://search.google.com/search-console/about/) check showed AI Overview impressions rising, led by practical how to posts, not by strategy posts. This profile piece is unlikely to move that line. Its bet is on the other scoreboard: the agent and pull channel, where clear summaries and structured proof pages get reused inside assistant sessions. Different surface, different win.
+One honest note on measurement. My recent [Google Search Console](https://search.google.com/search-console/) check showed AI Overview impressions rising, led by practical how to posts, not by strategy posts. This profile piece is unlikely to move that line. Its bet is on the other scoreboard: the agent and pull channel, where clear summaries and structured proof pages get reused inside assistant sessions. Different surface, different win.
 
 ## What I deliberately left manual
 
