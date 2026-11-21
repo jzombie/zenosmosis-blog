@@ -30,6 +30,8 @@ Everything else on the page exists to back up that sentence or it gets cut. Rece
 
 Honestly, the first reader is me. I run a lot of small projects that form individual pieces in a larger stack, and I lose track of how they relate. The focus ranking tells me where my attention actually went. The map shows which pieces carry weight and which ones drifted. When something needs shaping up, it usually shows up there first, quiet for too long or used by nothing.
 
+My focus is algorithmic on purpose. The tools matter to me whether or not the counts agree, because I build them for my own use and study first. I appreciate traction when it comes, and part of publishing the proof in the open is hoping it earns some. I am still sorting out how much of this is about traction and how much is wanting to see an otherwise apparently disjointed set of repos connect.
+
 This is the loose tie to the [Magnet Vector](/posts/8-magnet-vector/) idea I wrote about earlier. I am not stuffing keywords for ranking. I am trying to make one coordinate dense enough that both a person skimming and an agent summarizing land in the right place and can route deeper from there.
 
 ## The nightly loop in plain language
