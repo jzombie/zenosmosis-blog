@@ -52,7 +52,7 @@ The current picture is a cluster, not a list. Storage and fetching crates sit ne
 
 The top of the page names the focus in one line. Below that sit language share, selected work ordered by reuse signal, the cluster map, focus and share charts, and a commit data table with layers and reuse notes per repo. Every chart carries a version stamp in its URL so caches refetch instead of showing last month. Every repo row links out to the repo itself, its topics, and its package page where one exists.
 
-What I like most is how customizable the whole thing is. The [cluster map](https://github.com/jzombie#portfolio-cluster) is my favorite example. It draws the connections with braille characters inside a plain text block, and every repo name in it is a real link you can click. A text table underneath names the same repos for screen readers. None of that layout came from a generator preset. It looks the way it does because the pipeline lets me say so.
+What I like most is how customizable the whole thing is. The [cluster map](https://github.com/jzombie#portfolio-cluster) is my favorite example. It draws the connections with braille characters inside a plain text block, and every repo name in it is a real link you can click. Building it from braille instead of SVG is deliberate for the same reason. With no JavaScript allowed in images, a link dense map is safer as text. A text table underneath names the same repos for screen readers. None of that layout came from a generator preset. It looks the way it does because the pipeline lets me say so.
 
 Nothing there is hand counted. That sentence is the feature.
 
@@ -62,7 +62,7 @@ The profile is also a live test of the tooling underneath it. The nightly sweep,
 
 The graph they consume is simple to describe: nodes stand for repos and carry recent velocity with them, edges stand for real reuse between repos and only exist when the evidence holds. The profile then publishes whatever that pipeline produced.
 
-The SVGs are part of the same test. The charts and status badges are all generated from that same graph on every run, and they ship as separate image files linked from the page, so the visual layer gets exercised nightly instead of only when I feel like checking it.
+The SVGs are part of the same test. The charts and status badges are all generated from that same graph on every run, and they ship as separate image files linked from the page, so the visual layer gets exercised nightly instead of only when I feel like checking it. GitHub strips JavaScript out of SVGs, so any motion has to live in the markup and styles instead. That turns out to be a feature. Because every chart comes out of the same template, shared touches like the breathing pulse ride along everywhere for free.
 
 That makes my front page the canary. If a template change breaks rendering, if a chart goes stale, if the sweep fails and holds back a commit, I see it where everyone else sees it. That friction is intentional. Running my own visible surface through an unfinished language slows me down in exactly the places the language still needs work.
 
