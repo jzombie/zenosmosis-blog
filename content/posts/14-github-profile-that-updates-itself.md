@@ -8,7 +8,7 @@ draft: true
 
 > _Disclaimer: I'm not suggesting that I have a perfect GitHub profile page. What I am proposing is that most of it be automated._
 
-I never had a [profile page](https://github.com/jzombie). Just the default GitHub grid, a few pins I set once, and no sentence explaining what the scattered repos added up to.
+I never had a customized [GitHub profile page](https://github.com/jzombie). Just the default grid, a few pins I set once, and no sentence explaining what the scattered repos added up to.
 
 The reason was maintenance. I knew that if I wrote the page by hand on a motivated Sunday, it would freeze there while the real work moved somewhere else. Every manual profile works this way. It is a snapshot pretending to be a signal.
 
