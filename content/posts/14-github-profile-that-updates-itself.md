@@ -1,14 +1,14 @@
 ---
 title: "My GitHub Profile Updates Itself While I Sleep"
 date: 2026-11-21T00:00:00Z
-description: "I never had a real profile page, just the default GitHub grid. Now a nightly job recounts the work, redraws the map, and only commits when something actually changed."
+description: "I never had a real profile page, just the default GitHub grid. Now a nightly job recounts the work, redraws the map, and publishes the fresh proof."
 tags: ["automation", "github", "systems-design", "rust", "magnet-vector"]
 draft: true
 ---
 
 > _Disclaimer: I'm not suggesting that I have a perfect GitHub profile page. What I am proposing is that most of it be automated._
 
-I never had a profile page. Just the default GitHub grid, a few pins I set once, and no sentence explaining what the scattered repos added up to.
+I never had a [profile page](https://github.com/jzombie). Just the default GitHub grid, a few pins I set once, and no sentence explaining what the scattered repos added up to.
 
 The reason was maintenance. I knew that if I wrote the page by hand on a motivated Sunday, it would freeze there while the real work moved somewhere else. Every manual profile works this way. It is a snapshot pretending to be a signal.
 
@@ -20,7 +20,7 @@ A profile page has two jobs and they fight each other. It should tell a visitor 
 
 I kept the first job. I automated the second.
 
-The rule I settled on is simple. Words that describe identity stay hand written and change rarely. Anything that claims activity, reuse, or momentum must come from a recount, not from memory. If a number is on the page, a job put it there this week. If nothing changed, the job stays quiet and pushes nothing.
+The rule I settled on is simple. Words that describe identity stay hand written and change rarely. Anything that claims activity, reuse, or momentum must come from a recount, not from memory. If a number is on the page, a job put it there this week.
 
 ## What I wanted instead of a resume page
 
@@ -64,7 +64,7 @@ The SVGs are part of the same test. The charts and status badges are all generat
 
 That makes my front page the canary. If a template change breaks rendering, if a chart goes stale, if the sweep fails and holds back a commit, I see it where everyone else sees it. That friction is intentional. Running my own visible surface through an unfinished language slows me down in exactly the places the language still needs work.
 
-The same precomputed graph has a second consumer. [My website build](https://zenosmosis.com/llms-full.txt) reads it when assembling [llms-full.txt](https://llmstxt.org/), the full carrier that sits alongside the shorter routing map, so agents get one file that shows how the projects relate instead of piecing it together repo by repo. I may find other uses for that data next. For now the profile and that file are the two readers, which is enough to keep the schema honest.
+The same precomputed graph has a second consumer. My [website](https://zenosmosis.com) build reads it when assembling [llms-full.txt](https://llmstxt.org/), the full carrier that sits alongside the shorter routing map, so agents get one file that shows how the projects relate instead of piecing it together repo by repo. I may find other uses for that data next. For now the profile and that file are the two readers, which is enough to keep the schema honest.
 
 One honest note on measurement. My recent [Google Search Console](https://search.google.com/search-console/about/) check showed AI Overview impressions rising, led by practical how to posts, not by strategy posts. This profile piece is unlikely to move that line. Its bet is on the other scoreboard: the agent and pull channel, where clear summaries and structured proof pages get reused inside assistant sessions. Different surface, different win.
 
