@@ -1,16 +1,16 @@
 ---
 title: "My GitHub Profile Updates Itself While I Sleep"
-date: 2026-11-22T00:00:00Z
+date: 2026-11-21T00:00:00Z
 description: "I never had a real profile page, just the default GitHub grid. Now a nightly job recounts the work, redraws the map, and publishes the fresh proof."
 tags: ["automation", "github", "systems-design", "rust", "magnet-vector"]
 draft: true
 ---
 
-> _Disclaimer: I'm not suggesting that I have a perfect GitHub profile page. What I am proposing is that most of it be automated._
+> _Disclaimer: I'm not suggesting that I have a perfect GitHub profile page. What I am proposing is that most of it be automated. This one cannot be written without building the thing first. If you want a shortcut or a different direction, start with [Rahul Jain's guide](https://dev.to/rahuldkjain/how-i-improved-my-github-profile-480c)._
 
 I never had a customized [GitHub profile page](https://github.com/jzombie). Just the default grid, a few pins I set once, and no sentence explaining what the scattered repos added up to.
 
-Part of the reason was maintenance, and part was not wanting to deal with it. I knew that if I wrote the page by hand on a motivated Sunday, it would freeze there while the real work moved somewhere else. Every manual profile works this way. It is a snapshot pretending to be a signal. Plenty of generators will happily tile your stars and forks into cards, like [github-stats-extended](https://github.com/stats-organization/github-stats-extended) or [github-profile-readme-generator](https://github.com/rahuldkjain/github-profile-readme-generator). Those are fine. I wanted a different signal, one that does not move with vanity metrics. One that updates itself automatically.
+Part of the reason was maintenance, and part was not wanting to deal with it. I knew that if I wrote the page by hand on a motivated Sunday, it would freeze there while the real work moved somewhere else. Every manual profile works this way. It is a snapshot pretending to be a signal. Plenty of generators will happily tile your stars and forks into cards, like [github-stats-extended](https://github.com/stats-organization/github-stats-extended) or [github-profile-readme-generator](https://github.com/rahuldkjain/github-profile-readme-generator). Those are fine. I wanted a different signal, one built from metrics under my direct control. Commits I pushed, dependencies I declared, topics I set, docs I wrote. Every number on the page traces back to an action I took, not a reaction someone else had. One that updates itself automatically.
 
 So instead of writing a profile by hand, I started feeding one.
 
@@ -53,7 +53,7 @@ Then the profile repo does the simplest possible thing. It copies the fresh proo
 
 ### What counts as a connection
 
-The part I care about most is the dependency map. Stars and forks are pleasant, but mostly noise. A real edge means one repo builds on another: a manifest declares it, a lockfile confirms it, and for Rust code the source actually uses it. Ambiguous cases get no edge rather than a wrong one. That strictness is the whole point. The map is small because it is honest.
+The part I care about most is the dependency map. Stars and forks are pleasant, but they are not under my control. A real edge means one repo builds on another: a manifest declares it, a lockfile confirms it, and for Rust code the source actually uses it. Ambiguous cases get no edge rather than a wrong one. That strictness is the whole point. The map is small because it is honest.
 
 The current picture is a cluster, not a list. Storage and fetching crates sit near the middle. The terminal desktop and the pipeline language pull in several directions. Newer ingestion work hangs off the same foundations. Quiet repos drop out unless something current uses them. Forks stay out unless they diverged. What remains is the system as it runs, not the system as I wish it looked.
 
